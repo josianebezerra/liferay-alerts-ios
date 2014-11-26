@@ -85,11 +85,12 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 
 		collectionView.backgroundView = backgroundView
 
+		let top = topBar.frame.height
+		collectionView.contentInset.top = top
+
 		var layout: UICollectionViewFlowLayout =
 			collectionView.collectionViewLayout as UICollectionViewFlowLayout
 
-		let top = topBar.frame.height
-		layout.sectionInset.top = top
 		layout.minimumLineSpacing = 0
 
 		let width: CGFloat = UIScreen.mainScreen().bounds.width
