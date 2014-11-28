@@ -20,7 +20,7 @@ class PushNotificationsEntryServiceUtil {
 	class func likeAlert(alertId: Int) {
 		var session: LRSession = SettingsUtil.getSession()
 
-		var callback: AddLikeCallback = AddLikeCallback()
+		var callback: AddLikeCallback = AddLikeCallback(alertId: alertId)
 
 		session.callback = callback
 

@@ -17,10 +17,8 @@
  */
 class TextCardView: BaseCardView {
 
-	class func loadFromNib(name: String) -> TextCardView? {
-		let nib: UINib = UINib(nibName: name, bundle: NSBundle.mainBundle())
-
-		return nib.instantiateWithOwner(nil, options: nil)[0] as? TextCardView
+	deinit {
+		NotificationUtil.unregister(self)
 	}
 
 	override func awakeFromNib() {
@@ -28,11 +26,55 @@ class TextCardView: BaseCardView {
 		likeLabel.textColor = UIColors.CARD_BOTTOM_BAR_TEXT
 	}
 
+	@IBAction func likeButtonAction(sender: UIButton) {
+		PushNotificationsEntryServiceUtil.likeAlert(self.alert!.getAlertId())
+	}
+
+	class func loadFromNib(name: String) -> TextCardView? {
+		let nib: UINib = UINib(nibName: name, bundle: NSBundle.mainBundle())
+
+		return nib.instantiateWithOwner(nil, options: nil)[0] as? TextCardView
+	}
+
+	class func updateLike(alertId: Int, liked: Bool) {
+		var destination: String = TextCardView._getDestination(alertId)
+
+		NotificationUtil.send(destination, data:["liked": liked])
+	}
+
+	private class func _getDestination(alertId: Int) -> String {
+		return "updateLike" + String(alertId)
+	}
+
+	func updateLike(like: Bool) {
+		var name: String = "icon_like"
+
+		if (like) {
+			name = "icon_like_selected"
+		}
+
+		var image: UIImage? = UIImage(named: name)
+		likeButton.setImage(image, forState: UIControlState.Normal)
+	}
+
+	func updateLike(notification: NSNotification) {
+		var values: [NSObject: AnyObject] = notification.userInfo!
+		var liked: Bool = values["liked"] as Bool
+
+		updateLike(liked)
+	}
+
 	func setAlert(alert: Alert) {
 		self.contentMode = UIViewContentMode.Redraw
-		self.alert = alert;
+		self.alert = alert
 
 		_setMessage()
+
+		var alertId: Int = alert.getAlertId()
+		var destination: String = TextCardView._getDestination(alertId)
+
+		NotificationUtil.register(
+			destination, observer: self, selector: "updateLike:")
 	}
 
 	private func _setMessage() {
@@ -53,6 +95,7 @@ class TextCardView: BaseCardView {
 	var alert: Alert?
 
 	@IBOutlet var commentLabel: UILabel!
+	@IBOutlet var likeButton: UIButton!
 	@IBOutlet var likeLabel: UILabel!
 	@IBOutlet var messageTextView: UITextView!
 }
