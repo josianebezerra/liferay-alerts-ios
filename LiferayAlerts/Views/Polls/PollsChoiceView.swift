@@ -17,12 +17,6 @@
  */
 class PollsChoiceView: UIView {
 
-	class func update(choiceId: Int, checked: Bool) {
-		var destination: String = PollsChoiceView._getDestination(choiceId)
-
-		NotificationUtil.send(destination, data:["checked": checked])
-	}
-
 	deinit {
 		NotificationUtil.unregister(self)
 	}
@@ -40,6 +34,29 @@ class PollsChoiceView: UIView {
 		return CGSize(
 			width: UIViewNoIntrinsicMetric,
 			height: UIDimensions.POLLS_CARD_CHOICE_HEIGHT)
+	}
+
+	@IBAction func voteChanged() {
+		if (!voteSwitch.on) {
+			return
+		}
+
+		superview!.userInteractionEnabled = false
+
+		var choiceContainer: PollsChoiceContainerView =
+		superview as PollsChoiceContainerView
+
+		choiceContainer.voteChanged(choice!)
+	}
+
+	class func update(choiceId: Int, checked: Bool) {
+		var destination: String = PollsChoiceView._getDestination(choiceId)
+
+		NotificationUtil.send(destination, data:["checked": checked])
+	}
+
+	private class func _getDestination(choiceId: Int) -> String {
+		return "updatePollsChoice" + String(choiceId)
 	}
 
 	func setChoice(choice: PollsChoice) {
@@ -64,23 +81,6 @@ class PollsChoiceView: UIView {
 		if (!voteSwitch.on) {
 			superview!.userInteractionEnabled = true
 		}
-	}
-
-	private class func _getDestination(choiceId: Int) -> String {
-		return "updatePollsChoice" + String(choiceId)
-	}
-
-	@IBAction func voteChanged() {
-		if (!voteSwitch.on) {
-			return
-		}
-
-		superview!.userInteractionEnabled = false
-
-		var choiceContainer: PollsChoiceContainerView =
-			superview as PollsChoiceContainerView
-
-		choiceContainer.voteChanged(choice!)
 	}
 
 	var choice: PollsChoice?

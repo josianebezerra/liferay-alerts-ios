@@ -12,8 +12,6 @@
  * details.
  */
 
-import Foundation
-
 /**
  * @author Silvio Santos
  */
