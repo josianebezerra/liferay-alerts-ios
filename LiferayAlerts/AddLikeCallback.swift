@@ -12,22 +12,15 @@
  * details.
  */
 
-#import <Foundation/Foundation.h>
-
 /**
  * @author Silvio Santos
  */
+class AddLikeCallback : NSObject, LRCallback {
 
-// Liferay services
-#import "LRCallback.h"
-#import "LRSession.h"
-#import "LRError.h"
-#import "LRJSONObjectWrapper.h"
-#import "LRPortraitUtil.h"
-#import "LRPollsVoteService_v62.h"
-#import "LRPushnotificationsdeviceService_v62.h"
-#import "LRPushnotificationsentryService_v62.h"
-#import "MBProgressHUD.h"
+	func onFailure(error: NSError!) {
+	}
 
-//SDWebImage
-#import "UIImageView+WebCache.h"
+	func onSuccess(result: AnyObject!) {
+	}
+
+}

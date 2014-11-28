@@ -12,22 +12,25 @@
  * details.
  */
 
-#import <Foundation/Foundation.h>
-
 /**
  * @author Silvio Santos
  */
+class PushNotificationsEntryServiceUtil {
 
-// Liferay services
-#import "LRCallback.h"
-#import "LRSession.h"
-#import "LRError.h"
-#import "LRJSONObjectWrapper.h"
-#import "LRPortraitUtil.h"
-#import "LRPollsVoteService_v62.h"
-#import "LRPushnotificationsdeviceService_v62.h"
-#import "LRPushnotificationsentryService_v62.h"
-#import "MBProgressHUD.h"
+	class func likeAlert(alertId: Int) {
+		var session: LRSession = SettingsUtil.getSession()
 
-//SDWebImage
-#import "UIImageView+WebCache.h"
+		var callback: AddLikeCallback = AddLikeCallback()
+
+		session.callback = callback
+
+		var service: LRPushnotificationsentryService_v62 =
+			LRPushnotificationsentryService_v62(session:session)
+
+		var error: NSError?
+
+		service.likePushNotificationsEntryWithPushNotificationsEntryId(
+			Int64(alertId), error:&error)
+	}
+
+}
