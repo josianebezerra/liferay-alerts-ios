@@ -30,6 +30,8 @@ class TextCardView: BaseCardView {
 		var alertId: Int = self.alert!.getAlertId()
 		var like: Bool = !self.alert!.like
 
+		_updateLike(like)
+
 		PushNotificationsEntryServiceUtil.likeAlert(alertId, like:like)
 	}
 
@@ -60,6 +62,7 @@ class TextCardView: BaseCardView {
 		self.contentMode = UIViewContentMode.Redraw
 		self.alert = alert
 
+		_updateLike(alert.like)
 		_setMessage()
 
 		var alertId: Int = alert.getAlertId()
