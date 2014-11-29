@@ -17,18 +17,20 @@
  */
 class AddLikeCallback : NSObject, LRCallback {
 
-	init(alertId: Int) {
+	init(alertId: Int, like: Bool) {
 		self.alertId = alertId
+		self.like = like
 	}
 
 	func onFailure(error: NSError!) {
-		TextCardView.updateLike(alertId, liked:false)
+		TextCardView.updateLike(alertId, liked:!like)
 	}
 
 	func onSuccess(result: AnyObject!) {
-		TextCardView.updateLike(alertId, liked:true)
+		TextCardView.updateLike(alertId, liked:like)
 	}
 
 	var alertId: Int
+	var like: Bool
 
 }

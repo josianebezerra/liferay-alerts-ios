@@ -17,10 +17,11 @@
  */
 class PushNotificationsEntryServiceUtil {
 
-	class func likeAlert(alertId: Int) {
+	class func likeAlert(alertId: Int, like: Bool) {
 		var session: LRSession = SettingsUtil.getSession()
 
-		var callback: AddLikeCallback = AddLikeCallback(alertId: alertId)
+		var callback: AddLikeCallback = AddLikeCallback(
+			alertId: alertId, like:like)
 
 		session.callback = callback
 
@@ -29,8 +30,14 @@ class PushNotificationsEntryServiceUtil {
 
 		var error: NSError?
 
-		service.likePushNotificationsEntryWithPushNotificationsEntryId(
-			Int64(alertId), error:&error)
+		if (like) {
+			service.likePushNotificationsEntryWithPushNotificationsEntryId(
+				Int64(alertId), error:&error)
+		}
+		else {
+			service.dislikePushNotificationsEntryWithPushNotificationsEntryId(
+				Int64(alertId), error:&error)
+		}
 	}
 
 }

@@ -27,7 +27,10 @@ class TextCardView: BaseCardView {
 	}
 
 	@IBAction func likeButtonAction(sender: UIButton) {
-		PushNotificationsEntryServiceUtil.likeAlert(self.alert!.getAlertId())
+		var alertId: Int = self.alert!.getAlertId()
+		var like: Bool = !self.alert!.like
+
+		PushNotificationsEntryServiceUtil.likeAlert(alertId, like:like)
 	}
 
 	class func loadFromNib(name: String) -> TextCardView? {
@@ -88,6 +91,8 @@ class TextCardView: BaseCardView {
 
 		var image: UIImage? = UIImage(named: name)
 		likeButton.setImage(image, forState: UIControlState.Normal)
+
+		alert!.like = like
 	}
 
 	let TEXT_FONT: UIFont = UIFont(
