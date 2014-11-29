@@ -46,22 +46,11 @@ class TextCardView: BaseCardView {
 		return "updateLike" + String(alertId)
 	}
 
-	func updateLike(like: Bool) {
-		var name: String = "icon_like"
-
-		if (like) {
-			name = "icon_like_selected"
-		}
-
-		var image: UIImage? = UIImage(named: name)
-		likeButton.setImage(image, forState: UIControlState.Normal)
-	}
-
-	func updateLike(notification: NSNotification) {
+	func didReceiveLikeNotification(notification: NSNotification) {
 		var values: [NSObject: AnyObject] = notification.userInfo!
 		var liked: Bool = values["liked"] as Bool
 
-		updateLike(liked)
+		_updateLike(liked)
 	}
 
 	func setAlert(alert: Alert) {
@@ -74,7 +63,8 @@ class TextCardView: BaseCardView {
 		var destination: String = TextCardView._getDestination(alertId)
 
 		NotificationUtil.register(
-			destination, observer: self, selector: "updateLike:")
+			destination, observer: self,
+			selector: "didReceiveLikeNotification:")
 	}
 
 	private func _setMessage() {
@@ -87,6 +77,17 @@ class TextCardView: BaseCardView {
 		messageTextView.text = alert!.getMessage()
 		messageTextView.textColor = UIColors.CARD_MESSAGE
 		messageTextView.font = TEXT_FONT
+	}
+
+	private func _updateLike(like: Bool) {
+		var name: String = "icon_like"
+
+		if (like) {
+			name = "icon_like_selected"
+		}
+
+		var image: UIImage? = UIImage(named: name)
+		likeButton.setImage(image, forState: UIControlState.Normal)
 	}
 
 	let TEXT_FONT: UIFont = UIFont(
