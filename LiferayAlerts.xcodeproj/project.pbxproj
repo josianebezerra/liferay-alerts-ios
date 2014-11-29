@@ -44,6 +44,7 @@
 		29C99E431A28BB12009CEAE2 /* PushNotificationServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E421A28BB12009CEAE2 /* PushNotificationServiceUtil.swift */; };
 		29C99E451A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */; };
 		29C99E471A28BED4009CEAE2 /* AddLikeCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */; };
+		29C99E4B1A29FF07009CEAE2 /* MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */; };
 		29F8E49319FE886B000A7CA2 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8E49219FE886B000A7CA2 /* AlertExtension.swift */; };
 		534554EDA6DA97F7571BD665 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9C5F42C056303CBB27D9EE /* libPods.a */; };
 		755E0CF61A1E133300D9E829 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E0CF51A1E133300D9E829 /* UIView.swift */; };
@@ -97,6 +98,7 @@
 		29C99E421A28BB12009CEAE2 /* PushNotificationServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationServiceUtil.swift; sourceTree = "<group>"; };
 		29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsEntryServiceUtil.swift; sourceTree = "<group>"; };
 		29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLikeCallback.swift; sourceTree = "<group>"; };
+		29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBProgressHUD.swift; sourceTree = "<group>"; };
 		29F8E49219FE886B000A7CA2 /* AlertExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertExtension.swift; path = Extensions/AlertExtension.swift; sourceTree = "<group>"; };
 		4B90D4F048190E83E3FB5B14 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		755E0CF51A1E133300D9E829 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Extensions/UIView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				2901DB7019FEDCB100E25788 /* UIColor.swift */,
 				755E0CF51A1E133300D9E829 /* UIView.swift */,
+				29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				755E0CF61A1E133300D9E829 /* UIView.swift in Sources */,
 				2901DB7119FEDCB200E25788 /* UIColor.swift in Sources */,
 				299129FA1A1651A700E3CBF1 /* PollsChoice.swift in Sources */,
+				29C99E4B1A29FF07009CEAE2 /* MBProgressHUD.swift in Sources */,
 				2938A56C19F6D7AA00A72879 /* MainViewController.swift in Sources */,
 				29841F2219F893EE00A7ADAF /* PushNotificationUtil.swift in Sources */,
 				2917E7CD1A1640290050B757 /* PollsQuestion.swift in Sources */,

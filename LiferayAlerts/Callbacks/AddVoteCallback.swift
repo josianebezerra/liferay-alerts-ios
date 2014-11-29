@@ -32,7 +32,7 @@ class AddVoteCallback : NSObject, LRCallback {
 
 		context.refreshObject(alert, mergeChanges:false)
 
-		showError()
+		MBProgressHUD.showMessageOnWindow("failed-to-send-vote")
 
 		PollsChoiceView.update(choiceId, checked:false)
 	}
@@ -40,16 +40,6 @@ class AddVoteCallback : NSObject, LRCallback {
 	func onSuccess(result: AnyObject!) {
 		var database: DatabaseHelper = DatabaseHelper.getInstance()
 		database.commit()
-	}
-
-	func showError() {
-		var window: UIWindow = UIApplication.sharedApplication().keyWindow!
-
-		var hud = MBProgressHUD.showHUDAddedTo(window, animated: true)
-
-		hud.labelText = NSLocalizedString("failed-to-send-vote", comment:"")
-		hud.mode = MBProgressHUDModeText
-		hud.hide(true, afterDelay:1.5)
 	}
 
 	var alert: Alert

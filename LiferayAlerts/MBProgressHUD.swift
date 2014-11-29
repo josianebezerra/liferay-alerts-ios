@@ -12,27 +12,21 @@
  * details.
  */
 
+import Foundation
+
 /**
  * @author Silvio Santos
  */
-class AddLikeCallback : NSObject, LRCallback {
+extension MBProgressHUD {
 
-	init(alertId: Int, like: Bool) {
-		self.alertId = alertId
-		self.like = like
+	class func showMessageOnWindow(var key: String) {
+		var window: UIWindow = UIApplication.sharedApplication().keyWindow!
+
+		var hud = MBProgressHUD.showHUDAddedTo(window, animated: true)
+
+		hud.labelText = NSLocalizedString(key, comment:"")
+		hud.mode = MBProgressHUDModeText
+		hud.hide(true, afterDelay:1.5)
 	}
-
-	func onFailure(error: NSError!) {
-		TextCardView.updateLike(alertId, liked:!like)
-
-		MBProgressHUD.showMessageOnWindow("failed-to-like-alert")
-	}
-
-	func onSuccess(result: AnyObject!) {
-		TextCardView.updateLike(alertId, liked:like)
-	}
-
-	var alertId: Int
-	var like: Bool
-
+	
 }
