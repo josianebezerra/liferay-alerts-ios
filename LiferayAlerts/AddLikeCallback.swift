@@ -12,6 +12,8 @@
  * details.
  */
 
+import CoreData
+
 /**
  * @author Silvio Santos
  */
@@ -30,6 +32,9 @@ class AddLikeCallback : NSObject, LRCallback {
 
 	func onSuccess(result: AnyObject!) {
 		TextCardView.updateLike(alertId, liked:like)
+
+		var database: DatabaseHelper = DatabaseHelper.getInstance()
+		database.commit()
 	}
 
 	var alertId: Int
