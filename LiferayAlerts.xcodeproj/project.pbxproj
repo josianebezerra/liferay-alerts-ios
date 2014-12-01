@@ -45,6 +45,8 @@
 		29C99E451A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */; };
 		29C99E471A28BED4009CEAE2 /* AddLikeCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */; };
 		29C99E4B1A29FF07009CEAE2 /* MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */; };
+		29C99E4D1A2C9E02009CEAE2 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E4C1A2C9E02009CEAE2 /* CommentsViewController.swift */; };
+		29C99E4F1A2C9E94009CEAE2 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C99E4E1A2C9E94009CEAE2 /* CommentsViewController.xib */; };
 		29C99E511A2CAD0C009CEAE2 /* CommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C99E501A2CAD0C009CEAE2 /* CommentViewCell.xib */; };
 		29C99E541A2CB02F009CEAE2 /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E531A2CB02F009CEAE2 /* CommentViewCell.swift */; };
 		29F8E49319FE886B000A7CA2 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8E49219FE886B000A7CA2 /* AlertExtension.swift */; };
@@ -101,6 +103,8 @@
 		29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsEntryServiceUtil.swift; sourceTree = "<group>"; };
 		29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLikeCallback.swift; sourceTree = "<group>"; };
 		29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBProgressHUD.swift; sourceTree = "<group>"; };
+		29C99E4C1A2C9E02009CEAE2 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		29C99E4E1A2C9E94009CEAE2 /* CommentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
 		29C99E501A2CAD0C009CEAE2 /* CommentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentViewCell.xib; path = CommentViewCell/CommentViewCell.xib; sourceTree = "<group>"; };
 		29C99E531A2CB02F009CEAE2 /* CommentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentViewCell.swift; path = CommentViewCell/CommentViewCell.swift; sourceTree = "<group>"; };
 		29F8E49219FE886B000A7CA2 /* AlertExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertExtension.swift; path = Extensions/AlertExtension.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 			children = (
 				2901069B1A03FBBF003C0F05 /* AlertViewCell */,
 				29C99E521A2CB012009CEAE2 /* CommentViewCell */,
+				29C99E4C1A2C9E02009CEAE2 /* CommentsViewController.swift */,
+				29C99E4E1A2C9E94009CEAE2 /* CommentsViewController.xib */,
 				2938A55919F6D7AA00A72879 /* MainViewController.swift */,
 				298A45B019FAD6CD00D9AB93 /* MainViewController.xib */,
 			);
@@ -421,6 +427,7 @@
 				290106981A02CDA9003C0F05 /* TextAlertViewCell.xib in Resources */,
 				296160401A237C5700343359 /* PollsAlertViewCell.xib in Resources */,
 				29C99E511A2CAD0C009CEAE2 /* CommentViewCell.xib in Resources */,
+				29C99E4F1A2C9E94009CEAE2 /* CommentsViewController.xib in Resources */,
 				29C6357A19F6DD9600160E35 /* Images.xcassets in Resources */,
 				75B8DE791A0A59D300298092 /* LiferayAlerts-Regular.ttf in Resources */,
 				296160341A23615D00343359 /* PollsChoiceView.xib in Resources */,
@@ -499,6 +506,7 @@
 				296160331A23615D00343359 /* PollsChoiceView.swift in Sources */,
 				75DA6CBE1A1127700078D3EE /* OperatorUtil.swift in Sources */,
 				29841F2419F894ED00A7ADAF /* AddPushNotificationDeviceCallback.swift in Sources */,
+				29C99E4D1A2C9E02009CEAE2 /* CommentsViewController.swift in Sources */,
 				298A459E19F98BFC00D9AB93 /* Alert.swift in Sources */,
 				298A45A919F98CCB00D9AB93 /* Model.xcdatamodeld in Sources */,
 				29841F2619F8950900A7ADAF /* SettingsUtil.swift in Sources */,
