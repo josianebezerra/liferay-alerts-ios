@@ -45,6 +45,8 @@
 		29C99E451A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */; };
 		29C99E471A28BED4009CEAE2 /* AddLikeCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */; };
 		29C99E4B1A29FF07009CEAE2 /* MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */; };
+		29C99E511A2CAD0C009CEAE2 /* CommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C99E501A2CAD0C009CEAE2 /* CommentViewCell.xib */; };
+		29C99E541A2CB02F009CEAE2 /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E531A2CB02F009CEAE2 /* CommentViewCell.swift */; };
 		29F8E49319FE886B000A7CA2 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8E49219FE886B000A7CA2 /* AlertExtension.swift */; };
 		534554EDA6DA97F7571BD665 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9C5F42C056303CBB27D9EE /* libPods.a */; };
 		755E0CF61A1E133300D9E829 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E0CF51A1E133300D9E829 /* UIView.swift */; };
@@ -99,6 +101,8 @@
 		29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsEntryServiceUtil.swift; sourceTree = "<group>"; };
 		29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLikeCallback.swift; sourceTree = "<group>"; };
 		29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBProgressHUD.swift; sourceTree = "<group>"; };
+		29C99E501A2CAD0C009CEAE2 /* CommentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentViewCell.xib; path = CommentViewCell/CommentViewCell.xib; sourceTree = "<group>"; };
+		29C99E531A2CB02F009CEAE2 /* CommentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentViewCell.swift; path = CommentViewCell/CommentViewCell.swift; sourceTree = "<group>"; };
 		29F8E49219FE886B000A7CA2 /* AlertExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertExtension.swift; path = Extensions/AlertExtension.swift; sourceTree = "<group>"; };
 		4B90D4F048190E83E3FB5B14 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		755E0CF51A1E133300D9E829 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Extensions/UIView.swift; sourceTree = "<group>"; };
@@ -181,8 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				2901069B1A03FBBF003C0F05 /* AlertViewCell */,
-				298A45B019FAD6CD00D9AB93 /* MainViewController.xib */,
+				29C99E521A2CB012009CEAE2 /* CommentViewCell */,
 				2938A55919F6D7AA00A72879 /* MainViewController.swift */,
+				298A45B019FAD6CD00D9AB93 /* MainViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -319,6 +324,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		29C99E521A2CB012009CEAE2 /* CommentViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				29C99E531A2CB02F009CEAE2 /* CommentViewCell.swift */,
+				29C99E501A2CAD0C009CEAE2 /* CommentViewCell.xib */,
+			);
+			name = CommentViewCell;
+			sourceTree = "<group>";
+		};
 		75DA6CBF1A11283A0078D3EE /* Card Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +420,7 @@
 			files = (
 				290106981A02CDA9003C0F05 /* TextAlertViewCell.xib in Resources */,
 				296160401A237C5700343359 /* PollsAlertViewCell.xib in Resources */,
+				29C99E511A2CAD0C009CEAE2 /* CommentViewCell.xib in Resources */,
 				29C6357A19F6DD9600160E35 /* Images.xcassets in Resources */,
 				75B8DE791A0A59D300298092 /* LiferayAlerts-Regular.ttf in Resources */,
 				296160341A23615D00343359 /* PollsChoiceView.xib in Resources */,
@@ -472,6 +487,7 @@
 				29841F2219F893EE00A7ADAF /* PushNotificationUtil.swift in Sources */,
 				2917E7CD1A1640290050B757 /* PollsQuestion.swift in Sources */,
 				29C99E451A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift in Sources */,
+				29C99E541A2CB02F009CEAE2 /* CommentViewCell.swift in Sources */,
 				29841F2B19F895E800A7ADAF /* DatabaseHelper.swift in Sources */,
 				2972965B1A25134A00E76429 /* PollsVoteServiceUtil.swift in Sources */,
 				29F8E49319FE886B000A7CA2 /* AlertExtension.swift in Sources */,
