@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsViewController" customModule="LiferayAlerts" customModuleProvider="target">
             <connections>
+                <outlet property="bottomBar" destination="0D3-UW-rfv" id="epo-aa-1wh"/>
+                <outlet property="commentTextField" destination="Eqg-Cs-rVA" id="5se-JI-aUO"/>
+                <outlet property="sendButton" destination="a5i-Tn-3Qc" id="VOK-UV-Gs0"/>
                 <outlet property="tableView" destination="F8W-jf-aQe" id="iOw-Ek-pO4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="R3n-yj-Syc"/>
             </connections>
@@ -23,16 +26,18 @@
                         <outlet property="delegate" destination="-1" id="0oF-Rj-kqT"/>
                     </connections>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-UW-rfv">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-UW-rfv" userLabel="Bottom Bar">
                     <rect key="frame" x="0.0" y="520" width="320" height="48"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eqg-Cs-rVA" userLabel="Comment Text Field">
-                            <rect key="frame" x="8" y="8" width="260" height="32"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <rect key="frame" x="8" y="8" width="240" height="32"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5i-Tn-3Qc" userLabel="Send Button">
-                            <rect key="frame" x="276" y="8" width="36" height="32"/>
+                            <rect key="frame" x="256" y="8" width="56" height="32"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                             <state key="normal" title="Send">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>

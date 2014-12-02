@@ -31,6 +31,8 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 
 		tableView.registerNib(nib, forCellReuseIdentifier: "CommentCellId")
 		tableView.estimatedRowHeight = 44.0
+
+		_initBottomBar()
 	}
 
 	func tableView(tableView: UITableView,
@@ -48,6 +50,36 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		return 1
 	}
 
+	private func _initBottomBar() {
+		bottomBar.backgroundColor = UIColors.COMMENTS_BAR_BACKGROUND
+
+		sendButton.backgroundColor = UIColors.COMMENTS_BAR_SEND_BUTTON
+		sendButton.layer.borderWidth =
+			UIDimensions.COMMENTS_BAR_SEND_BUTTON_BORDER
+
+		sendButton.layer.borderColor =
+			UIColors.COMMENTS_BAR_SEND_BUTTON_BORDER.CGColor
+
+		sendButton.layer.cornerRadius =
+			UIDimensions.COMMENTS_BAR_SEND_BUTTON_RADIUS
+
+		sendButton.setTitleColor(
+			UIColors.COMMENTS_BAR_SEND_BUTTON_TEXT,
+			forState:UIControlState.Normal)
+
+		commentTextField.borderStyle = UITextBorderStyle.None
+		commentTextField.backgroundColor =
+			UIColors.COMMENTS_BAR_INPUT_BACKGROUND
+
+		commentTextField.layer.cornerRadius =
+			UIDimensions.COMMENTS_BAR_INPUT_RADIUS
+
+		commentTextField.textColor = UIColors.COMMENTS_BAR_INPUT_TEXT
+	}
+
+	@IBOutlet var bottomBar: UIView!
+	@IBOutlet var commentTextField: UITextField!
+	@IBOutlet var sendButton: UIButton!
 	@IBOutlet var tableView: UITableView!
 
 }

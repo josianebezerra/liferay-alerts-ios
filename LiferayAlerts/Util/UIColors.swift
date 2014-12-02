@@ -21,7 +21,9 @@ struct UIColors {
 
 	static let DARK_GRAY: UIColor = UIColor(rgb: "233240")
 	static let DARK_GRAY_ALPHA_40: UIColor = UIColor(rgb: "26233240")
+	static let DARK_YELLOW: UIColor = UIColor(rgb: "E4C143")
 	static let WHITE: UIColor = UIColor(rgb:"FFFFFF")
+	static let YELLOW: UIColor = UIColor(rgb: "FBD22A")
 
 	static let CARD_BOTTOM_BAR_TEXT = UIColor(rgb: "66233240")
 	static let CARD_MESSAGE = DARK_GRAY
@@ -31,17 +33,24 @@ struct UIColors {
 	static let COMMENT_TEXT = DARK_GRAY
 	static let COMMENT_DATE = DARK_GRAY_ALPHA_40
 
+	static let COMMENTS_BAR_BACKGROUND = UIColor(rgb: "E9EAEC")
+	static let COMMENTS_BAR_INPUT_BACKGROUND = WHITE
+	static let COMMENTS_BAR_INPUT_TEXT = UIColors.DARK_GRAY
+	static let COMMENTS_BAR_SEND_BUTTON = YELLOW
+	static let COMMENTS_BAR_SEND_BUTTON_BORDER = DARK_YELLOW
+	static let COMMENTS_BAR_SEND_BUTTON_TEXT = WHITE
+
 	static let POLLS_CARD_CHOICE_BACKGROUND_1 = UIColor(rgb: "FFBF1F")
 	static let POLLS_CARD_CHOICE_BACKGROUND_2 = UIColor(rgb: "FCD435")
 	static let POLLS_CARD_CHOICE_SWITCH_OFF = UIColor(rgb: "4DFFFFFF")
 	static let POLLS_CARD_CHOICE_TEXT = WHITE
 
-	static let TOP_BAR_BACKGROUND = UIColor(rgb:"FBD22A")
+	static let TOP_BAR_BACKGROUND = YELLOW
 	static let TOP_BAR_BACKGROUND_CENTER = UIColor(rgb:"FFD12B")
-	static let TOP_BAR_DIVIDER = UIColor(rgb:"E4C143")
+	static let TOP_BAR_DIVIDER = DARK_YELLOW
 	static let TOP_BAR_LAST_ALERT: UIColor = UIColor(rgb:"B29734")
 	static let TOP_BAR_USER_NAME: UIColor = WHITE
-	static let TOP_BAR_USER_NAME_SHADOW: UIColor = UIColor(rgb:"E4C143")
+	static let TOP_BAR_USER_NAME_SHADOW: UIColor = DARK_YELLOW
 	static let VERTICAL_LINE_COLOR: UIColor = DARK_GRAY_ALPHA_40
 
 }
