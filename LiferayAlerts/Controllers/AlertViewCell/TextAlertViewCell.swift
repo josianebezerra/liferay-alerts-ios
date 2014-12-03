@@ -18,11 +18,6 @@
  */
 class TextAlertViewCell: BaseAlertViewCell {
 
-	override func awakeFromNib() {
-		_setRadius(portraitImageView)
-		_setRadius(typeBadge)
-	}
-
 	override func prepareForReuse() {
 		for view in cardViewContainer.subviews {
 			view.removeFromSuperview()
@@ -50,20 +45,12 @@ class TextAlertViewCell: BaseAlertViewCell {
 		let portraitURL = LRPortraitUtil.getPortraitURL(session, male: true,
 			portraitId: user.portraitId.longLongValue, uuid: user.uuid)
 
-		let URL = NSURL(string: portraitURL)
+		let URL: NSURL = NSURL(string: portraitURL)!
 
-		portraitImageView.sd_setImageWithURL(URL)
-	}
-
-	private func _setRadius(view: UIView) {
-		let radius = view.frame.size.width / 2
-
-		view.layer.cornerRadius = radius
-		view.clipsToBounds = true
+		portraitView.setPortraitURL(URL)
 	}
 
 	@IBOutlet var cardViewContainer: UIView!
-	@IBOutlet var portraitImageView: UIImageView!
-	@IBOutlet var typeBadge: UIView!
+	@IBOutlet var portraitView: PortraitView!
 
 }

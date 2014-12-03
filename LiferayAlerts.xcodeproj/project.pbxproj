@@ -39,6 +39,8 @@
 		298A45B119FAD6CD00D9AB93 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 298A45B019FAD6CD00D9AB93 /* MainViewController.xib */; };
 		299129FA1A1651A700E3CBF1 /* PollsChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299129F91A1651A700E3CBF1 /* PollsChoice.swift */; };
 		2999F2BC1A001A1000456701 /* GradientUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999F2BB1A001A1000456701 /* GradientUtil.swift */; };
+		29B7FDCA1A2E52F800011E50 /* PortraitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7FDC91A2E52F800011E50 /* PortraitView.swift */; };
+		29B7FDCC1A2E530B00011E50 /* PortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B7FDCB1A2E530B00011E50 /* PortraitView.xib */; };
 		29C6357A19F6DD9600160E35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C6357919F6DD9600160E35 /* Images.xcassets */; };
 		29C6357E19F6DDEE00160E35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C6357D19F6DDEE00160E35 /* LaunchScreen.xib */; };
 		29C99E431A28BB12009CEAE2 /* PushNotificationServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E421A28BB12009CEAE2 /* PushNotificationServiceUtil.swift */; };
@@ -97,6 +99,8 @@
 		298A45B019FAD6CD00D9AB93 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		299129F91A1651A700E3CBF1 /* PollsChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollsChoice.swift; sourceTree = "<group>"; };
 		2999F2BB1A001A1000456701 /* GradientUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientUtil.swift; sourceTree = "<group>"; };
+		29B7FDC91A2E52F800011E50 /* PortraitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortraitView.swift; path = PortraitView/PortraitView.swift; sourceTree = "<group>"; };
+		29B7FDCB1A2E530B00011E50 /* PortraitView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PortraitView.xib; path = PortraitView/PortraitView.xib; sourceTree = "<group>"; };
 		29C6357919F6DD9600160E35 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Assets/Images.xcassets; sourceTree = "<group>"; };
 		29C6357D19F6DDEE00160E35 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		29C99E421A28BB12009CEAE2 /* PushNotificationServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationServiceUtil.swift; sourceTree = "<group>"; };
@@ -311,6 +315,15 @@
 			name = Alert;
 			sourceTree = "<group>";
 		};
+		29B7FDCD1A2E5FD500011E50 /* PortraitView */ = {
+			isa = PBXGroup;
+			children = (
+				29B7FDC91A2E52F800011E50 /* PortraitView.swift */,
+				29B7FDCB1A2E530B00011E50 /* PortraitView.xib */,
+			);
+			name = PortraitView;
+			sourceTree = "<group>";
+		};
 		29C6357B19F6DD9D00160E35 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +338,7 @@
 			children = (
 				75DA6CBF1A11283A0078D3EE /* Card Views */,
 				297AD9561A23A980006CF823 /* Polls */,
+				29B7FDCD1A2E5FD500011E50 /* PortraitView */,
 				29C6357D19F6DDEE00160E35 /* LaunchScreen.xib */,
 			);
 			path = Views;
@@ -435,6 +449,7 @@
 				29C6357E19F6DDEE00160E35 /* LaunchScreen.xib in Resources */,
 				297550C019F6DC7400E3F550 /* Info.plist in Resources */,
 				298A45B119FAD6CD00D9AB93 /* MainViewController.xib in Resources */,
+				29B7FDCC1A2E530B00011E50 /* PortraitView.xib in Resources */,
 				75B8DE7F1A0AB6AC00298092 /* TextCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +507,7 @@
 				29C99E4B1A29FF07009CEAE2 /* MBProgressHUD.swift in Sources */,
 				2938A56C19F6D7AA00A72879 /* MainViewController.swift in Sources */,
 				29841F2219F893EE00A7ADAF /* PushNotificationUtil.swift in Sources */,
+				29B7FDCA1A2E52F800011E50 /* PortraitView.swift in Sources */,
 				2917E7CD1A1640290050B757 /* PollsQuestion.swift in Sources */,
 				29C99E451A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift in Sources */,
 				29C99E541A2CB02F009CEAE2 /* CommentViewCell.swift in Sources */,
