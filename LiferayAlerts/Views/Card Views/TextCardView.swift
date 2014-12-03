@@ -26,6 +26,10 @@ class TextCardView: BaseCardView {
 		likeLabel.textColor = UIColors.CARD_BOTTOM_BAR_TEXT
 	}
 
+	@IBAction func commentButtonAction() {
+		NotificationUtil.send("commentButtonClick", data: ["alert": alert!])
+	}
+
 	@IBAction func likeButtonAction(sender: UIButton) {
 		var alertId: Int = self.alert!.getAlertId()
 		var like: Bool = !self.alert!.like

@@ -34,6 +34,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 
 		_initCollectionView()
 		_initTopBar()
+
+		NotificationUtil.register(
+			"commentButtonClick", observer:self,
+			selector: "didCommentButtonClickNotification:")
 	}
 
 	func collectionView(collectionView: UICollectionView,
@@ -51,6 +55,17 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 		numberOfItemsInSection section: Int) -> Int {
 
 		return alerts!.count
+	}
+
+	func didCommentButtonClickNotification(
+		notification: NSNotification) {
+
+		var values: [NSObject: AnyObject] = notification.userInfo!
+		var alert: Alert = values["alert"] as Alert
+
+		presentViewController(
+			CommentsViewController(alert:alert), animated: true,
+			completion: nil)
 	}
 
 	private func _initCollectionView() {

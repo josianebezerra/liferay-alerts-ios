@@ -33,15 +33,7 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 
 		tableView.registerNib(nib, forCellReuseIdentifier: "CommentCellId")
 		tableView.estimatedRowHeight = 44.0
-
-		nib = UINib(nibName: "CommentsHeaderView", bundle: NSBundle.mainBundle())
-
-		var view: CommentsHeaderView? =
-			nib.instantiateWithOwner(nil, options: nil)[0] as? CommentsHeaderView
-
-		view!.setAlert(alert!)
-
-		tableView.tableHeaderView = view
+		tableView.tableHeaderView = _getCommentsHeaderView()
 
 		_initBottomBar()
 	}
@@ -59,6 +51,18 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
 		return 1
+	}
+
+	private func _getCommentsHeaderView() -> CommentsHeaderView {
+		var nib: UINib = UINib(
+			nibName: "CommentsHeaderView", bundle: NSBundle.mainBundle())
+
+		var view: CommentsHeaderView = nib.instantiateWithOwner(
+			nil, options: nil)[0] as CommentsHeaderView
+
+		view.setAlert(alert!)
+
+		return view
 	}
 
 	private func _initBottomBar() {
