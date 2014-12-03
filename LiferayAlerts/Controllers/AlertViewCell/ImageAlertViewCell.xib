@@ -30,7 +30,7 @@
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cU4-co-Krq" userLabel="Overlay">
                                 <rect key="frame" x="0.0" y="0.0" width="469" height="205"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tb2-To-xuj">
                                 <rect key="frame" x="0.0" y="0.0" width="469" height="205"/>
@@ -41,7 +41,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="nKL-ZJ-u2f" secondAttribute="centerY" id="0dV-lT-fnF"/>
                             <constraint firstAttribute="height" constant="205" id="6DP-ga-aeh"/>
@@ -91,7 +91,7 @@
             <size key="customSize" width="469" height="373"/>
             <connections>
                 <outlet property="backgroundImageView" destination="nKL-ZJ-u2f" id="IF5-a2-l7f"/>
-                <outlet property="imageContainerView" destination="toE-sv-gtr" id="FRc-FT-b3S"/>
+                <outlet property="imageContainer" destination="nKL-ZJ-u2f" id="RcF-jB-JC9"/>
                 <outlet property="imageGradient" destination="R7T-SR-WxB" id="XXm-Le-2hC"/>
                 <outlet property="imageView" destination="tb2-To-xuj" id="mLT-Zd-Rcw"/>
                 <outlet property="nameLabel" destination="n3h-V8-rUa" id="jfq-5E-viB"/>

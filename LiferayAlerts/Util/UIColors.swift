@@ -34,6 +34,9 @@ struct UIColors {
 	static let COMMENT_DATE: UIColor = DARK_GRAY_ALPHA_40
 	static let COMMENT_USER_NAME: UIColor = UIColor(rgb: "EBC631")
 
+	static let IMAGE_CARD_GRADIENT = UIColor(rgb: "33000000")
+	static let IMAGE_CARD_GRADIENT_CENTER = UIColor(rgb: "00000000")
+
 	static let COMMENTS_BAR_BACKGROUND: UIColor = UIColor(rgb: "E9EAEC")
 	static let COMMENTS_BAR_INPUT_BACKGROUND: UIColor = WHITE
 	static let COMMENTS_BAR_INPUT_TEXT: UIColor = UIColors.DARK_GRAY

@@ -19,6 +19,35 @@ import UIKit
 */
 class ImageAlertViewCell: BaseAlertViewCell {
 
+	override func setAlert(alert: Alert) {
+		super.setAlert(alert)
+
+		nameLabel.text = alert.user.fullName
+		textCardView.leftArrow = false
+		textCardView.setAlert(alert)
+
+		self._setGradient()
+
+		self.layoutIfNeeded()
+	}
+
+	func _setGradient() {
+		var colors: [CGColor] = [
+			(UIColors.IMAGE_CARD_GRADIENT).CGColor,
+			(UIColors.IMAGE_CARD_GRADIENT_CENTER).CGColor,
+			(UIColors.IMAGE_CARD_GRADIENT).CGColor
+		]
+
+		var frame: CGRect = imageGradient.bounds
+		var startPoint: CGPoint = CGPointMake(0.5, 0.0)
+		var endPoint: CGPoint = CGPointMake(0.5, 1.0)
+
+		var gradient = GradientUtil .createGradient(colors, frame: frame,
+			startPoint: startPoint, endPoint: endPoint)
+
+		imageGradient.layer.addSublayer(gradient)
+	}
+
 	@IBOutlet weak var backgroundImageView: UIImageView!
 	@IBOutlet weak var imageContainer: UIView!
 	@IBOutlet weak var imageGradient: UIView!
