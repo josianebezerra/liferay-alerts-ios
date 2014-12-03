@@ -10,6 +10,7 @@
                 <outlet property="commentTextField" destination="Eqg-Cs-rVA" id="5se-JI-aUO"/>
                 <outlet property="sendButton" destination="a5i-Tn-3Qc" id="VOK-UV-Gs0"/>
                 <outlet property="tableView" destination="F8W-jf-aQe" id="iOw-Ek-pO4"/>
+                <outlet property="topBar" destination="0lY-dF-OUq" id="V3e-f5-79s"/>
                 <outlet property="view" destination="iN0-l3-epB" id="R3n-yj-Syc"/>
             </connections>
         </placeholder>

@@ -33,6 +33,7 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 
 		tableView.registerNib(nib, forCellReuseIdentifier: "CommentCellId")
 		tableView.estimatedRowHeight = 44.0
+		tableView.contentInset.top = topBar.frame.size.height
 		tableView.tableHeaderView = _getCommentsHeaderView()
 
 		_initBottomBar()
@@ -98,5 +99,6 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 	@IBOutlet var commentTextField: UITextField!
 	@IBOutlet var sendButton: UIButton!
 	@IBOutlet var tableView: UITableView!
+	@IBOutlet var topBar: UIView!
 
 }
