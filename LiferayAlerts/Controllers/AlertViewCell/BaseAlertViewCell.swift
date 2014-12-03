@@ -21,20 +21,20 @@ class BaseAlertViewCell: UICollectionViewCell {
 		attributes: UICollectionViewLayoutAttributes)
 		-> UICollectionViewLayoutAttributes! {
 
-			return super.preferredLayoutAttributesFittingAttributes(attributes)
+		return super.preferredLayoutAttributesFittingAttributes(attributes)
 	}
 
 	override func systemLayoutSizeFittingSize(targetSize: CGSize,
 		withHorizontalFittingPriority horizontalPriority: UILayoutPriority,
 		verticalFittingPriority: UILayoutPriority) -> CGSize {
 
-			let horizontalPriority = UIDimensions.ALERT_HORIZONTAL_FITTING_PRIORITY
+		let horizontalPriority = UIDimensions.ALERT_HORIZONTAL_FITTING_PRIORITY
 
-			let size =  super.systemLayoutSizeFittingSize(targetSize,
-				withHorizontalFittingPriority: horizontalPriority,
-				verticalFittingPriority: verticalFittingPriority)
+		let size =  super.systemLayoutSizeFittingSize(targetSize,
+			withHorizontalFittingPriority: horizontalPriority,
+			verticalFittingPriority: verticalFittingPriority)
 
-			return size
+		return size
 	}
 
 	func setAlert(alert: Alert) {
