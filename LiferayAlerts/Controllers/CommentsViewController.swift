@@ -18,8 +18,10 @@
 class CommentsViewController: UIViewController, UITableViewDataSource,
 	UITableViewDelegate {
 
-	override init() {
+	init(alert: Alert) {
 		super.init(nibName:"CommentsViewController", bundle:nil)
+
+		self.alert = alert
 	}
 
 	required init(coder: NSCoder) {
@@ -31,6 +33,15 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 
 		tableView.registerNib(nib, forCellReuseIdentifier: "CommentCellId")
 		tableView.estimatedRowHeight = 44.0
+
+		nib = UINib(nibName: "CommentsHeaderView", bundle: NSBundle.mainBundle())
+
+		var view: CommentsHeaderView? =
+			nib.instantiateWithOwner(nil, options: nil)[0] as? CommentsHeaderView
+
+		view!.setAlert(alert!)
+
+		tableView.tableHeaderView = view
 
 		_initBottomBar()
 	}
@@ -76,6 +87,8 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 
 		commentTextField.textColor = UIColors.COMMENTS_BAR_INPUT_TEXT
 	}
+
+	var alert: Alert?
 
 	@IBOutlet var bottomBar: UIView!
 	@IBOutlet var commentTextField: UITextField!

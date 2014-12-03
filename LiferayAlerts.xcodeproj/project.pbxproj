@@ -41,6 +41,8 @@
 		2999F2BC1A001A1000456701 /* GradientUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999F2BB1A001A1000456701 /* GradientUtil.swift */; };
 		29B7FDCA1A2E52F800011E50 /* PortraitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7FDC91A2E52F800011E50 /* PortraitView.swift */; };
 		29B7FDCC1A2E530B00011E50 /* PortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B7FDCB1A2E530B00011E50 /* PortraitView.xib */; };
+		29B7FDD11A2F46EB00011E50 /* CommentsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7FDD01A2F46EB00011E50 /* CommentsHeaderView.swift */; };
+		29B7FDD31A2F5D9100011E50 /* CommentsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B7FDD21A2F5D9100011E50 /* CommentsHeaderView.xib */; };
 		29C6357A19F6DD9600160E35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C6357919F6DD9600160E35 /* Images.xcassets */; };
 		29C6357E19F6DDEE00160E35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C6357D19F6DDEE00160E35 /* LaunchScreen.xib */; };
 		29C99E431A28BB12009CEAE2 /* PushNotificationServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E421A28BB12009CEAE2 /* PushNotificationServiceUtil.swift */; };
@@ -101,6 +103,8 @@
 		2999F2BB1A001A1000456701 /* GradientUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientUtil.swift; sourceTree = "<group>"; };
 		29B7FDC91A2E52F800011E50 /* PortraitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortraitView.swift; path = PortraitView/PortraitView.swift; sourceTree = "<group>"; };
 		29B7FDCB1A2E530B00011E50 /* PortraitView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PortraitView.xib; path = PortraitView/PortraitView.xib; sourceTree = "<group>"; };
+		29B7FDD01A2F46EB00011E50 /* CommentsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsHeaderView.swift; sourceTree = "<group>"; };
+		29B7FDD21A2F5D9100011E50 /* CommentsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsHeaderView.xib; sourceTree = "<group>"; };
 		29C6357919F6DD9600160E35 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Assets/Images.xcassets; sourceTree = "<group>"; };
 		29C6357D19F6DDEE00160E35 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		29C99E421A28BB12009CEAE2 /* PushNotificationServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationServiceUtil.swift; sourceTree = "<group>"; };
@@ -349,6 +353,8 @@
 			children = (
 				29C99E531A2CB02F009CEAE2 /* CommentViewCell.swift */,
 				29C99E501A2CAD0C009CEAE2 /* CommentViewCell.xib */,
+				29B7FDD01A2F46EB00011E50 /* CommentsHeaderView.swift */,
+				29B7FDD21A2F5D9100011E50 /* CommentsHeaderView.xib */,
 			);
 			name = CommentViewCell;
 			sourceTree = "<group>";
@@ -447,6 +453,7 @@
 				296160341A23615D00343359 /* PollsChoiceView.xib in Resources */,
 				294457EB1A2674F2007ECCC4 /* Localizable.strings in Resources */,
 				29C6357E19F6DDEE00160E35 /* LaunchScreen.xib in Resources */,
+				29B7FDD31A2F5D9100011E50 /* CommentsHeaderView.xib in Resources */,
 				297550C019F6DC7400E3F550 /* Info.plist in Resources */,
 				298A45B119FAD6CD00D9AB93 /* MainViewController.xib in Resources */,
 				29B7FDCC1A2E530B00011E50 /* PortraitView.xib in Resources */,
@@ -502,6 +509,7 @@
 				296ADD071A24B79F0099FA0F /* AddVoteCallback.swift in Sources */,
 				2901069A1A02CE0B003C0F05 /* TextAlertViewCell.swift in Sources */,
 				755E0CF61A1E133300D9E829 /* UIView.swift in Sources */,
+				29B7FDD11A2F46EB00011E50 /* CommentsHeaderView.swift in Sources */,
 				2901DB7119FEDCB200E25788 /* UIColor.swift in Sources */,
 				299129FA1A1651A700E3CBF1 /* PollsChoice.swift in Sources */,
 				29C99E4B1A29FF07009CEAE2 /* MBProgressHUD.swift in Sources */,
