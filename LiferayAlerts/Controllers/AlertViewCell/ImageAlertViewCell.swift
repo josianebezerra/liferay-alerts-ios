@@ -19,4 +19,12 @@ import UIKit
 */
 class ImageAlertViewCell: BaseAlertViewCell {
 
+	@IBOutlet weak var backgroundImageView: UIImageView!
+	@IBOutlet weak var imageContainer: UIView!
+	@IBOutlet weak var imageGradient: UIView!
+	@IBOutlet weak var imageView: UIImageView!
+	@IBOutlet weak var nameLabel: UILabel!
+	@IBOutlet weak var overlayView: UIView!
+	@IBOutlet weak var textCardView: TextCardView!
+
 }
