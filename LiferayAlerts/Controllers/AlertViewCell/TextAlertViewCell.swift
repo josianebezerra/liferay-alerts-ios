@@ -18,25 +18,14 @@
  */
 class TextAlertViewCell: BaseAlertViewCell {
 
-	override func prepareForReuse() {
-		for view in cardViewContainer.subviews {
-			view.removeFromSuperview()
-		}
-	}
-
 	override func setAlert(alert: Alert) {
 		super.setAlert(alert)
 
-		var cardView: TextCardView = TextCardView.loadFromNib("TextCardView")!
-
-		cardView.setAlert(alert)
-		cardViewContainer.addSubview(cardView)
-		cardView.setTranslatesAutoresizingMaskIntoConstraints(false)
-		cardView.setFrameConstraints(equalsToView: cardViewContainer)
+		textCardView.setAlert(alert)
 
 		self.layoutIfNeeded()
 	}
 
-	@IBOutlet var cardViewContainer: UIView!
+	@IBOutlet var textCardView: TextCardView!
 
 }

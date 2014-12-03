@@ -14,6 +14,7 @@
 
 /**
  * @author Silvio Santos
+ * @author Josiane Bzerra
  */
 class TextCardView: BaseCardView {
 
@@ -24,6 +25,20 @@ class TextCardView: BaseCardView {
 	override func awakeFromNib() {
 		commentLabel.textColor = UIColors.CARD_BOTTOM_BAR_TEXT
 		likeLabel.textColor = UIColors.CARD_BOTTOM_BAR_TEXT
+	}
+
+	override init(coder: NSCoder) {
+		super.init(coder: coder)
+
+		containerView = NSBundle.mainBundle().loadNibNamed("TextCardView",
+			owner: self, options: nil)[0] as UIView
+
+		self.addSubview(containerView)
+
+		containerView.setTranslatesAutoresizingMaskIntoConstraints(false)
+		containerView.setFrameConstraints(equalsToView: self)
+
+		self.layoutIfNeeded()
 	}
 
 	@IBAction func commentButtonAction() {
@@ -108,7 +123,9 @@ class TextCardView: BaseCardView {
 	var alert: Alert?
 
 	@IBOutlet var commentLabel: UILabel!
+	@IBOutlet var containerView: UIView!
 	@IBOutlet var likeButton: UIButton!
 	@IBOutlet var likeLabel: UILabel!
 	@IBOutlet var messageTextView: UITextView!
+
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="744" height="201"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQ9-Lp-Y6G" userLabel="Card View Container">
+                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQ9-Lp-Y6G" customClass="TextCardView" customModule="LiferayAlerts" customModuleProvider="target">
                         <rect key="frame" x="69" y="13" width="662" height="188"/>
                     </view>
                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="59" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="wIA-ZL-Gzd" customClass="PortraitView" customModule="LiferayAlerts" customModuleProvider="target">
@@ -45,8 +45,8 @@
             </constraints>
             <size key="customSize" width="744" height="201"/>
             <connections>
-                <outlet property="cardViewContainer" destination="yQ9-Lp-Y6G" id="Fy4-di-uY4"/>
                 <outlet property="portraitView" destination="wIA-ZL-Gzd" id="VaK-Hh-b6x"/>
+                <outlet property="textCardView" destination="yQ9-Lp-Y6G" id="KYr-yP-dQ5"/>
             </connections>
             <point key="canvasLocation" x="406" y="239.5"/>
         </collectionViewCell>
