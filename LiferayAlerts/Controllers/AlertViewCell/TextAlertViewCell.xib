@@ -44,7 +44,7 @@
             <size key="customSize" width="744" height="201"/>
             <connections>
                 <outlet property="cardViewContainer" destination="yQ9-Lp-Y6G" id="Fy4-di-uY4"/>
-                <outlet property="portraitView" destination="wIA-ZL-Gzd" id="q6p-GZ-X8c"/>
+                <outlet property="portraitView" destination="wIA-ZL-Gzd" id="VaK-Hh-b6x"/>
             </connections>
             <point key="canvasLocation" x="406" y="239.5"/>
         </collectionViewCell>

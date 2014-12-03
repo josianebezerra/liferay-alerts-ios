@@ -27,8 +27,6 @@ class TextAlertViewCell: BaseAlertViewCell {
 	override func setAlert(alert: Alert) {
 		super.setAlert(alert)
 
-		_setPortrait(alert.user)
-
 		var cardView: TextCardView = TextCardView.loadFromNib("TextCardView")!
 
 		cardView.setAlert(alert)
@@ -39,18 +37,6 @@ class TextAlertViewCell: BaseAlertViewCell {
 		self.layoutIfNeeded()
 	}
 
-	private func _setPortrait(user: User) {
-		let session = LRSession(server: SettingsUtil.getServer())
-
-		let portraitURL = LRPortraitUtil.getPortraitURL(session, male: true,
-			portraitId: user.portraitId.longLongValue, uuid: user.uuid)
-
-		let URL: NSURL = NSURL(string: portraitURL)!
-
-		portraitView.setPortraitURL(URL)
-	}
-
 	@IBOutlet var cardViewContainer: UIView!
-	@IBOutlet var portraitView: PortraitView!
 
 }

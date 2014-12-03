@@ -13,6 +13,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="569" height="540"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="59" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="IGN-s1-jOH" userLabel="Portrait View" customClass="PortraitView" customModule="LiferayAlerts" customModuleProvider="target">
+                        <rect key="frame" x="13" y="5" width="59" height="64"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0m5-xu-h3O" customClass="PollsChoiceContainerView" customModule="LiferayAlerts" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="73" width="569" height="467"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,6 +38,7 @@
             </view>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="IGN-s1-jOH" firstAttribute="top" secondItem="VDG-Pg-xWF" secondAttribute="top" constant="5" id="3wJ-zA-4wu"/>
                 <constraint firstAttribute="bottom" secondItem="0m5-xu-h3O" secondAttribute="bottom" id="BcH-3s-abo"/>
                 <constraint firstItem="bZ8-kz-Pcq" firstAttribute="leading" secondItem="VDG-Pg-xWF" secondAttribute="leading" constant="80" id="OIN-jx-A8D"/>
                 <constraint firstItem="bZ8-kz-Pcq" firstAttribute="top" secondItem="VDG-Pg-xWF" secondAttribute="top" constant="20" id="SNA-Ip-Xrr"/>
@@ -41,6 +46,7 @@
                 <constraint firstItem="0m5-xu-h3O" firstAttribute="leading" secondItem="VDG-Pg-xWF" secondAttribute="leading" id="Yv4-kB-NZD"/>
                 <constraint firstItem="0m5-xu-h3O" firstAttribute="top" secondItem="WHu-r5-Ek7" secondAttribute="bottom" constant="10" id="btd-Af-2x1"/>
                 <constraint firstItem="WHu-r5-Ek7" firstAttribute="leading" secondItem="VDG-Pg-xWF" secondAttribute="leading" constant="80" id="lBY-MG-aqN"/>
+                <constraint firstItem="IGN-s1-jOH" firstAttribute="leading" secondItem="VDG-Pg-xWF" secondAttribute="leading" constant="13" id="miQ-wj-P0e"/>
                 <constraint firstItem="WHu-r5-Ek7" firstAttribute="top" secondItem="bZ8-kz-Pcq" secondAttribute="bottom" constant="10" id="wJO-WO-OEz"/>
                 <constraint firstAttribute="trailing" secondItem="0m5-xu-h3O" secondAttribute="trailing" id="zhY-db-CNR"/>
             </constraints>
@@ -48,6 +54,7 @@
             <connections>
                 <outlet property="nameLabel" destination="bZ8-kz-Pcq" id="FZe-Pf-Fex"/>
                 <outlet property="pollsChoiceContainerView" destination="0m5-xu-h3O" id="HFt-cJ-vzz"/>
+                <outlet property="portraitView" destination="IGN-s1-jOH" id="cOM-NU-cgY"/>
                 <outlet property="questionLabel" destination="WHu-r5-Ek7" id="4a0-69-Ksi"/>
             </connections>
             <point key="canvasLocation" x="340.5" y="178"/>
