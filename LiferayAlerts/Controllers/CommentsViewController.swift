@@ -37,6 +37,7 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		tableView.tableHeaderView = _getCommentsHeaderView()
 
 		_initBottomBar()
+		_initTopBar()
 	}
 
 	func tableView(tableView: UITableView,
@@ -91,6 +92,16 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 			UIDimensions.COMMENTS_BAR_INPUT_RADIUS
 
 		commentTextField.textColor = UIColors.COMMENTS_BAR_INPUT_TEXT
+	}
+
+	private func _initTopBar() {
+		var colors: [CGColor] = [
+			(UIColors.TOP_BAR_BACKGROUND).CGColor,
+			(UIColors.TOP_BAR_BACKGROUND_CENTER).CGColor,
+			(UIColors.TOP_BAR_BACKGROUND).CGColor
+		]
+
+		GradientUtil.setGradientBackground(topBar, colors:colors)
 	}
 
 	var alert: Alert?

@@ -118,14 +118,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 			(UIColors.TOP_BAR_BACKGROUND).CGColor
 		]
 
-		var frame: CGRect = topBar!.frame
-		var startPoint: CGPoint = CGPointMake(0, 0.5)
-		var endPoint: CGPoint = CGPointMake(1, 0.5)
-
-		var gradient: CAGradientLayer = GradientUtil.createGradient(
-			colors, frame:frame, startPoint:startPoint, endPoint:endPoint)
-
-		topBar.layer.insertSublayer(gradient, atIndex:0)
+		GradientUtil.setGradientBackground(topBar, colors:colors)
 	}
 
 	var alerts: [Alert]?

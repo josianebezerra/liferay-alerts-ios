@@ -31,4 +31,15 @@ class GradientUtil {
 		return gradient
 	}
 
+	class func setGradientBackground(view: UIView, colors: [CGColor]) {
+		var frame: CGRect = view.frame
+		var startPoint: CGPoint = CGPointMake(0, 0.5)
+		var endPoint: CGPoint = CGPointMake(1, 0.5)
+
+		var gradient: CAGradientLayer = createGradient(
+			colors, frame:frame, startPoint:startPoint, endPoint:endPoint)
+
+		view.layer.insertSublayer(gradient, atIndex:0)
+	}
+
 }
