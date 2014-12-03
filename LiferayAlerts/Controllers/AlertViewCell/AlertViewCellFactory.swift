@@ -25,6 +25,8 @@ class AlertViewCellFactory {
 		var type: AlertType = alert.getType()!
 
 		switch (type) {
+			case .IMAGE:
+				id = "ImageAlertViewCellId"
 			case .POLLS:
 				id = "PollsAlertViewCellId"
 			default:
@@ -44,6 +46,10 @@ class AlertViewCellFactory {
 		var nib: UINib = UINib(nibName: "TextAlertViewCell", bundle:nil)
 		collectionView.registerNib(
 			nib, forCellWithReuseIdentifier: "TextAlertViewCellId")
+
+		nib = UINib(nibName: "ImageAlertViewCell", bundle: nil)
+		collectionView.registerNib(
+			nib, forCellWithReuseIdentifier: "ImageAlertViewCellId")
 
 		nib = UINib(nibName: "PollsAlertViewCell", bundle:nil)
 		collectionView.registerNib(
