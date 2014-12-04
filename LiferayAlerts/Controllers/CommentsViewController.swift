@@ -29,14 +29,8 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 	}
 
 	override func viewDidLoad() {
-		var nib: UINib = UINib(nibName: "CommentViewCell", bundle:nil)
-
-		tableView.registerNib(nib, forCellReuseIdentifier: "CommentCellId")
-		tableView.estimatedRowHeight = 44.0
-		tableView.contentInset.top = topBar.frame.size.height
-		tableView.tableHeaderView = _getCommentsHeaderView()
-
 		_initBottomBar()
+		_initTableView()
 		_initTopBar()
 	}
 
@@ -92,6 +86,15 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 			UIDimensions.COMMENTS_BAR_INPUT_RADIUS
 
 		commentTextField.textColor = UIColors.COMMENTS_BAR_INPUT_TEXT
+	}
+
+	private func _initTableView() {
+		var nib: UINib = UINib(nibName: "CommentViewCell", bundle:nil)
+
+		tableView.registerNib(nib, forCellReuseIdentifier: "CommentCellId")
+		tableView.estimatedRowHeight = 44.0
+		tableView.contentInset.top = topBar.frame.size.height
+		tableView.tableHeaderView = _getCommentsHeaderView()
 	}
 
 	private func _initTopBar() {
