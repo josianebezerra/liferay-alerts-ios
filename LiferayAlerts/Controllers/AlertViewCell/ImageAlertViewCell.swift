@@ -34,6 +34,8 @@ class ImageAlertViewCell: BaseAlertViewCell {
 
 	func _getImage(alert: Alert) {
 		let URL = NSURL(string: alert.getURL()!)
+		let size = CGSize(width: UIScreen.mainScreen().bounds.width,
+			height: self.imageView.bounds.size.height)
 
 		SDWebImageDownloader.sharedDownloader().downloadImageWithURL(
 			URL, options: SDWebImageDownloaderOptions.UseNSURLCache,
@@ -41,8 +43,25 @@ class ImageAlertViewCell: BaseAlertViewCell {
 				(image: UIImage!, data: NSData!, error: NSError!,finished: Bool)
 					-> Void in
 
-					self.imageView.image = image
+				self._resizeImage(image, size: size)
 			}
+	}
+
+	func _resizeImage(var image: UIImage, size: CGSize) {
+		if (image.size.width > size.width) {
+			let scale = size.width / image.size.width
+
+			let newSize = CGSizeApplyAffineTransform(
+				image.size, CGAffineTransformMakeScale(scale, scale))
+
+			UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
+			image.drawInRect(CGRect(origin: CGPointZero, size: newSize))
+
+			image = UIGraphicsGetImageFromCurrentImageContext()
+			UIGraphicsEndImageContext()
+		}
+
+		self.imageView.image = image
 	}
 
 	func _setGradient() {
