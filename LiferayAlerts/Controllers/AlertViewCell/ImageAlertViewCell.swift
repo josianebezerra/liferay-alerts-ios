@@ -27,8 +27,22 @@ class ImageAlertViewCell: BaseAlertViewCell {
 		textCardView.setAlert(alert)
 
 		self._setGradient()
+		self._getImage(alert)
 
 		self.layoutIfNeeded()
+	}
+
+	func _getImage(alert: Alert) {
+		let URL = NSURL(string: alert.getURL()!)
+
+		SDWebImageDownloader.sharedDownloader().downloadImageWithURL(
+			URL, options: SDWebImageDownloaderOptions.UseNSURLCache,
+			progress: nil) {
+				(image: UIImage!, data: NSData!, error: NSError!,finished: Bool)
+					-> Void in
+
+					self.imageView.image = image
+			}
 	}
 
 	func _setGradient() {
