@@ -51,17 +51,39 @@ class ImageAlertViewCell: BaseAlertViewCell {
 		if (image.size.width > size.width) {
 			let scale = size.width / image.size.width
 
-			let newSize = CGSizeApplyAffineTransform(
-				image.size, CGAffineTransformMakeScale(scale, scale))
+			image = self._scale(image, scale: scale)
+		}
 
-			UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
-			image.drawInRect(CGRect(origin: CGPointZero, size: newSize))
+		if ((image.size.width < size.width) ||
+			(image.size.height < size.height)) {
 
-			image = UIGraphicsGetImageFromCurrentImageContext()
-			UIGraphicsEndImageContext()
+			self._setBackground(image, size: size)
 		}
 
 		self.imageView.image = image
+	}
+
+	func _scale(var image: UIImage, scale: CGFloat) -> UIImage {
+		let newSize = CGSizeApplyAffineTransform(
+			image.size, CGAffineTransformMakeScale(scale, scale))
+
+		UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
+		image.drawInRect(CGRect(origin: CGPointZero, size: newSize))
+
+		image = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+
+		return image
+	}
+
+	func _setBackground(image: UIImage, size: CGSize) {
+		let widthScale =  size.width / image.size.width
+		let heightScale = size.height / image.size.height
+
+		let scale = max(widthScale, heightScale)
+		let backgroundImage = self._scale(image, scale: scale)
+
+		self.backgroundImageView.image = backgroundImage
 	}
 
 	func _setGradient() {
