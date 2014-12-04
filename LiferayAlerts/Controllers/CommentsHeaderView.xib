@@ -31,11 +31,21 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3w-It-9Vb" userLabel="Divider">
+                    <rect key="frame" x="0.0" y="187" width="600" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="npD-dO-xwG"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="dTu-zJ-nOH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="Djm-TX-dgU"/>
+                <constraint firstAttribute="bottom" secondItem="S3w-It-9Vb" secondAttribute="bottom" id="PFg-4h-BNj"/>
+                <constraint firstAttribute="trailing" secondItem="S3w-It-9Vb" secondAttribute="trailing" id="WTT-Np-d4b"/>
                 <constraint firstItem="PBk-9t-VQd" firstAttribute="leading" secondItem="RKE-1e-mHR" secondAttribute="leading" id="WxQ-At-Etb"/>
+                <constraint firstItem="S3w-It-9Vb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XYg-hh-s4Q"/>
                 <constraint firstAttribute="trailing" secondItem="PBk-9t-VQd" secondAttribute="trailing" constant="5" id="d0a-78-VNx"/>
                 <constraint firstItem="PBk-9t-VQd" firstAttribute="leading" secondItem="dTu-zJ-nOH" secondAttribute="trailing" constant="7" id="djc-cE-AXh"/>
                 <constraint firstItem="RKE-1e-mHR" firstAttribute="top" secondItem="PBk-9t-VQd" secondAttribute="bottom" constant="4" id="eMA-7q-rCQ"/>
@@ -46,6 +56,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="divider" destination="S3w-It-9Vb" id="2QQ-3E-5UY"/>
                 <outlet property="messageTextView" destination="RKE-1e-mHR" id="RZi-Cm-0Z9"/>
                 <outlet property="userNameLabel" destination="PBk-9t-VQd" id="veo-NH-zS4"/>
             </connections>

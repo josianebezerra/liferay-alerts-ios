@@ -33,14 +33,24 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXe-p2-Eu6" userLabel="Divider">
+                        <rect key="frame" x="0.0" y="84" width="437" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Hym-J6-Xe5"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="topMargin" secondItem="NUD-J1-Z2O" secondAttribute="top" constant="-10" id="0cu-o1-2BQ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="t3C-Yo-vdq" secondAttribute="bottom" constant="10" id="Aqp-Fd-Rqh"/>
+                    <constraint firstAttribute="bottom" secondItem="hXe-p2-Eu6" secondAttribute="bottom" id="C4Y-At-bkD"/>
                     <constraint firstItem="t3C-Yo-vdq" firstAttribute="trailing" secondItem="upG-85-3Cq" secondAttribute="trailing" constant="-8" id="MrS-lf-da3"/>
                     <constraint firstItem="dei-cB-vbI" firstAttribute="top" secondItem="upG-85-3Cq" secondAttribute="top" constant="8" id="NBN-aI-U2B"/>
+                    <constraint firstItem="hXe-p2-Eu6" firstAttribute="leading" secondItem="upG-85-3Cq" secondAttribute="leading" id="TRG-iR-L2H"/>
                     <constraint firstItem="t3C-Yo-vdq" firstAttribute="leading" secondItem="NUD-J1-Z2O" secondAttribute="leading" id="X25-d1-Fzd"/>
                     <constraint firstItem="NUD-J1-Z2O" firstAttribute="leading" secondItem="dei-cB-vbI" secondAttribute="trailing" constant="4" id="ZtQ-ov-y0a"/>
+                    <constraint firstAttribute="trailing" secondItem="hXe-p2-Eu6" secondAttribute="trailing" id="d4u-at-IGg"/>
                     <constraint firstItem="dei-cB-vbI" firstAttribute="leading" secondItem="upG-85-3Cq" secondAttribute="leading" constant="13" id="gug-YG-KEN"/>
                     <constraint firstItem="NUD-J1-Z2O" firstAttribute="bottom" secondItem="t3C-Yo-vdq" secondAttribute="top" constant="-5" id="hwR-gO-I3V"/>
                     <constraint firstItem="NUD-J1-Z2O" firstAttribute="trailing" secondItem="upG-85-3Cq" secondAttribute="trailing" constant="-8" id="vlC-MX-Y9I"/>
@@ -49,6 +59,7 @@
             <connections>
                 <outlet property="commentLabel" destination="NUD-J1-Z2O" id="6iV-2z-pl1"/>
                 <outlet property="dateLabel" destination="t3C-Yo-vdq" id="q7e-ld-fyX"/>
+                <outlet property="divider" destination="hXe-p2-Eu6" id="5A1-Yx-drb"/>
                 <outlet property="portraitView" destination="dei-cB-vbI" id="KXe-q5-0rq"/>
             </connections>
             <point key="canvasLocation" x="244.5" y="179"/>

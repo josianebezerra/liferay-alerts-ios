@@ -95,6 +95,7 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		tableView.estimatedRowHeight = 44.0
 		tableView.contentInset.top = topBar.frame.size.height
 		tableView.tableHeaderView = _getCommentsHeaderView()
+		tableView.separatorStyle = UITableViewCellSeparatorStyle.None
 	}
 
 	private func _initTopBar() {

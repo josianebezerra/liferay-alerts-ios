@@ -18,13 +18,17 @@
 class CommentsHeaderView: UIView {
 
 	func setAlert(alert: Alert) {
+		divider.backgroundColor = UIColors.COMMENTS_DIVIDER
+
 		userNameLabel.text = alert.user.fullName
 
 		messageTextView.text = alert.getMessage()
 		messageTextView.textContainer.lineFragmentPadding = 0
 	}
 
-	@IBOutlet var userNameLabel: UILabel!
-	@IBOutlet var portraitView: PortraitView!
+
+	@IBOutlet var divider: UIView!
 	@IBOutlet var messageTextView: UITextView!
+	@IBOutlet var portraitView: PortraitView!
+	@IBOutlet var userNameLabel: UILabel!
 }
