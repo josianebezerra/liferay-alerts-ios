@@ -26,6 +26,11 @@ class SignInViewController: UIViewController {
 	}
 
 	@IBAction func signInAction() {
+		let login = loginTextField.text
+		let password = passwordTextField.text
+
+		SettingsUtil.setLogin(login)
+		SettingsUtil.setPassword(password)
 	}
 
 	@IBOutlet weak var loginTextField: UITextField!

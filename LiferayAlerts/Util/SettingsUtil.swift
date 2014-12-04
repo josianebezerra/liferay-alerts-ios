@@ -20,12 +20,12 @@ import Foundation
  */
 class SettingsUtil {
 
-	class func getLogin() -> String {
-		return ""
+	class func getLogin() -> String? {
+		return self._getPreference("login") as String?
 	}
 
-	class func getPassword() -> String {
-		return ""
+	class func getPassword() -> String? {
+		return self._getPreference("password") as String?
 	}
 
 	class func getServer() -> String {
@@ -33,15 +33,39 @@ class SettingsUtil {
 	}
 
 	class func getSession() -> LRSession {
+		let login: String? = self.getLogin()
+		let password: String? = self.getPassword()
+
 		return LRSession(
-			server:getServer(), username:"test@liferay.com", password:"test")
+			server:getServer(), username:login, password:password)
 	}
 
 	class func isSignedIn() -> Bool {
-		let login = self.getLogin()
-		let password = self.getPassword()
+		let login: String? = self.getLogin()
+		let password: String? = self.getPassword()
 
 		return !(Validator.isNull(login)) && !(Validator.isNull(password))
+	}
+
+	class func setLogin(login: String) {
+		self._setPreference(login, key: "login")
+	}
+
+	class func setPassword(password: String) {
+		self._setPreference(password, key: "password")
+	}
+
+	class func _getPreference(key: String) -> AnyObject? {
+		var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+
+		return defaults.objectForKey(key)
+	}
+
+	class func _setPreference(object: AnyObject?, key: String) {
+		var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+
+		defaults.setObject(object, forKey: key)
+		defaults.synchronize()
 	}
 
 }
