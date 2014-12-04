@@ -20,9 +20,11 @@ class CommentViewCell: UITableViewCell {
 	override func awakeFromNib() {
 		commentLabel.textColor = UIColors.COMMENT_TEXT
 		dateLabel.textColor = UIColors.COMMENT_DATE
+
+		portraitView.typeBadge.hidden = true
 	}
 
 	@IBOutlet var commentLabel: UILabel!
 	@IBOutlet var dateLabel: UILabel!
-
+	@IBOutlet var portraitView: PortraitView!
 }

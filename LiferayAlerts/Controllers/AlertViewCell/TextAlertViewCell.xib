@@ -17,11 +17,13 @@
                         <rect key="frame" x="69" y="13" width="662" height="188"/>
                     </view>
                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="59" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="wIA-ZL-Gzd" customClass="PortraitView" customModule="LiferayAlerts" customModuleProvider="target">
-                        <rect key="frame" x="13" y="5" width="59" height="64"/>
+                        <rect key="frame" x="13" y="5" width="53" height="54"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="69" id="3GR-Ra-7Ib"/>
+                            <constraint firstAttribute="height" constant="54" id="U5Y-uC-iTn"/>
                             <constraint firstAttribute="height" constant="70" id="d76-fx-utB"/>
+                            <constraint firstAttribute="width" constant="53" id="zdg-ly-BNg"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

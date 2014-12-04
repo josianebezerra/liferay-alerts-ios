@@ -14,8 +14,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="59" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="IGN-s1-jOH" userLabel="Portrait View" customClass="PortraitView" customModule="LiferayAlerts" customModuleProvider="target">
-                        <rect key="frame" x="13" y="5" width="59" height="64"/>
+                        <rect key="frame" x="13" y="5" width="53" height="54"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="53" id="VhY-pm-bXd"/>
+                            <constraint firstAttribute="height" constant="54" id="u3g-aJ-RyO"/>
+                        </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0m5-xu-h3O" customClass="PollsChoiceContainerView" customModule="LiferayAlerts" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="73" width="569" height="467"/>

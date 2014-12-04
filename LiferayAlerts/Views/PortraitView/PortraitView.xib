@@ -20,14 +20,14 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlF-5j-iej" userLabel="Portrait">
-                    <rect key="frame" x="0.0" y="5" width="49" height="49"/>
+                    <rect key="frame" x="0.0" y="5" width="596" height="595"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BCI-9o-i60" userLabel="Portrait">
-                            <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                            <rect key="frame" x="0.0" y="0.0" width="596" height="595"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="sTR-MK-hSc" userLabel="Portrait Shadow">
-                            <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                            <rect key="frame" x="0.0" y="0.0" width="596" height="595"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -43,9 +43,15 @@
                         <constraint firstAttribute="height" secondItem="sTR-MK-hSc" secondAttribute="height" id="nTL-H9-lbO"/>
                         <constraint firstAttribute="centerY" secondItem="sTR-MK-hSc" secondAttribute="centerY" id="ryq-Z6-2mP"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="K2a-7C-pd3"/>
+                            <exclude reference="KgD-Et-ReV"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dov-BX-DBj" userLabel="Type Badge">
-                    <rect key="frame" x="30" y="0.0" width="22" height="22"/>
+                    <rect key="frame" x="578" y="0.0" width="22" height="22"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dD-Oi-xY6">
                             <rect key="frame" x="6" y="0.0" width="12" height="20"/>
@@ -69,10 +75,13 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="YlF-5j-iej" firstAttribute="leading" secondItem="h5U-Fq-dFT" secondAttribute="leading" id="2aW-RT-qq5"/>
+                <constraint firstAttribute="leading" secondItem="YlF-5j-iej" secondAttribute="leading" id="2aW-RT-qq5"/>
                 <constraint firstItem="YlF-5j-iej" firstAttribute="top" secondItem="h5U-Fq-dFT" secondAttribute="top" constant="5" id="4LB-8G-A1p"/>
+                <constraint firstAttribute="trailing" secondItem="dov-BX-DBj" secondAttribute="trailing" id="D52-Y9-gVr"/>
                 <constraint firstItem="dov-BX-DBj" firstAttribute="top" secondItem="YlF-5j-iej" secondAttribute="top" constant="-5" id="bLV-Sq-JTl"/>
-                <constraint firstItem="dov-BX-DBj" firstAttribute="leading" secondItem="YlF-5j-iej" secondAttribute="leading" constant="30" id="jta-vA-BdF"/>
+                <constraint firstItem="dov-BX-DBj" firstAttribute="trailing" secondItem="YlF-5j-iej" secondAttribute="trailing" constant="4" id="jta-vA-BdF"/>
+                <constraint firstAttribute="trailing" secondItem="YlF-5j-iej" secondAttribute="trailing" priority="750" id="w66-rx-iL7"/>
+                <constraint firstAttribute="bottom" secondItem="YlF-5j-iej" secondAttribute="bottom" id="z57-yV-Zi9"/>
             </constraints>
             <point key="canvasLocation" x="249" y="351"/>
         </view>

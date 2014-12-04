@@ -13,14 +13,22 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iu9-We-kfH" id="upG-85-3Cq">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dei-cB-vbI" userLabel="Portrait View" customClass="PortraitView" customModule="LiferayAlerts" customModuleProvider="target">
+                        <rect key="frame" x="13" y="8" width="36" height="37"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="s9i-vJ-Nbf"/>
+                            <constraint firstAttribute="width" constant="36" id="zPC-Sa-pmc"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="comment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUD-J1-Z2O" userLabel="Comment Label">
-                        <rect key="frame" x="16" y="18" width="405" height="30"/>
+                        <rect key="frame" x="53" y="18" width="376" height="30"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3C-Yo-vdq" userLabel="Date Label">
-                        <rect key="frame" x="16" y="53" width="405" height="14"/>
+                        <rect key="frame" x="53" y="53" width="376" height="14"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -29,16 +37,19 @@
                 <constraints>
                     <constraint firstAttribute="topMargin" secondItem="NUD-J1-Z2O" secondAttribute="top" constant="-10" id="0cu-o1-2BQ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="t3C-Yo-vdq" secondAttribute="bottom" constant="10" id="Aqp-Fd-Rqh"/>
-                    <constraint firstItem="t3C-Yo-vdq" firstAttribute="trailing" secondItem="upG-85-3Cq" secondAttribute="trailingMargin" constant="-8" id="MrS-lf-da3"/>
-                    <constraint firstItem="NUD-J1-Z2O" firstAttribute="leading" secondItem="upG-85-3Cq" secondAttribute="leadingMargin" constant="8" id="T79-H7-HFC"/>
+                    <constraint firstItem="t3C-Yo-vdq" firstAttribute="trailing" secondItem="upG-85-3Cq" secondAttribute="trailing" constant="-8" id="MrS-lf-da3"/>
+                    <constraint firstItem="dei-cB-vbI" firstAttribute="top" secondItem="upG-85-3Cq" secondAttribute="top" constant="8" id="NBN-aI-U2B"/>
+                    <constraint firstItem="t3C-Yo-vdq" firstAttribute="leading" secondItem="NUD-J1-Z2O" secondAttribute="leading" id="X25-d1-Fzd"/>
+                    <constraint firstItem="NUD-J1-Z2O" firstAttribute="leading" secondItem="dei-cB-vbI" secondAttribute="trailing" constant="4" id="ZtQ-ov-y0a"/>
+                    <constraint firstItem="dei-cB-vbI" firstAttribute="leading" secondItem="upG-85-3Cq" secondAttribute="leading" constant="13" id="gug-YG-KEN"/>
                     <constraint firstItem="NUD-J1-Z2O" firstAttribute="bottom" secondItem="t3C-Yo-vdq" secondAttribute="top" constant="-5" id="hwR-gO-I3V"/>
-                    <constraint firstItem="t3C-Yo-vdq" firstAttribute="leading" secondItem="upG-85-3Cq" secondAttribute="leadingMargin" constant="8" id="pZD-tL-njr"/>
-                    <constraint firstItem="NUD-J1-Z2O" firstAttribute="trailing" secondItem="upG-85-3Cq" secondAttribute="trailingMargin" constant="-8" id="vlC-MX-Y9I"/>
+                    <constraint firstItem="NUD-J1-Z2O" firstAttribute="trailing" secondItem="upG-85-3Cq" secondAttribute="trailing" constant="-8" id="vlC-MX-Y9I"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="commentLabel" destination="NUD-J1-Z2O" id="6iV-2z-pl1"/>
                 <outlet property="dateLabel" destination="t3C-Yo-vdq" id="q7e-ld-fyX"/>
+                <outlet property="portraitView" destination="dei-cB-vbI" id="KXe-q5-0rq"/>
             </connections>
             <point key="canvasLocation" x="244.5" y="179"/>
         </tableViewCell>
