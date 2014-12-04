@@ -22,12 +22,14 @@
 #import "LRCallback.h"
 #import "LRSession.h"
 #import "LRError.h"
+#import "LRGroupService_v62.h"
 #import "LRHttpUtil.h"
 #import "LRJSONObjectWrapper.h"
 #import "LRPortraitUtil.h"
 #import "LRPollsVoteService_v62.h"
 #import "LRPushnotificationsdeviceService_v62.h"
 #import "LRPushnotificationsentryService_v62.h"
+#import "LRServiceFactory.h"
 #import "MBProgressHUD.h"
 
 //SDWebImage

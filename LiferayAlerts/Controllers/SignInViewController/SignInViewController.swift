@@ -29,11 +29,19 @@ class SignInViewController: UIViewController {
 		let login = loginTextField.text
 		let password = passwordTextField.text
 
-		SettingsUtil.setLogin(login)
-		SettingsUtil.setPassword(password)
+		let operation = SignInOperation(login: login, password: password)
+
+		queue.addOperation(operation)
 	}
 
 	@IBOutlet weak var loginTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
+
+	lazy var queue: NSOperationQueue = {
+		var queue = NSOperationQueue()
+		queue.maxConcurrentOperationCount = 1
+
+		return queue
+	}()
 
 }

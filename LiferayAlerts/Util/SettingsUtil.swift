@@ -47,6 +47,11 @@ class SettingsUtil {
 		return !(Validator.isNull(login)) && !(Validator.isNull(password))
 	}
 
+	class func setCredentials(login: String, password: String) {
+		self.setLogin(login)
+		self.setPassword(password)
+	}
+
 	class func setLogin(login: String) {
 		self._setPreference(login, key: "login")
 	}
