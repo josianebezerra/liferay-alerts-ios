@@ -85,6 +85,7 @@
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstItem="Br2-kj-TrG" firstAttribute="leading" secondItem="fOW-Sa-T2h" secondAttribute="leading" constant="14" id="CQ7-cx-wcR"/>
                                 <constraint firstAttribute="trailingMargin" secondItem="4GX-aO-4E0" secondAttribute="trailing" id="E0W-ef-4xG"/>
@@ -92,6 +93,9 @@
                                 <constraint firstAttribute="centerY" secondItem="4GX-aO-4E0" secondAttribute="centerY" id="W9m-Q9-enJ"/>
                                 <constraint firstItem="4GX-aO-4E0" firstAttribute="leading" secondItem="Br2-kj-TrG" secondAttribute="trailing" constant="10" id="dsE-9L-42q"/>
                             </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="jeG-PF-bzl" appends="YES" id="I6v-CD-bw3"/>
+                            </connections>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,5 +123,10 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="534" y="352"/>
         </view>
+        <tapGestureRecognizer id="jeG-PF-bzl">
+            <connections>
+                <action selector="backButtonClick:" destination="-1" id="B0C-Ag-XxI"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

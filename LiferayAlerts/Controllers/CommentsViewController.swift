@@ -112,6 +112,10 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		topBarTitle.textColor = UIColors.TOP_BAR_TEXT
 	}
 
+	@IBAction func backButtonClick(recognizer: UITapGestureRecognizer) {
+		dismissViewControllerAnimated(true, completion:nil)
+	}
+
 	var alert: Alert?
 
 	@IBOutlet var backButon: UIView!
