@@ -16,16 +16,32 @@ import Foundation
 
 /**
  * @author Silvio Santos
+ * @author Josiane Bezerra
  */
 class SettingsUtil {
 
+	class func getLogin() -> String {
+		return ""
+	}
+
+	class func getPassword() -> String {
+		return ""
+	}
+
 	class func getServer() -> String {
-		return "http://192.168.110.177:8081"
+		return "http://192.168.108.28:8080"
 	}
 
 	class func getSession() -> LRSession {
 		return LRSession(
 			server:getServer(), username:"test@liferay.com", password:"test")
+	}
+
+	class func isSignedIn() -> Bool {
+		let login = self.getLogin()
+		let password = self.getPassword()
+
+		return !(Validator.isNull(login)) && !(Validator.isNull(password))
 	}
 
 }

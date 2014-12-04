@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		-> Bool {
 
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
-		window!.rootViewController = MainViewController()
+		window!.rootViewController = self._getRootViewController()
 		window!.makeKeyAndVisible()
 
 		PushNotificationUtil.registerForNotifications()
@@ -55,7 +55,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		PushNotificationUtil.handleNotification(userInfo)
 	}
 
+	func _getRootViewController() -> UIViewController {
+		if (SettingsUtil.isSignedIn()) {
+			return MainViewController()
+		}
+		else {
+			return SignInViewController()
+		}
+	}
+
 	var window: UIWindow?
 
 }
-

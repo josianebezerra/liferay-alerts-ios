@@ -72,6 +72,7 @@
 		75DA6CCD1A1166580078D3EE /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DA6CCC1A1166580078D3EE /* AlertType.swift */; };
 		75F2F61A1A3087B900D71492 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F6181A3087B900D71492 /* SignInViewController.swift */; };
 		75F2F61B1A3087B900D71492 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F2F6191A3087B900D71492 /* SignInViewController.xib */; };
+		75F2F61D1A308FD100D71492 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F61C1A308FD100D71492 /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,7 @@
 		75DA6CCC1A1166580078D3EE /* AlertType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
 		75F2F6181A3087B900D71492 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = SignInViewController/SignInViewController.swift; sourceTree = "<group>"; };
 		75F2F6191A3087B900D71492 /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignInViewController.xib; path = SignInViewController/SignInViewController.xib; sourceTree = "<group>"; };
+		75F2F61C1A308FD100D71492 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		9B9C5F42C056303CBB27D9EE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02323913B620570916343E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -295,6 +297,7 @@
 				29841F2519F8950900A7ADAF /* SettingsUtil.swift */,
 				2901DB7319FEF71500E25788 /* UIColors.swift */,
 				75B8DE761A097A5900298092 /* UIDimensions.swift */,
+				75F2F61C1A308FD100D71492 /* Validator.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				29C99E541A2CB02F009CEAE2 /* CommentViewCell.swift in Sources */,
 				29841F2B19F895E800A7ADAF /* DatabaseHelper.swift in Sources */,
 				2972965B1A25134A00E76429 /* PollsVoteServiceUtil.swift in Sources */,
+				75F2F61D1A308FD100D71492 /* Validator.swift in Sources */,
 				29F8E49319FE886B000A7CA2 /* AlertExtension.swift in Sources */,
 				75DA6CCD1A1166580078D3EE /* AlertType.swift in Sources */,
 				75B8DE7B1A0A5B2F00298092 /* FontUtil.swift in Sources */,

@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="LiferayAlerts" customModuleProvider="target">
             <connections>
+                <outlet property="loginTextField" destination="6JF-GX-bKI" id="UIw-0h-SQI"/>
+                <outlet property="passwordTextField" destination="sQm-gn-11N" id="AR0-TR-er2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +15,58 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7G-Yc-56d">
+                    <rect key="frame" x="23" y="23" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6JF-GX-bKI">
+                    <rect key="frame" x="124" y="19" width="442" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Y-o2-bvi">
+                    <rect key="frame" x="23" y="96" width="76" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQm-gn-11N">
+                    <rect key="frame" x="122" y="87" width="442" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVr-X0-XuA">
+                    <rect key="frame" x="478" y="166" width="88" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="88" id="gjT-0l-j0J"/>
+                    </constraints>
+                    <state key="normal" title="Singn In">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="signInAction" destination="-1" eventType="touchUpInside" id="hix-8p-BQJ"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sQm-gn-11N" firstAttribute="top" secondItem="6JF-GX-bKI" secondAttribute="bottom" constant="38" id="5NX-pY-fI1"/>
+                <constraint firstItem="sQm-gn-11N" firstAttribute="leading" secondItem="Z8Y-o2-bvi" secondAttribute="trailing" constant="23" id="7g4-rG-pWg"/>
+                <constraint firstItem="lVr-X0-XuA" firstAttribute="top" secondItem="sQm-gn-11N" secondAttribute="bottom" constant="49" id="8O2-fb-nQY"/>
+                <constraint firstItem="Z8Y-o2-bvi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="CFY-vL-xtO"/>
+                <constraint firstItem="6JF-GX-bKI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="T0r-Bv-bCM"/>
+                <constraint firstAttribute="trailing" secondItem="lVr-X0-XuA" secondAttribute="trailing" constant="34" id="T3w-Ff-fo6"/>
+                <constraint firstItem="J7G-Yc-56d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="fr0-ce-jC5"/>
+                <constraint firstItem="6JF-GX-bKI" firstAttribute="leading" secondItem="J7G-Yc-56d" secondAttribute="trailing" constant="59" id="lfu-e1-J7r"/>
+                <constraint firstAttribute="trailing" secondItem="sQm-gn-11N" secondAttribute="trailing" constant="36" id="nbf-XE-hGp"/>
+                <constraint firstItem="Z8Y-o2-bvi" firstAttribute="top" secondItem="J7G-Yc-56d" secondAttribute="bottom" constant="52" id="p4x-0h-Xqg"/>
+                <constraint firstItem="J7G-Yc-56d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="23" id="qYn-WE-2iO"/>
+                <constraint firstAttribute="trailing" secondItem="6JF-GX-bKI" secondAttribute="trailing" constant="34" id="tbm-yd-bYn"/>
+            </constraints>
+            <point key="canvasLocation" x="338" y="289"/>
         </view>
     </objects>
 </document>

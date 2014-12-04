@@ -15,20 +15,21 @@
 /**
 * @author Josiane Bezerra
 */
-class SignInViewController: UIViewController {
+class Validator: NSObject {
 
-	override init() {
-		super.init(nibName:"SignInViewController", bundle:nil)
+	class func isNull(var string: String?) -> Bool {
+		if (string == nil || string!.isEmpty) {
+			return true
+		}
+
+		let whitespace = NSCharacterSet.whitespaceAndNewlineCharacterSet()
+		string = string!.stringByTrimmingCharactersInSet(whitespace)
+
+		if (string!.isEmpty) {
+			return true
+		}
+
+		return false
 	}
-
-	required init(coder: NSCoder) {
-		super.init(coder:coder)
-	}
-
-	@IBAction func signInAction() {
-	}
-
-	@IBOutlet weak var loginTextField: UITextField!
-	@IBOutlet weak var passwordTextField: UITextField!
 
 }
