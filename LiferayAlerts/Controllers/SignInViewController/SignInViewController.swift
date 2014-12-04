@@ -29,7 +29,26 @@ class SignInViewController: UIViewController {
 		let login = loginTextField.text
 		let password = passwordTextField.text
 
-		let operation = SignInOperation(login: login, password: password)
+		let operation = SignInOperation(login: login, password: password) {
+			(error) -> Void in
+
+			if (error == nil) {
+				self.navigationController!.pushViewController(
+					MainViewController(), animated: true)
+			}
+			else {
+				var window: UIWindow =
+					UIApplication.sharedApplication().keyWindow!
+
+				var hud = MBProgressHUD.showHUDAddedTo(window, animated: true)
+
+				hud.labelText = NSLocalizedString(
+					"\(error!.description)", comment:"")
+
+				hud.mode = MBProgressHUDModeText
+				hud.hide(true, afterDelay:1.5)
+			}
+		}
 
 		queue.addOperation(operation)
 	}

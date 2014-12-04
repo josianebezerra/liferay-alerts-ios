@@ -17,7 +17,10 @@
  */
 class SignInOperation: NSOperation {
 
-	init(login: String, password: String) {
+	init(login: String, password: String,
+		completion: ((error: NSError?) -> Void)) {
+
+		self.completion = completion
 		self.login = login
 		self.password = password
 	}
@@ -37,6 +40,10 @@ class SignInOperation: NSOperation {
 			return
 		}
 
+		dispatch_async(dispatch_get_main_queue(), {
+			self.completion(error: error)
+		});
+
 		SettingsUtil.setCredentials(login, password: password)
 	}
 
@@ -45,11 +52,16 @@ class SignInOperation: NSOperation {
 			return false
 		}
 
+		dispatch_async(dispatch_get_main_queue(), {
+			self.completion(error: error)
+		});
+
 		super.cancel()
 
 		return true
 	}
 
+	var completion: ((error: NSError?) -> Void)
 	var login: String
 	var password: String
 

@@ -23,8 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?)
 		-> Bool {
 
+		let navigationController = UINavigationController(
+			rootViewController: self._getRootViewController())
+
+		navigationController.navigationBarHidden = true
+
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
-		window!.rootViewController = self._getRootViewController()
+		window!.rootViewController = navigationController
 		window!.makeKeyAndVisible()
 
 		PushNotificationUtil.registerForNotifications()
