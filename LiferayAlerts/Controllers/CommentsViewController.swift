@@ -105,14 +105,22 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		]
 
 		GradientUtil.setGradientBackground(topBar, colors:colors)
+
+		topBarBackIcon.textColor = UIColors.TOP_BAR_TEXT
+
+		topBarTitle.text = NSLocalizedString("comments", comment:"")
+		topBarTitle.textColor = UIColors.TOP_BAR_TEXT
 	}
 
 	var alert: Alert?
 
+	@IBOutlet var backButon: UIView!
 	@IBOutlet var bottomBar: UIView!
 	@IBOutlet var commentTextField: UITextField!
 	@IBOutlet var sendButton: UIButton!
 	@IBOutlet var tableView: UITableView!
 	@IBOutlet var topBar: UIView!
+	@IBOutlet var topBarBackIcon: UILabel!
+	@IBOutlet var topBarTitle: UILabel!
 
 }

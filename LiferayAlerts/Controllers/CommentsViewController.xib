@@ -2,15 +2,24 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="LiferayAlerts-Regular.ttf">
+            <string>LiferayAlerts-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsViewController" customModule="LiferayAlerts" customModuleProvider="target">
             <connections>
+                <outlet property="backButon" destination="fOW-Sa-T2h" id="wmY-sT-tJG"/>
                 <outlet property="bottomBar" destination="0D3-UW-rfv" id="epo-aa-1wh"/>
                 <outlet property="commentTextField" destination="Eqg-Cs-rVA" id="5se-JI-aUO"/>
                 <outlet property="sendButton" destination="a5i-Tn-3Qc" id="VOK-UV-Gs0"/>
                 <outlet property="tableView" destination="F8W-jf-aQe" id="iOw-Ek-pO4"/>
                 <outlet property="topBar" destination="0lY-dF-OUq" id="V3e-f5-79s"/>
+                <outlet property="topBarBackIcon" destination="Br2-kj-TrG" id="pkB-SC-EHL"/>
+                <outlet property="topBarTitle" destination="4GX-aO-4E0" id="c3V-iP-jgb"/>
                 <outlet property="view" destination="iN0-l3-epB" id="R3n-yj-Syc"/>
             </connections>
         </placeholder>
@@ -56,11 +65,41 @@
                         <constraint firstItem="Eqg-Cs-rVA" firstAttribute="top" secondItem="0D3-UW-rfv" secondAttribute="top" constant="8" id="vOM-Pj-POu"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lY-dF-OUq" userLabel="Top bar">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lY-dF-OUq" userLabel="Top Bar">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOW-Sa-T2h" userLabel="Back Button">
+                            <rect key="frame" x="0.0" y="20" width="135" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="g" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Br2-kj-TrG">
+                                    <rect key="frame" x="14" y="8" width="12" height="26"/>
+                                    <fontDescription key="fontDescription" name="LiferayAlerts-Regular" family="Liferay Alerts" pointSize="21"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GX-aO-4E0">
+                                    <rect key="frame" x="36" y="11" width="91" height="23"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Br2-kj-TrG" firstAttribute="leading" secondItem="fOW-Sa-T2h" secondAttribute="leading" constant="14" id="CQ7-cx-wcR"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="4GX-aO-4E0" secondAttribute="trailing" id="E0W-ef-4xG"/>
+                                <constraint firstAttribute="centerY" secondItem="Br2-kj-TrG" secondAttribute="centerY" constant="1" id="JlD-qo-ian"/>
+                                <constraint firstAttribute="centerY" secondItem="4GX-aO-4E0" secondAttribute="centerY" id="W9m-Q9-enJ"/>
+                                <constraint firstItem="4GX-aO-4E0" firstAttribute="leading" secondItem="Br2-kj-TrG" secondAttribute="trailing" constant="10" id="dsE-9L-42q"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="fOW-Sa-T2h" firstAttribute="leading" secondItem="0lY-dF-OUq" secondAttribute="leading" id="15G-SC-acw"/>
                         <constraint firstAttribute="height" constant="64" id="23M-dX-Jww"/>
+                        <constraint firstItem="fOW-Sa-T2h" firstAttribute="bottom" secondItem="0lY-dF-OUq" secondAttribute="bottom" id="3ea-qT-1Ee"/>
+                        <constraint firstItem="fOW-Sa-T2h" firstAttribute="height" secondItem="0lY-dF-OUq" secondAttribute="height" constant="-20" id="JKJ-p4-dw6"/>
                     </constraints>
                 </view>
             </subviews>
