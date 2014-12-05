@@ -35,7 +35,7 @@ class PushNotificationsEntryServiceUtil {
 				Int64(alertId), error:&error)
 		}
 		else {
-			service.dislikePushNotificationsEntryWithPushNotificationsEntryId(
+			service.unlikePushNotificationsEntryWithPushNotificationsEntryId(
 				Int64(alertId), error:&error)
 		}
 	}
