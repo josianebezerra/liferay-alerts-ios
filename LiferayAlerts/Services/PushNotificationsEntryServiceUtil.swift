@@ -26,12 +26,23 @@ class PushNotificationsEntryServiceUtil {
 			"message": comment
 		]
 
-		var json: String = JsonUtil.toString(payload)
+		var json: String = JsonUtil.toString(payload)!
 
 		var error: NSError?
 
 		service.addPushNotificationsEntryWithParentPushNotificationsEntryId(
 			Int64(alert.alertId.integerValue), payload: json, error: &error)
+	}
+
+	class func addPushNotificationsEntry(payload: String) {
+		var session: LRSession = SettingsUtil.getSession()
+
+		var service: LRPushnotificationsentryService_v62 =
+			LRPushnotificationsentryService_v62(session:session)
+
+		var error: NSError?
+
+		service.addPushNotificationsEntryWithPayload(payload, error: &error)
 	}
 
 	class func getComments(alertId: Int) {

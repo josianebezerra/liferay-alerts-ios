@@ -24,7 +24,6 @@
 		296160401A237C5700343359 /* PollsAlertViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2961603E1A237C5700343359 /* PollsAlertViewCell.xib */; };
 		296160421A237D7600343359 /* AlertViewCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296160411A237D7600343359 /* AlertViewCellFactory.swift */; };
 		296317591A31F81800A50452 /* GetCommentsCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296317581A31F81800A50452 /* GetCommentsCallback.swift */; };
-		2963175B1A31F86400A50452 /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2963175A1A31F86400A50452 /* JsonUtil.swift */; };
 		296ADD071A24B79F0099FA0F /* AddVoteCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296ADD061A24B79F0099FA0F /* AddVoteCallback.swift */; };
 		296C65A41A0155F200ACF560 /* BaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296C65A31A0155F200ACF560 /* BaseCardView.swift */; };
 		2972965B1A25134A00E76429 /* PollsVoteServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972965A1A25134A00E76429 /* PollsVoteServiceUtil.swift */; };
@@ -77,6 +76,7 @@
 		75F2F6201A30A50300D71492 /* SignInOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F61F1A30A50300D71492 /* SignInOperation.swift */; };
 		75F2F6241A30CFCC00D71492 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F6221A30CFCC00D71492 /* ComposeViewController.swift */; };
 		75F2F6251A30CFCC00D71492 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F2F6231A30CFCC00D71492 /* ComposeViewController.xib */; };
+		75F2F6271A31EF7100D71492 /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F6261A31EF7100D71492 /* JsonUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +97,6 @@
 		2961603E1A237C5700343359 /* PollsAlertViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollsAlertViewCell.xib; sourceTree = "<group>"; };
 		296160411A237D7600343359 /* AlertViewCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewCellFactory.swift; sourceTree = "<group>"; };
 		296317581A31F81800A50452 /* GetCommentsCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCommentsCallback.swift; path = Callbacks/GetCommentsCallback.swift; sourceTree = "<group>"; };
-		2963175A1A31F86400A50452 /* JsonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
 		296ADD061A24B79F0099FA0F /* AddVoteCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddVoteCallback.swift; path = Callbacks/AddVoteCallback.swift; sourceTree = "<group>"; };
 		296C65A31A0155F200ACF560 /* BaseCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCardView.swift; sourceTree = "<group>"; };
 		2972965A1A25134A00E76429 /* PollsVoteServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollsVoteServiceUtil.swift; path = Services/PollsVoteServiceUtil.swift; sourceTree = "<group>"; };
@@ -152,6 +151,7 @@
 		75F2F61F1A30A50300D71492 /* SignInOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInOperation.swift; sourceTree = "<group>"; };
 		75F2F6221A30CFCC00D71492 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		75F2F6231A30CFCC00D71492 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		75F2F6261A31EF7100D71492 /* JsonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
 		9B9C5F42C056303CBB27D9EE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02323913B620570916343E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -299,9 +299,9 @@
 			isa = PBXGroup;
 			children = (
 				2982C5A81A30E630003CF8EB /* DateUtil.swift */,
-				2963175A1A31F86400A50452 /* JsonUtil.swift */,
 				75B8DE7A1A0A5B2F00298092 /* FontUtil.swift */,
 				2999F2BB1A001A1000456701 /* GradientUtil.swift */,
+				75F2F6261A31EF7100D71492 /* JsonUtil.swift */,
 				2972965C1A2616CB00E76429 /* NotificationUtil.swift */,
 				294420391A36131500D36306 /* PortraitUtil.swift */,
 				29841F2119F893EE00A7ADAF /* PushNotificationUtil.swift */,
@@ -572,7 +572,6 @@
 				2938A56D19F6D7AA00A72879 /* AppDelegate.swift in Sources */,
 				29C99E471A28BED4009CEAE2 /* AddLikeCallback.swift in Sources */,
 				298A45AE19F9989A00D9AB93 /* AlertDAO.swift in Sources */,
-				2963175B1A31F86400A50452 /* JsonUtil.swift in Sources */,
 				296ADD071A24B79F0099FA0F /* AddVoteCallback.swift in Sources */,
 				2901069A1A02CE0B003C0F05 /* TextAlertViewCell.swift in Sources */,
 				755E0CF61A1E133300D9E829 /* UIView.swift in Sources */,
@@ -593,6 +592,7 @@
 				2972965B1A25134A00E76429 /* PollsVoteServiceUtil.swift in Sources */,
 				75F2F61D1A308FD100D71492 /* Validator.swift in Sources */,
 				29F8E49319FE886B000A7CA2 /* AlertExtension.swift in Sources */,
+				75F2F6271A31EF7100D71492 /* JsonUtil.swift in Sources */,
 				75DA6CCD1A1166580078D3EE /* AlertType.swift in Sources */,
 				75B8DE7B1A0A5B2F00298092 /* FontUtil.swift in Sources */,
 				75B8DE771A097A5900298092 /* UIDimensions.swift in Sources */,

@@ -25,5 +25,26 @@ class ComposeViewController: UIViewController {
 		super.init(coder:coder)
 	}
 
-	@IBOutlet weak var alertTextView: UITextView!
+	override func viewDidLoad() {
+		messageTextView.becomeFirstResponder()
+	}
+
+	@IBAction func backButtonAction() {
+		self.dismissViewControllerAnimated(true, completion: nil)
+	}
+
+	@IBAction func createButtonAction() {
+		let message = messageTextView.text
+
+		var payload = [String: String]()
+		payload["message"] = message
+		payload["type"] = AlertType.TEXT.rawValue
+
+		PushNotificationsEntryServiceUtil.addPushNotificationsEntry(
+			JsonUtil.toString(payload)!)
+
+		println(payload)
+	}
+
+	@IBOutlet weak var messageTextView: UITextView!
 }
