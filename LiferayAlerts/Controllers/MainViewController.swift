@@ -40,6 +40,11 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 			selector: "didCommentButtonClickNotification:")
 	}
 
+	@IBAction func addContentAction() {
+		self.presentViewController(ComposeViewController(), animated: true,
+			completion: nil)
+	}
+
 	func collectionView(collectionView: UICollectionView,
 		cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
