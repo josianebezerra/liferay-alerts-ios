@@ -75,6 +75,8 @@
 		75F2F61B1A3087B900D71492 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F2F6191A3087B900D71492 /* SignInViewController.xib */; };
 		75F2F61D1A308FD100D71492 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F61C1A308FD100D71492 /* Validator.swift */; };
 		75F2F6201A30A50300D71492 /* SignInOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F61F1A30A50300D71492 /* SignInOperation.swift */; };
+		75F2F6241A30CFCC00D71492 /* AddContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F6221A30CFCC00D71492 /* AddContentViewController.swift */; };
+		75F2F6251A30CFCC00D71492 /* AddContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F2F6231A30CFCC00D71492 /* AddContentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +150,8 @@
 		75F2F6191A3087B900D71492 /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignInViewController.xib; path = SignInViewController/SignInViewController.xib; sourceTree = "<group>"; };
 		75F2F61C1A308FD100D71492 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		75F2F61F1A30A50300D71492 /* SignInOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInOperation.swift; sourceTree = "<group>"; };
+		75F2F6221A30CFCC00D71492 /* AddContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddContentViewController.swift; path = AddContentViewController/AddContentViewController.swift; sourceTree = "<group>"; };
+		75F2F6231A30CFCC00D71492 /* AddContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddContentViewController.xib; path = AddContentViewController/AddContentViewController.xib; sourceTree = "<group>"; };
 		9B9C5F42C056303CBB27D9EE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02323913B620570916343E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +225,7 @@
 		2938A55819F6D7AA00A72879 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				75F2F6211A30CF9B00D71492 /* AddContentViewController */,
 				2901069B1A03FBBF003C0F05 /* AlertViewCell */,
 				29C99E521A2CB012009CEAE2 /* CommentViewCell */,
 				75F2F6171A30877900D71492 /* SignInViewController */,
@@ -418,6 +423,15 @@
 			path = Operations;
 			sourceTree = "<group>";
 		};
+		75F2F6211A30CF9B00D71492 /* AddContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				75F2F6221A30CFCC00D71492 /* AddContentViewController.swift */,
+				75F2F6231A30CFCC00D71492 /* AddContentViewController.xib */,
+			);
+			name = AddContentViewController;
+			sourceTree = "<group>";
+		};
 		D7017E4CB05CE1901C6DB99B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +522,7 @@
 				759AB7C01A265B5F0094C717 /* ImageAlertViewCell.xib in Resources */,
 				298A45B119FAD6CD00D9AB93 /* MainViewController.xib in Resources */,
 				29B7FDCC1A2E530B00011E50 /* PortraitView.xib in Resources */,
+				75F2F6251A30CFCC00D71492 /* AddContentViewController.xib in Resources */,
 				75B8DE7F1A0AB6AC00298092 /* TextCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +600,7 @@
 				298A45AF19F9989A00D9AB93 /* UserDAO.swift in Sources */,
 				296160331A23615D00343359 /* PollsChoiceView.swift in Sources */,
 				2982C5A91A30E630003CF8EB /* DateUtil.swift in Sources */,
+				75F2F6241A30CFCC00D71492 /* AddContentViewController.swift in Sources */,
 				29841F2419F894ED00A7ADAF /* AddPushNotificationDeviceCallback.swift in Sources */,
 				29C99E4D1A2C9E02009CEAE2 /* CommentsViewController.swift in Sources */,
 				298A459E19F98BFC00D9AB93 /* Alert.swift in Sources */,
