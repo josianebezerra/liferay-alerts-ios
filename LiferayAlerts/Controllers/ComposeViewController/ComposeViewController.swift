@@ -15,10 +15,10 @@
 /**
 * @author Josiane Bezerra
 */
-class AddContentViewController: UIViewController {
+class ComposeViewController: UIViewController {
 
 	override init() {
-		super.init(nibName:"AddContentViewController", bundle:nil)
+		super.init(nibName:"ComposeViewController", bundle:nil)
 	}
 
 	required init(coder: NSCoder) {
