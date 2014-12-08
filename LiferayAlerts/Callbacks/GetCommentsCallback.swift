@@ -27,6 +27,8 @@ class GetCommentsCallback : NSObject, LRCallback {
 		for json in jsonArray {
 			AlertDAO.insertComment(json)
 		}
+
+		CommentsViewController.reloadData()
 	}
 
 }

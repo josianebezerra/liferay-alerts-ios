@@ -29,7 +29,7 @@ class NotificationUtil {
 			observer, selector:selector, name:destination, object:nil)
 	}
 
-	class func send(destination: String, data: [String: AnyObject]) {
+	class func send(destination: String, data: [String: AnyObject]? = nil) {
 		var notificationCenter = NSNotificationCenter.defaultCenter()
 
 		notificationCenter.postNotificationName(

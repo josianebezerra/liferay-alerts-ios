@@ -22,6 +22,7 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		super.init(nibName:"CommentsViewController", bundle:nil)
 
 		self.alert = alert
+		self.comments = []
 	}
 
 	required init(coder: NSCoder) {
@@ -32,6 +33,26 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		_initBottomBar()
 		_initTableView()
 		_initTopBar()
+
+		NotificationUtil.register(
+			"reloadEntries", observer: self,
+			selector: "reloadEntriesNotification")
+
+		var alertId = alert!.alertId.integerValue
+
+		PushNotificationsEntryServiceUtil.getComments(alertId)
+	}
+
+	class func reloadData() {
+		NotificationUtil.send("reloadEntries")
+	}
+
+	func reloadEntriesNotification() {
+		var alertId = alert!.alertId.integerValue
+
+		comments = AlertDAO.getChildren(alertId)
+
+		tableView.reloadData()
 	}
 
 	func tableView(tableView: UITableView,
@@ -40,13 +61,17 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		var cell: CommentViewCell = tableView.dequeueReusableCellWithIdentifier(
 			"CommentCellId") as CommentViewCell
 
+		var comment: Alert = comments![indexPath.row]
+
+		cell.commentLabel.text = comment.getMessage()
+
 		return cell
 	}
 
 	func tableView(
 		tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-		return 1
+		return comments!.count
 	}
 
 	private func _getCommentsHeaderView() -> CommentsHeaderView {
@@ -118,6 +143,7 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 	}
 
 	var alert: Alert?
+	var comments: [Alert]?
 
 	@IBOutlet var backButon: UIView!
 	@IBOutlet var bottomBar: UIView!
