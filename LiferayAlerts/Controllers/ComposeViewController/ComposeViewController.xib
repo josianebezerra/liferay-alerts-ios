@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeViewController" customModule="LiferayAlerts" customModuleProvider="target">
             <connections>
+                <outlet property="keyboradHeightConstraint" destination="zxe-RP-MT5" id="llL-S5-aqr"/>
                 <outlet property="messageTextView" destination="IdA-cE-TbB" id="lTj-32-EBX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -90,10 +91,10 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1L-Xe-hxs">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1L-Xe-hxs" userLabel="Actions bar">
                     <rect key="frame" x="0.0" y="555" width="600" height="45"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSe-oG-rlt">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSe-oG-rlt" userLabel="Divider">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
                             <color key="backgroundColor" red="0.97254901960784312" green="0.93725490196078431" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>

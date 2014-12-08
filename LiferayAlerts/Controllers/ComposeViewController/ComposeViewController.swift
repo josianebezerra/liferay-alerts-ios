@@ -27,6 +27,12 @@ class ComposeViewController: UIViewController {
 
 	override func viewDidLoad() {
 		messageTextView.becomeFirstResponder()
+
+		NotificationUtil.register(UIKeyboardWillHideNotification,
+			observer: self, selector: Selector("keyboardWillHide:"))
+
+		NotificationUtil.register(UIKeyboardWillChangeFrameNotification,
+			observer: self, selector: Selector("keyboardWillShow:"))
 	}
 
 	@IBAction func backAction() {
@@ -46,5 +52,22 @@ class ComposeViewController: UIViewController {
 		println(payload)
 	}
 
+	func keyboardWillHide(notification: NSNotification) {
+		let userInfo = notification.userInfo!
+		let frame = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue()
+
+		keyboradHeightConstraint.constant = 0
+		view.layoutIfNeeded()
+	}
+
+	func keyboardWillShow(notification: NSNotification) {
+		let userInfo = notification.userInfo!
+		let frame = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue()
+
+		keyboradHeightConstraint.constant = frame.size.height
+		view.layoutIfNeeded()
+	}
+
+	@IBOutlet weak var keyboradHeightConstraint: NSLayoutConstraint!
 	@IBOutlet weak var messageTextView: UITextView!
 }
