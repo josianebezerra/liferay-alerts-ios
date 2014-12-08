@@ -15,7 +15,7 @@
 /**
 * @author Josiane Bezerra
 */
-class ComposeViewController: UIViewController {
+class ComposeViewController: UIViewController, UITextViewDelegate {
 
 	override init() {
 		super.init(nibName:"ComposeViewController", bundle:nil)
@@ -41,6 +41,10 @@ class ComposeViewController: UIViewController {
 	}
 
 	@IBAction func createAction() {
+		if (messageTextView.tag == 0) {
+			return
+		}
+
 		let message = messageTextView.text
 
 		var payload = [String: String]()
@@ -69,6 +73,28 @@ class ComposeViewController: UIViewController {
 		view.layoutIfNeeded()
 	}
 
+	func textView(textView: UITextView, shouldChangeTextInRange range: NSRange,
+		replacementText text: String) -> Bool {
+
+		if(textView.tag == 0) {
+			textView.tag = 1
+			textView.text = ""
+			textView.textColor = UIColors.COMPOSE_TEXT
+		}
+
+		return true
+	}
+
+	func textViewDidEndEditing(textView: UITextView) {
+		if(Validator.isNull(textView.text)) {
+			textView.tag = 0
+			textView.text = _placeholder
+			textView.textColor = UIColors.COMPOSE_PLACEHOLDER
+		}
+	}
+
 	@IBOutlet weak var keyboradHeightConstraint: NSLayoutConstraint!
 	@IBOutlet weak var messageTextView: UITextView!
+
+	let _placeholder = NSLocalizedString("say-something-nice", comment:"")
 }
