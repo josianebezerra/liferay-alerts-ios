@@ -33,24 +33,14 @@ class AlertDAO {
 	}
 
 	class func getAll() -> [Alert]? {
-		var context = DatabaseHelper.getInstance().getContext()!
+		return getChildren(0)
+	}
 
-		var request: NSFetchRequest = NSFetchRequest()
-		request.entity = NSEntityDescription.entityForName(
-			"Alert", inManagedObjectContext:context)
+	class func getChildren(parentAlertId: Int) -> [Alert]? {
+		var predicate: NSPredicate? = NSPredicate(
+			format: "parentAlertId = %d", parentAlertId)
 
-		var error: NSError?
-
-		let alerts: [Alert] = context.executeFetchRequest(request, error:&error)
-			as [Alert]
-
-		if (error != nil) {
-			NSLog("Coldn't get users \(error), \(error!.userInfo)")
-
-			return nil
-		}
-
-		return alerts
+		return _get(predicate)
 	}
 
 	class func insert(json: [NSObject: AnyObject]) {
