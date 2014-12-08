@@ -15,6 +15,7 @@
 		2938A56C19F6D7AA00A72879 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2938A55919F6D7AA00A72879 /* MainViewController.swift */; };
 		2938A56D19F6D7AA00A72879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2938A55B19F6D7AA00A72879 /* AppDelegate.swift */; };
 		293BB69C19F6A011004AF345 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293BB69B19F6A011004AF345 /* CoreData.framework */; };
+		2944203A1A36131500D36306 /* PortraitUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294420391A36131500D36306 /* PortraitUtil.swift */; };
 		294457EB1A2674F2007ECCC4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 294457EA1A2674F2007ECCC4 /* Localizable.strings */; };
 		296160331A23615D00343359 /* PollsChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296160311A23615D00343359 /* PollsChoiceView.swift */; };
 		296160341A23615D00343359 /* PollsChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296160321A23615D00343359 /* PollsChoiceView.xib */; };
@@ -78,6 +79,7 @@
 		2938A55919F6D7AA00A72879 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2938A55B19F6D7AA00A72879 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293BB69B19F6A011004AF345 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		294420391A36131500D36306 /* PortraitUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortraitUtil.swift; sourceTree = "<group>"; };
 		294457EA1A2674F2007ECCC4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "Supporting Files/Localizable.strings"; sourceTree = "<group>"; };
 		296160311A23615D00343359 /* PollsChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollsChoiceView.swift; path = Polls/PollsChoiceView.swift; sourceTree = "<group>"; };
 		296160321A23615D00343359 /* PollsChoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PollsChoiceView.xib; path = Polls/PollsChoiceView.xib; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				75B8DE7A1A0A5B2F00298092 /* FontUtil.swift */,
 				2999F2BB1A001A1000456701 /* GradientUtil.swift */,
 				2972965C1A2616CB00E76429 /* NotificationUtil.swift */,
+				294420391A36131500D36306 /* PortraitUtil.swift */,
 				29841F2119F893EE00A7ADAF /* PushNotificationUtil.swift */,
 				29841F2519F8950900A7ADAF /* SettingsUtil.swift */,
 				2901DB7319FEF71500E25788 /* UIColors.swift */,
@@ -528,6 +531,7 @@
 				29841F2219F893EE00A7ADAF /* PushNotificationUtil.swift in Sources */,
 				29B7FDCA1A2E52F800011E50 /* PortraitView.swift in Sources */,
 				2917E7CD1A1640290050B757 /* PollsQuestion.swift in Sources */,
+				2944203A1A36131500D36306 /* PortraitUtil.swift in Sources */,
 				29C99E451A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift in Sources */,
 				29C99E541A2CB02F009CEAE2 /* CommentViewCell.swift in Sources */,
 				29841F2B19F895E800A7ADAF /* DatabaseHelper.swift in Sources */,

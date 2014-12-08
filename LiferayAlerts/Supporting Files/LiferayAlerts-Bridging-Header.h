@@ -22,6 +22,7 @@
 #import "LRCallback.h"
 #import "LRSession.h"
 #import "LRError.h"
+#import "LRHttpUtil.h"
 #import "LRJSONObjectWrapper.h"
 #import "LRPortraitUtil.h"
 #import "LRPollsVoteService_v62.h"

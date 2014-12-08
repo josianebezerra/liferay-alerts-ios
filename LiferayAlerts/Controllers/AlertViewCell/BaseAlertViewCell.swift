@@ -44,12 +44,7 @@ class BaseAlertViewCell: UICollectionViewCell {
 	}
 
 	private func _setPortrait(user: User) {
-		let session = LRSession(server: SettingsUtil.getServer())
-
-		let portraitURL = LRPortraitUtil.getPortraitURL(session, male: true,
-			portraitId: user.portraitId.longLongValue, uuid: user.uuid)
-
-		let URL: NSURL = NSURL(string: portraitURL)!
+		let URL: NSURL = PortraitUtil.getPortraitURL(user)
 
 		portraitView.setPortraitURL(URL)
 	}
