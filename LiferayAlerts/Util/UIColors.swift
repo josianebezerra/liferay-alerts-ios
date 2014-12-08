@@ -32,6 +32,7 @@ struct UIColors {
 
 	static let COMMENT_TEXT: UIColor = DARK_GRAY
 	static let COMMENT_DATE: UIColor = DARK_GRAY_ALPHA_40
+	static let COMMENT_USER_NAME: UIColor = UIColor(rgb: "EBC631")
 
 	static let COMMENTS_BAR_BACKGROUND: UIColor = UIColor(rgb: "E9EAEC")
 	static let COMMENTS_BAR_INPUT_BACKGROUND: UIColor = WHITE

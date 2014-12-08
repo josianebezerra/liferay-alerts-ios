@@ -69,7 +69,7 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 
 		var comment: Alert = comments![indexPath.row]
 
-		cell.commentLabel.text = comment.getMessage()
+		cell.setAlert(comment)
 
 		return cell
 	}

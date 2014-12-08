@@ -25,6 +25,49 @@ class CommentViewCell: UITableViewCell {
 		portraitView.typeBadge.hidden = true
 	}
 
+	func setAlert(comment: Alert) {
+		self.comment = comment
+
+		_setComment()
+	}
+
+	private func _getAttributedString(
+		text: String, font: UIFont, color: UIColor)
+		 -> NSMutableAttributedString {
+
+		var attributes = [
+			NSFontAttributeName: font,
+			NSForegroundColorAttributeName: color
+		]
+
+		var attributedString = NSMutableAttributedString(
+			string:text, attributes:attributes)
+
+		return attributedString
+	}
+
+	private func _setComment() {
+		var userName: NSMutableAttributedString = _getAttributedString(
+			comment!.user.fullName + " ", font:USER_NAME_FONT,
+			color:UIColors.COMMENT_USER_NAME)
+
+		var text = _getAttributedString(
+			comment!.getMessage()!, font:COMMENT_FONT,
+			color:UIColors.COMMENT_TEXT)
+
+		text.insertAttributedString(userName, atIndex: 0)
+
+		commentLabel.attributedText = text
+	}
+
+	let USER_NAME_FONT: UIFont = UIFont(
+		name: "HelveticaNeue-Medium", size: UIDimensions.CARD_TEXT_SIZE)!
+
+	let COMMENT_FONT: UIFont = UIFont(
+		name: "HelveticaNeue-Light", size: UIDimensions.CARD_TEXT_SIZE)!
+
+	var comment: Alert?
+
 	@IBOutlet var commentLabel: UILabel!
 	@IBOutlet var dateLabel: UILabel!
 	@IBOutlet var divider: UIView!
