@@ -22,6 +22,7 @@
 		2961603F1A237C5700343359 /* PollsAlertViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961603D1A237C5700343359 /* PollsAlertViewCell.swift */; };
 		296160401A237C5700343359 /* PollsAlertViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2961603E1A237C5700343359 /* PollsAlertViewCell.xib */; };
 		296160421A237D7600343359 /* AlertViewCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296160411A237D7600343359 /* AlertViewCellFactory.swift */; };
+		296317591A31F81800A50452 /* GetCommentsCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296317581A31F81800A50452 /* GetCommentsCallback.swift */; };
 		296ADD071A24B79F0099FA0F /* AddVoteCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296ADD061A24B79F0099FA0F /* AddVoteCallback.swift */; };
 		296C65A41A0155F200ACF560 /* BaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296C65A31A0155F200ACF560 /* BaseCardView.swift */; };
 		2972965B1A25134A00E76429 /* PollsVoteServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972965A1A25134A00E76429 /* PollsVoteServiceUtil.swift */; };
@@ -82,6 +83,7 @@
 		2961603D1A237C5700343359 /* PollsAlertViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollsAlertViewCell.swift; sourceTree = "<group>"; };
 		2961603E1A237C5700343359 /* PollsAlertViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollsAlertViewCell.xib; sourceTree = "<group>"; };
 		296160411A237D7600343359 /* AlertViewCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewCellFactory.swift; sourceTree = "<group>"; };
+		296317581A31F81800A50452 /* GetCommentsCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCommentsCallback.swift; path = Callbacks/GetCommentsCallback.swift; sourceTree = "<group>"; };
 		296ADD061A24B79F0099FA0F /* AddVoteCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddVoteCallback.swift; path = Callbacks/AddVoteCallback.swift; sourceTree = "<group>"; };
 		296C65A31A0155F200ACF560 /* BaseCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCardView.swift; sourceTree = "<group>"; };
 		2972965A1A25134A00E76429 /* PollsVoteServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollsVoteServiceUtil.swift; path = Services/PollsVoteServiceUtil.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */,
 				296ADD061A24B79F0099FA0F /* AddVoteCallback.swift */,
 				29841F2319F894ED00A7ADAF /* AddPushNotificationDeviceCallback.swift */,
+				296317581A31F81800A50452 /* GetCommentsCallback.swift */,
 			);
 			name = Callbacks;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				298A459E19F98BFC00D9AB93 /* Alert.swift in Sources */,
 				298A45A919F98CCB00D9AB93 /* Model.xcdatamodeld in Sources */,
 				29841F2619F8950900A7ADAF /* SettingsUtil.swift in Sources */,
+				296317591A31F81800A50452 /* GetCommentsCallback.swift in Sources */,
 				29C99E431A28BB12009CEAE2 /* PushNotificationServiceUtil.swift in Sources */,
 				2901DB7419FEF71500E25788 /* UIColors.swift in Sources */,
 				2972965D1A2616CB00E76429 /* NotificationUtil.swift in Sources */,

@@ -17,16 +17,22 @@
  */
 class PushNotificationsEntryServiceUtil {
 
-	class func likeAlert(alertId: Int, like: Bool) {
-		var session: LRSession = SettingsUtil.getSession()
+	class func getComments(alertId: Int) {
+		var callback: LRCallback = GetCommentsCallback()
 
+		var service: LRPushnotificationsentryService_v62 = getService(callback)
+
+		var error: NSError?
+
+		service.getPushNotificationsEntriesWithParentPushNotificationsEntryId(
+			Int64(alertId), lastAccessTime:0, start:-1, end:-1, error:&error)
+	}
+
+	class func likeAlert(alertId: Int, like: Bool) {
 		var callback: AddLikeCallback = AddLikeCallback(
 			alertId: alertId, like:like)
 
-		session.callback = callback
-
-		var service: LRPushnotificationsentryService_v62 =
-			LRPushnotificationsentryService_v62(session:session)
+		var service: LRPushnotificationsentryService_v62 = getService(callback)
 
 		var error: NSError?
 
@@ -38,6 +44,15 @@ class PushNotificationsEntryServiceUtil {
 			service.unlikePushNotificationsEntryWithPushNotificationsEntryId(
 				Int64(alertId), error:&error)
 		}
+	}
+
+	class func getService(callback: LRCallback)
+		-> LRPushnotificationsentryService_v62 {
+
+		var session: LRSession = SettingsUtil.getSession()
+		session.callback = callback
+
+		return	LRPushnotificationsentryService_v62(session:session)
 	}
 
 }
