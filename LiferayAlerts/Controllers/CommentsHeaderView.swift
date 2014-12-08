@@ -24,6 +24,9 @@ class CommentsHeaderView: UIView {
 
 		messageTextView.text = alert.getMessage()
 		messageTextView.textContainer.lineFragmentPadding = 0
+
+		var URL: NSURL = PortraitUtil.getPortraitURL(alert.user)
+		portraitView.setPortraitURL(URL)
 	}
 
 

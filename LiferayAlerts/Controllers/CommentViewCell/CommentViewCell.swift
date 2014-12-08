@@ -30,6 +30,7 @@ class CommentViewCell: UITableViewCell {
 
 		_setComment()
 		_setDate()
+		_setPortrait()
 	}
 
 	private func _getAttributedString(
@@ -59,6 +60,12 @@ class CommentViewCell: UITableViewCell {
 		text.insertAttributedString(userName, atIndex: 0)
 
 		commentLabel.attributedText = text
+	}
+
+	private func _setPortrait() {
+		var URL: NSURL = PortraitUtil.getPortraitURL(comment!.user)
+
+		portraitView.setPortraitURL(URL)
 	}
 
 	private func _setDate() {

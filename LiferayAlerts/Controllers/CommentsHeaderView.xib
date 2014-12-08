@@ -58,6 +58,7 @@
             <connections>
                 <outlet property="divider" destination="S3w-It-9Vb" id="2QQ-3E-5UY"/>
                 <outlet property="messageTextView" destination="RKE-1e-mHR" id="RZi-Cm-0Z9"/>
+                <outlet property="portraitView" destination="dTu-zJ-nOH" id="KR5-oR-bX7"/>
                 <outlet property="userNameLabel" destination="PBk-9t-VQd" id="veo-NH-zS4"/>
             </connections>
             <point key="canvasLocation" x="226" y="137"/>
