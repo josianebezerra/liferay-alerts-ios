@@ -29,11 +29,11 @@ class ComposeViewController: UIViewController {
 		messageTextView.becomeFirstResponder()
 	}
 
-	@IBAction func backButtonAction() {
+	@IBAction func backAction() {
 		self.dismissViewControllerAnimated(true, completion: nil)
 	}
 
-	@IBAction func createButtonAction() {
+	@IBAction func createAction() {
 		let message = messageTextView.text
 
 		var payload = [String: String]()
