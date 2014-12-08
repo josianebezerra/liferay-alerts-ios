@@ -23,8 +23,8 @@ class DateUtil {
 		var currentDate: NSDate = NSDate()
 		var	date: NSDate = NSDate(timeIntervalSince1970: time)
 
-		if (currentDate.timeIntervalSince1970 < time) {
-			return String("just now")
+		if ((time == 0) || (currentDate.timeIntervalSince1970 < time)) {
+			return String(NSLocalizedString("just-now", comment: ""))
 		}
 
 		var calendar: NSCalendar = NSCalendar.currentCalendar()
@@ -43,32 +43,32 @@ class DateUtil {
 
 		if (components.year != 0) {
 			return _formatTimeUnit(
-				components.hour, singularKey: "time_year_ago",
-				pluralKey: "time_years_ago")
+				components.year, singularKey: "time-year-ago",
+				pluralKey: "time-years-ago")
 		}
 
 		if (components.month != 0) {
 			return _formatTimeUnit(
-				components.hour, singularKey: "time_month_ago",
-				pluralKey: "time_months_ago")
+				components.month, singularKey: "time-month-ago",
+				pluralKey: "time-months-ago")
 		}
 
 		if (components.day != 0) {
 			return _formatTimeUnit(
-				components.hour, singularKey: "time_day_ago",
-				pluralKey: "time_days_ago")
+				components.day, singularKey: "time-day-ago",
+				pluralKey: "time-days-ago")
 		}
 
 		if (components.hour != 0) {
 			return _formatTimeUnit(
-				components.hour, singularKey: "time_hour_ago",
-				pluralKey: "time_hours_ago")
+				components.hour, singularKey: "time-hour-ago",
+				pluralKey: "time-hours-ago")
 		}
 
 		if (components.minute != 0) {
 			return _formatTimeUnit(
-				components.hour, singularKey: "time_minute_ago",
-				pluralKey: "time_minutes_ago")
+				components.minute, singularKey: "time-minute-ago",
+				pluralKey: "time-minutes-ago")
 		}
 
 		return String(format:"Just now")
