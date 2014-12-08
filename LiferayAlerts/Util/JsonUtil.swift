@@ -17,7 +17,6 @@ import CoreData
 /**
  * @author Silvio Santos
  */
-
 class JsonUtil {
 
 	class func toJson(json: String) -> [NSObject: AnyObject] {

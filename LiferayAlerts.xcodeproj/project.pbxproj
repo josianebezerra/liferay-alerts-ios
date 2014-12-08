@@ -48,7 +48,7 @@
 		29B7FDD31A2F5D9100011E50 /* CommentsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B7FDD21A2F5D9100011E50 /* CommentsHeaderView.xib */; };
 		29C6357A19F6DD9600160E35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C6357919F6DD9600160E35 /* Images.xcassets */; };
 		29C6357E19F6DDEE00160E35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C6357D19F6DDEE00160E35 /* LaunchScreen.xib */; };
-		29C99E431A28BB12009CEAE2 /* PushNotificationServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E421A28BB12009CEAE2 /* PushNotificationServiceUtil.swift */; };
+		29C99E431A28BB12009CEAE2 /* PushNotificationsDeviceServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E421A28BB12009CEAE2 /* PushNotificationsDeviceServiceUtil.swift */; };
 		29C99E451A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */; };
 		29C99E471A28BED4009CEAE2 /* AddLikeCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */; };
 		29C99E4B1A29FF07009CEAE2 /* MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */; };
@@ -113,8 +113,8 @@
 		29B7FDD21A2F5D9100011E50 /* CommentsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsHeaderView.xib; sourceTree = "<group>"; };
 		29C6357919F6DD9600160E35 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Assets/Images.xcassets; sourceTree = "<group>"; };
 		29C6357D19F6DDEE00160E35 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		29C99E421A28BB12009CEAE2 /* PushNotificationServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationServiceUtil.swift; sourceTree = "<group>"; };
-		29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsEntryServiceUtil.swift; sourceTree = "<group>"; };
+		29C99E421A28BB12009CEAE2 /* PushNotificationsDeviceServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationsDeviceServiceUtil.swift; path = Services/PushNotificationsDeviceServiceUtil.swift; sourceTree = "<group>"; };
+		29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationsEntryServiceUtil.swift; path = Services/PushNotificationsEntryServiceUtil.swift; sourceTree = "<group>"; };
 		29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddLikeCallback.swift; path = Callbacks/AddLikeCallback.swift; sourceTree = "<group>"; };
 		29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MBProgressHUD.swift; path = Extensions/MBProgressHUD.swift; sourceTree = "<group>"; };
 		29C99E4C1A2C9E02009CEAE2 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				2972965A1A25134A00E76429 /* PollsVoteServiceUtil.swift */,
-				29C99E421A28BB12009CEAE2 /* PushNotificationServiceUtil.swift */,
+				29C99E421A28BB12009CEAE2 /* PushNotificationsDeviceServiceUtil.swift */,
 				29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */,
 			);
 			name = Services;
@@ -546,7 +546,7 @@
 				298A45A919F98CCB00D9AB93 /* Model.xcdatamodeld in Sources */,
 				29841F2619F8950900A7ADAF /* SettingsUtil.swift in Sources */,
 				296317591A31F81800A50452 /* GetCommentsCallback.swift in Sources */,
-				29C99E431A28BB12009CEAE2 /* PushNotificationServiceUtil.swift in Sources */,
+				29C99E431A28BB12009CEAE2 /* PushNotificationsDeviceServiceUtil.swift in Sources */,
 				2901DB7419FEF71500E25788 /* UIColors.swift in Sources */,
 				2972965D1A2616CB00E76429 /* NotificationUtil.swift in Sources */,
 				2961603F1A237C5700343359 /* PollsAlertViewCell.swift in Sources */,

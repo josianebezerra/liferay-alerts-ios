@@ -43,9 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		application: UIApplication,
 		didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
 
-		var token: String = PushNotificationServiceUtil.getToken(deviceToken)
+		var token: String = PushNotificationsServiceUtil.getToken(deviceToken)
 
-		PushNotificationServiceUtil.addDevice(token);
+		PushNotificationsServiceUtil.addDevice(token);
 	}
 
 	func application(

@@ -15,7 +15,7 @@
 /**
  * @author Silvio Santos
  */
-class PushNotificationServiceUtil {
+class PushNotificationsServiceUtil {
 
 	class func addDevice(token: String) {
 		var server: String = SettingsUtil.getServer()
