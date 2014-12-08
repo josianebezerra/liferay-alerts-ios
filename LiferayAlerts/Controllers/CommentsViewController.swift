@@ -83,6 +83,8 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		var comment: String = commentTextField.text
 
 		PushNotificationsEntryServiceUtil.addComment(alert!, comment: comment)
+
+		commentTextField.resignFirstResponder()
 	}
 
 	func tableView(tableView: UITableView,
