@@ -26,6 +26,11 @@ class AddCommentCallback : NSObject, LRCallback {
 	}
 
 	func onSuccess(result: AnyObject!) {
+		var json = result as [NSObject: AnyObject]
+
+		AlertDAO.insertComment(json, user: alert.user)
+
+		CommentsViewController.reloadData()
 	}
 
 	private var alert: Alert

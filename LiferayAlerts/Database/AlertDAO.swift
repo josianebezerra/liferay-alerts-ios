@@ -66,6 +66,13 @@ class AlertDAO {
 	}
 
 	class func insertComment(json: [NSObject: AnyObject]) {
+		var userJson = json["user"] as [NSObject: AnyObject]
+		var user: User = UserDAO.createUser(userJson)
+
+		insertComment(json, user: user)
+	}
+
+	class func insertComment(json: [NSObject: AnyObject], user: User) {
 		var alertId: Int = json["pushNotificationsEntryId"] as Int
 		var parentAlertId: Int = json["parentPushNotificationsEntryId"]
 			as Int
@@ -74,9 +81,6 @@ class AlertDAO {
 
 		var alertJsonObj: [NSObject: AnyObject] =
 			JsonUtil.toJson(json["payload"] as String)
-
-		var userJson = json["user"] as [NSObject: AnyObject]
-		var user: User = UserDAO.createUser(userJson)
 
 		AlertDAO._insert(
 			alertId, parentAlertId: parentAlertId, createTime: createTime,
