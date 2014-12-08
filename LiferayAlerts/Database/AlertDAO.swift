@@ -19,7 +19,20 @@ import CoreData
  */
 class AlertDAO {
 
-	class func get() -> [Alert]? {
+	class func get(alertId: Int) -> Alert? {
+		var predicate: NSPredicate? = NSPredicate(
+			format: "alertId = %d", alertId)
+
+		var alerts: [Alert]? = _get(predicate)
+
+		if ((alerts != nil) && (alerts!.count > 0)) {
+			return alerts![0]
+		}
+
+		return nil
+	}
+
+	class func getAll() -> [Alert]? {
 		var context = DatabaseHelper.getInstance().getContext()!
 
 		var request: NSFetchRequest = NSFetchRequest()
@@ -69,26 +82,53 @@ class AlertDAO {
 		var database: DatabaseHelper = DatabaseHelper.getInstance()
 		var context: NSManagedObjectContext = database.getContext()!
 
-		var alert: Alert = NSEntityDescription.insertNewObjectForEntityForName(
-			"Alert", inManagedObjectContext:context) as Alert
+		var alert: Alert? = get(alertId)
 
-		alert.alertId = alertId
-		alert.parentAlertId = parentAlertId
-		alert.payload = payload
-		alert.user = user
+		if (alert == nil) {
+			alert = NSEntityDescription.insertNewObjectForEntityForName(
+				"Alert", inManagedObjectContext:context) as? Alert
+		}
+
+		alert!.alertId = alertId
+		alert!.parentAlertId = parentAlertId
+		alert!.payload = payload
+		alert!.user = user
 
 		if (createTime != nil) {
-			alert.createTime = createTime!
+			alert!.createTime = createTime!
 		}
 		else {
-			alert.createTime = 0
+			alert!.createTime = 0
 		}
 
 		if (commit) {
 			database.commit()
 		}
 
-		return alert
+		return alert!
+	}
+
+	private class func _get(predicate: NSPredicate?) -> [Alert]? {
+		var context = DatabaseHelper.getInstance().getContext()!
+
+		var request: NSFetchRequest = NSFetchRequest()
+		request.entity = NSEntityDescription.entityForName(
+			"Alert", inManagedObjectContext:context)
+
+		request.predicate = predicate
+
+		var error: NSError?
+
+		let alerts: [Alert] = context.executeFetchRequest(request, error:&error)
+			as [Alert]
+
+		if (error != nil) {
+			NSLog("Coldn't get users \(error), \(error!.userInfo)")
+
+			return nil
+		}
+
+		return alerts
 	}
 
 }

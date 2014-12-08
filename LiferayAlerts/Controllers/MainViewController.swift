@@ -30,7 +30,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		alerts = AlertDAO.get()
+		alerts = AlertDAO.getAll()
 
 		_initCollectionView()
 		_initTopBar()
