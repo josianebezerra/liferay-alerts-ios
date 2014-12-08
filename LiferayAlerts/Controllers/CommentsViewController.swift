@@ -29,6 +29,10 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		super.init(coder:coder)
 	}
 
+	class func reloadData() {
+		NotificationUtil.send("reloadEntries")
+	}
+
 	override func viewDidLoad() {
 		_initBottomBar()
 		_initTableView()
@@ -41,10 +45,14 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		var alertId = alert!.alertId.integerValue
 
 		PushNotificationsEntryServiceUtil.getComments(alertId)
-	}
 
-	class func reloadData() {
-		NotificationUtil.send("reloadEntries")
+		NotificationUtil.register(
+			"UIKeyboardWillShowNotification", observer: self,
+			selector: "willShowKeyboardNotification:")
+
+		NotificationUtil.register(
+			"UIKeyboardWillHideNotification", observer: self,
+			selector: "willHideKeyboardNotification:")
 	}
 
 	func reloadEntriesNotification() {
@@ -53,6 +61,22 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		comments = AlertDAO.getChildren(alertId)
 
 		tableView.reloadData()
+	}
+
+	func willHideKeyboardNotification(notification: NSNotification) {
+		var params: [NSObject: AnyObject] = notification.userInfo!
+
+		_animateView(false, params: params)
+	}
+
+	func willShowKeyboardNotification(notification: NSNotification) {
+		var params: [NSObject: AnyObject] = notification.userInfo!
+
+		_animateView(true, params: params)
+	}
+
+	@IBAction func backButtonClick(recognizer: UITapGestureRecognizer) {
+		dismissViewControllerAnimated(true, completion:nil)
 	}
 
 	@IBAction func sendCommentAction() {
@@ -78,6 +102,30 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
 		return comments!.count
+	}
+
+	private func _animateView(up: Bool, params: [NSObject: AnyObject]) {
+		var size: CGSize =
+			params[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue().size
+
+		var duration: Double =
+			params[UIKeyboardAnimationDurationUserInfoKey] as Double
+
+		var rawAnimationCurve =
+			(params[UIKeyboardAnimationCurveUserInfoKey]
+			as NSNumber).unsignedIntValue << 16
+
+		var curve = UIViewAnimationOptions(rawValue: UInt(rawAnimationCurve))
+		var distance: CGFloat = (up ? -size.height : size.height)
+
+		UIView.animateWithDuration(
+			duration,
+			delay: 0,
+			options: curve,
+			animations: {
+				self.view.frame = CGRectOffset(self.view.frame, 0, distance)
+			},
+			completion: nil)
 	}
 
 	private func _getCommentsHeaderView() -> CommentsHeaderView {
@@ -142,10 +190,6 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 
 		topBarTitle.text = NSLocalizedString("comments", comment:"")
 		topBarTitle.textColor = UIColors.TOP_BAR_TEXT
-	}
-
-	@IBAction func backButtonClick(recognizer: UITapGestureRecognizer) {
-		dismissViewControllerAnimated(true, completion:nil)
 	}
 
 	var alert: Alert?
