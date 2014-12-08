@@ -20,8 +20,11 @@ import CoreData
  */
 class Alert: NSManagedObject {
 
-	@NSManaged var payload: AnyObject
+	@NSManaged var alertId: NSNumber
+	@NSManaged var createTime: NSNumber
 	@NSManaged var like: Bool
+	@NSManaged var parentAlertId: NSNumber
+	@NSManaged var payload: AnyObject
 	@NSManaged var user: LiferayAlerts.User
 
 }

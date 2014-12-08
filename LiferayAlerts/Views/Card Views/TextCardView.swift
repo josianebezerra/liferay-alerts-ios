@@ -31,7 +31,7 @@ class TextCardView: BaseCardView {
 	}
 
 	@IBAction func likeButtonAction(sender: UIButton) {
-		var alertId: Int = self.alert!.getAlertId()
+		var alertId: Int = self.alert!.alertId.integerValue
 		var like: Bool = !self.alert!.like
 
 		_updateLike(like)
@@ -69,7 +69,7 @@ class TextCardView: BaseCardView {
 		_updateLike(alert.like)
 		_setMessage()
 
-		var alertId: Int = alert.getAlertId()
+		var alertId: Int = alert.alertId.integerValue
 		var destination: String = TextCardView._getDestination(alertId)
 
 		NotificationUtil.register(

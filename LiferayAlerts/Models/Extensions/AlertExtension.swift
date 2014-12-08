@@ -18,10 +18,6 @@
  */
 extension Alert {
 
-	func getAlertId() -> Int {
-		return payload["pushNotificationsEntryId"] as Int
-	}
-
 	func getMessage() -> String? {
 		return payload["alert"] as String?
 	}
