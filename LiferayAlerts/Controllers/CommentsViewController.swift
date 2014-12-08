@@ -55,6 +55,12 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		tableView.reloadData()
 	}
 
+	@IBAction func sendCommentAction() {
+		var comment: String = commentTextField.text
+
+		PushNotificationsEntryServiceUtil.addComment(alert!, comment: comment)
+	}
+
 	func tableView(tableView: UITableView,
 		cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
