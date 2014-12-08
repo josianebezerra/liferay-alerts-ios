@@ -75,6 +75,24 @@ class AlertDAO {
 			createTime:createTime, payload:alertJsonObj, user:user, commit:true)
 	}
 
+	class func insertComment(json: [NSObject: AnyObject]) {
+		var alertId: Int = json["pushNotificationsEntryId"] as Int
+		var parentAlertId: Int = json["parentPushNotificationsEntryId"]
+			as Int
+
+		var createTime: NSNumber? = json["createTime"] as? NSNumber
+
+		var alertJsonObj: [NSObject: AnyObject] =
+			JsonUtil.parse(json["payload"] as String)
+
+		var userJson = json["user"] as [NSObject: AnyObject]
+		var user: User = UserDAO.createUser(userJson)
+
+		AlertDAO._insert(
+			alertId, parentAlertId: parentAlertId, createTime: createTime,
+			payload: alertJsonObj, user: user, commit:true)
+	}
+
 	class func _insert(
 		alertId: Int, parentAlertId: Int, createTime:  NSNumber?,
 		payload: [NSObject: AnyObject], user: User, commit: Bool) -> Alert {

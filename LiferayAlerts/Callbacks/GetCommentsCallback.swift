@@ -22,6 +22,11 @@ class GetCommentsCallback : NSObject, LRCallback {
 	}
 
 	func onSuccess(result: AnyObject!) {
+		var jsonArray = result as [[NSObject: AnyObject]]
+
+		for json in jsonArray {
+			AlertDAO.insertComment(json)
+		}
 	}
 
 }
