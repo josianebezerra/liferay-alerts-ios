@@ -29,6 +29,7 @@
 		2972965B1A25134A00E76429 /* PollsVoteServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972965A1A25134A00E76429 /* PollsVoteServiceUtil.swift */; };
 		2972965D1A2616CB00E76429 /* NotificationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972965C1A2616CB00E76429 /* NotificationUtil.swift */; };
 		297550C019F6DC7400E3F550 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297550BD19F6DC7400E3F550 /* Info.plist */; };
+		2982C5A91A30E630003CF8EB /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982C5A81A30E630003CF8EB /* DateUtil.swift */; };
 		29841F2219F893EE00A7ADAF /* PushNotificationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29841F2119F893EE00A7ADAF /* PushNotificationUtil.swift */; };
 		29841F2419F894ED00A7ADAF /* AddPushNotificationDeviceCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29841F2319F894ED00A7ADAF /* AddPushNotificationDeviceCallback.swift */; };
 		29841F2619F8950900A7ADAF /* SettingsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29841F2519F8950900A7ADAF /* SettingsUtil.swift */; };
@@ -92,6 +93,7 @@
 		2972965C1A2616CB00E76429 /* NotificationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationUtil.swift; sourceTree = "<group>"; };
 		297550BD19F6DC7400E3F550 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		297C30CE19ED71EA00057718 /* LiferayAlerts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiferayAlerts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2982C5A81A30E630003CF8EB /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		29841F1519F88CE900A7ADAF /* LiferayAlerts-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LiferayAlerts-Bridging-Header.h"; path = "Supporting Files/LiferayAlerts-Bridging-Header.h"; sourceTree = "<group>"; };
 		29841F2119F893EE00A7ADAF /* PushNotificationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationUtil.swift; sourceTree = "<group>"; };
 		29841F2319F894ED00A7ADAF /* AddPushNotificationDeviceCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPushNotificationDeviceCallback.swift; path = Callbacks/AddPushNotificationDeviceCallback.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		29841F1619F88D6D00A7ADAF /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2982C5A81A30E630003CF8EB /* DateUtil.swift */,
 				2963175A1A31F86400A50452 /* JsonUtil.swift */,
 				75B8DE7A1A0A5B2F00298092 /* FontUtil.swift */,
 				2999F2BB1A001A1000456701 /* GradientUtil.swift */,
@@ -536,6 +539,7 @@
 				75DA6CC91A11326A0078D3EE /* PollsChoiceContainerView.swift in Sources */,
 				298A45AF19F9989A00D9AB93 /* UserDAO.swift in Sources */,
 				296160331A23615D00343359 /* PollsChoiceView.swift in Sources */,
+				2982C5A91A30E630003CF8EB /* DateUtil.swift in Sources */,
 				29841F2419F894ED00A7ADAF /* AddPushNotificationDeviceCallback.swift in Sources */,
 				29C99E4D1A2C9E02009CEAE2 /* CommentsViewController.swift in Sources */,
 				298A459E19F98BFC00D9AB93 /* Alert.swift in Sources */,

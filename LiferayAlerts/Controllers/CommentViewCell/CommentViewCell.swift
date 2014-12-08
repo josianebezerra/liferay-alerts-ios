@@ -29,6 +29,7 @@ class CommentViewCell: UITableViewCell {
 		self.comment = comment
 
 		_setComment()
+		_setDate()
 	}
 
 	private func _getAttributedString(
@@ -58,6 +59,10 @@ class CommentViewCell: UITableViewCell {
 		text.insertAttributedString(userName, atIndex: 0)
 
 		commentLabel.attributedText = text
+	}
+
+	private func _setDate() {
+		dateLabel.text = DateUtil.format(comment!.createTime.longLongValue)
 	}
 
 	let USER_NAME_FONT: UIFont = UIFont(
