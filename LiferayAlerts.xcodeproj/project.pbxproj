@@ -75,7 +75,7 @@
 		2938A55919F6D7AA00A72879 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2938A55B19F6D7AA00A72879 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293BB69B19F6A011004AF345 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		294457EA1A2674F2007ECCC4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		294457EA1A2674F2007ECCC4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "Supporting Files/Localizable.strings"; sourceTree = "<group>"; };
 		296160311A23615D00343359 /* PollsChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollsChoiceView.swift; path = Polls/PollsChoiceView.swift; sourceTree = "<group>"; };
 		296160321A23615D00343359 /* PollsChoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PollsChoiceView.xib; path = Polls/PollsChoiceView.xib; sourceTree = "<group>"; };
 		296160351A23657600343359 /* BaseAlertViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAlertViewCell.swift; sourceTree = "<group>"; };
@@ -109,8 +109,8 @@
 		29C6357D19F6DDEE00160E35 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		29C99E421A28BB12009CEAE2 /* PushNotificationServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationServiceUtil.swift; sourceTree = "<group>"; };
 		29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsEntryServiceUtil.swift; sourceTree = "<group>"; };
-		29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLikeCallback.swift; sourceTree = "<group>"; };
-		29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBProgressHUD.swift; sourceTree = "<group>"; };
+		29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddLikeCallback.swift; path = Callbacks/AddLikeCallback.swift; sourceTree = "<group>"; };
+		29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MBProgressHUD.swift; path = Extensions/MBProgressHUD.swift; sourceTree = "<group>"; };
 		29C99E4C1A2C9E02009CEAE2 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		29C99E4E1A2C9E94009CEAE2 /* CommentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
 		29C99E501A2CAD0C009CEAE2 /* CommentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentViewCell.xib; path = CommentViewCell/CommentViewCell.xib; sourceTree = "<group>"; };
@@ -159,9 +159,9 @@
 		2901DB7219FEEE7500E25788 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */,
 				2901DB7019FEDCB100E25788 /* UIColor.swift */,
 				755E0CF51A1E133300D9E829 /* UIView.swift */,
-				29C99E4A1A29FF07009CEAE2 /* MBProgressHUD.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
