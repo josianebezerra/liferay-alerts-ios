@@ -27,6 +27,7 @@ class ComposeViewController: UIViewController {
 
 	override func viewDidLoad() {
 		messageTextView.becomeFirstResponder()
+		messageTextView.selectedRange = NSMakeRange(0, 0)
 
 		NotificationUtil.register(UIKeyboardWillHideNotification,
 			observer: self, selector: Selector("keyboardWillHide:"))
