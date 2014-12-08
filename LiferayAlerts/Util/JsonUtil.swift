@@ -20,7 +20,7 @@ import CoreData
 
 class JsonUtil {
 
-	class func parse(json: String) -> [NSObject: AnyObject] {
+	class func toJson(json: String) -> [NSObject: AnyObject] {
 		var jsonData: NSData? = json.dataUsingEncoding(NSUTF8StringEncoding)
 		var error: NSError?
 
@@ -29,6 +29,18 @@ class JsonUtil {
 			as [NSObject: AnyObject]
 
 		return jsonObj
+	}
+
+	class func toString(json: [NSObject: AnyObject]) -> String {
+		var error: NSError?
+
+		var data: NSData = NSJSONSerialization.dataWithJSONObject(
+			json, options:nil, error:&error)!
+
+		var jsonString: String? = NSString(
+			data:data, encoding:NSUTF8StringEncoding)
+
+		return jsonString!
 	}
 
 }

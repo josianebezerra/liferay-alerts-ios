@@ -41,6 +41,7 @@
 		298A45B119FAD6CD00D9AB93 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 298A45B019FAD6CD00D9AB93 /* MainViewController.xib */; };
 		299129FA1A1651A700E3CBF1 /* PollsChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299129F91A1651A700E3CBF1 /* PollsChoice.swift */; };
 		2999F2BC1A001A1000456701 /* GradientUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999F2BB1A001A1000456701 /* GradientUtil.swift */; };
+		29AD593C1A32625F00E866E5 /* AddCommentCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AD593B1A32625F00E866E5 /* AddCommentCallback.swift */; };
 		29B7FDCA1A2E52F800011E50 /* PortraitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7FDC91A2E52F800011E50 /* PortraitView.swift */; };
 		29B7FDCC1A2E530B00011E50 /* PortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B7FDCB1A2E530B00011E50 /* PortraitView.xib */; };
 		29B7FDD11A2F46EB00011E50 /* CommentsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7FDD01A2F46EB00011E50 /* CommentsHeaderView.swift */; };
@@ -105,6 +106,7 @@
 		298A45B019FAD6CD00D9AB93 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		299129F91A1651A700E3CBF1 /* PollsChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollsChoice.swift; sourceTree = "<group>"; };
 		2999F2BB1A001A1000456701 /* GradientUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientUtil.swift; sourceTree = "<group>"; };
+		29AD593B1A32625F00E866E5 /* AddCommentCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddCommentCallback.swift; path = Callbacks/AddCommentCallback.swift; sourceTree = "<group>"; };
 		29B7FDC91A2E52F800011E50 /* PortraitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PortraitView.swift; path = PortraitView/PortraitView.swift; sourceTree = "<group>"; };
 		29B7FDCB1A2E530B00011E50 /* PortraitView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PortraitView.xib; path = PortraitView/PortraitView.xib; sourceTree = "<group>"; };
 		29B7FDD01A2F46EB00011E50 /* CommentsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsHeaderView.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		29841F1D19F88EB600A7ADAF /* Callbacks */ = {
 			isa = PBXGroup;
 			children = (
+				29AD593B1A32625F00E866E5 /* AddCommentCallback.swift */,
 				29C99E461A28BED4009CEAE2 /* AddLikeCallback.swift */,
 				296ADD061A24B79F0099FA0F /* AddVoteCallback.swift */,
 				29841F2319F894ED00A7ADAF /* AddPushNotificationDeviceCallback.swift */,
@@ -518,6 +521,7 @@
 				755E0CF61A1E133300D9E829 /* UIView.swift in Sources */,
 				29B7FDD11A2F46EB00011E50 /* CommentsHeaderView.swift in Sources */,
 				2901DB7119FEDCB200E25788 /* UIColor.swift in Sources */,
+				29AD593C1A32625F00E866E5 /* AddCommentCallback.swift in Sources */,
 				299129FA1A1651A700E3CBF1 /* PollsChoice.swift in Sources */,
 				29C99E4B1A29FF07009CEAE2 /* MBProgressHUD.swift in Sources */,
 				2938A56C19F6D7AA00A72879 /* MainViewController.swift in Sources */,

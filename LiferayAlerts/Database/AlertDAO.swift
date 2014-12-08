@@ -54,11 +54,11 @@ class AlertDAO {
 			json["aps"] as [NSObject: AnyObject]
 
 		var userJson: [NSObject: AnyObject] =
-			JsonUtil.parse(json["user"] as String)
+			JsonUtil.toJson(json["user"] as String)
 
 		var user: User = UserDAO.createUser(userJson)
 
-		alertJsonObj = alertJsonObj + JsonUtil.parse(json["payload"] as String)
+		alertJsonObj = alertJsonObj + JsonUtil.toJson(json["payload"] as String)
 
 		AlertDAO._insert(
 			alertId.toInt()!, parentAlertId:parentAlertId.toInt()!,
@@ -73,7 +73,7 @@ class AlertDAO {
 		var createTime: NSNumber? = json["createTime"] as? NSNumber
 
 		var alertJsonObj: [NSObject: AnyObject] =
-			JsonUtil.parse(json["payload"] as String)
+			JsonUtil.toJson(json["payload"] as String)
 
 		var userJson = json["user"] as [NSObject: AnyObject]
 		var user: User = UserDAO.createUser(userJson)

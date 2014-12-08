@@ -17,6 +17,23 @@
  */
 class PushNotificationsEntryServiceUtil {
 
+	class func addComment(alert: Alert, comment: String) {
+		var callback: LRCallback = AddCommentCallback(alert: alert)
+
+		var service: LRPushnotificationsentryService_v62 = getService(callback)
+
+		var payload: [String: AnyObject] = [
+			"message": comment
+		]
+
+		var json: String = JsonUtil.toString(payload)
+
+		var error: NSError?
+
+		service.addPushNotificationsEntryWithParentPushNotificationsEntryId(
+			Int64(alert.alertId.integerValue), payload: json, error: &error)
+	}
+
 	class func getComments(alertId: Int) {
 		var callback: LRCallback = GetCommentsCallback()
 
