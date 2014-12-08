@@ -40,9 +40,31 @@ class AlertDAO {
 		return alerts
 	}
 
-	class func insert(
-		payload: [NSObject: AnyObject], user: User, commit: Bool)
-		-> Alert {
+	class func insert(json: [NSObject: AnyObject]) {
+		var alertId: String = json["pushNotificationsEntryId"] as String
+		var parentAlertId: String = json["parentPushNotificationsEntryId"]
+			as String
+
+		var createTime: NSNumber? = json["createTime"] as? NSNumber
+
+		var alertJsonObj: [NSObject: AnyObject] =
+			json["aps"] as [NSObject: AnyObject]
+
+		var userJson: [NSObject: AnyObject] =
+			JsonUtil.parse(json["user"] as String)
+
+		var user: User = UserDAO.createUser(userJson)
+
+		alertJsonObj = alertJsonObj + JsonUtil.parse(json["payload"] as String)
+
+		AlertDAO._insert(
+			alertId.toInt()!, parentAlertId:parentAlertId.toInt()!,
+			createTime:createTime, payload:alertJsonObj, user:user, commit:true)
+	}
+
+	class func _insert(
+		alertId: Int, parentAlertId: Int, createTime:  NSNumber?,
+		payload: [NSObject: AnyObject], user: User, commit: Bool) -> Alert {
 
 		var database: DatabaseHelper = DatabaseHelper.getInstance()
 		var context: NSManagedObjectContext = database.getContext()!
@@ -50,8 +72,17 @@ class AlertDAO {
 		var alert: Alert = NSEntityDescription.insertNewObjectForEntityForName(
 			"Alert", inManagedObjectContext:context) as Alert
 
+		alert.alertId = alertId
+		alert.parentAlertId = parentAlertId
 		alert.payload = payload
 		alert.user = user
+
+		if (createTime != nil) {
+			alert.createTime = createTime!
+		}
+		else {
+			alert.createTime = 0
+		}
 
 		if (commit) {
 			database.commit()

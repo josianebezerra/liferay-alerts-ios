@@ -17,24 +17,18 @@ import CoreData
 /**
  * @author Silvio Santos
  */
-class PushNotificationUtil {
 
-	class func handleNotification(notification: [NSObject: AnyObject]) {
-		AlertDAO.insert(notification)
-	}
+class JsonUtil {
 
-	class func registerForNotifications() {
-		var types: UIUserNotificationType =
-			(UIUserNotificationType.Alert | UIUserNotificationType.Badge |
-			UIUserNotificationType.Sound)
+	class func parse(json: String) -> [NSObject: AnyObject] {
+		var jsonData: NSData? = json.dataUsingEncoding(NSUTF8StringEncoding)
+		var error: NSError?
 
-		var settings: UIUserNotificationSettings = UIUserNotificationSettings(
-			forTypes:types, categories:nil)
+		var jsonObj = NSJSONSerialization.JSONObjectWithData(
+			jsonData!, options:NSJSONReadingOptions(0), error:&error)
+			as [NSObject: AnyObject]
 
-		var application: UIApplication = UIApplication.sharedApplication()
-
-		application.registerUserNotificationSettings(settings)
-		application.registerForRemoteNotifications()
+		return jsonObj
 	}
 
 }

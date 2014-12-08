@@ -19,6 +19,19 @@ import CoreData
  */
 class UserDAO {
 
+	class func createUser(jsonObj: [NSObject: AnyObject]) -> User {
+		var id: NSNumber = jsonObj["userId"] as NSNumber
+		var fullName: String = jsonObj["fullName"] as String
+		var portraitId: NSNumber = jsonObj["portraitId"] as NSNumber
+		var uuid: String = jsonObj["uuid"] as String
+
+		var user: User = UserDAO.insert(
+			id, fullName:fullName, portraitId:portraitId, uuid:uuid,
+			commit:false)
+
+		return user;
+	}
+
 	class func get(id : NSNumber) -> User? {
 		var context = DatabaseHelper.getInstance().getContext()!
 
