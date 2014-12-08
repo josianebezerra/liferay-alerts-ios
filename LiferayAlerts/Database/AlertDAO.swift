@@ -50,19 +50,24 @@ class AlertDAO {
 
 		var createTime: NSNumber? = json["createTime"] as? NSNumber
 
-		var alertJsonObj: [NSObject: AnyObject] =
+		var apsJsonObj: [NSObject: AnyObject] =
 			json["aps"] as [NSObject: AnyObject]
+
+		var message: String = apsJsonObj["alert"] as String
+
+		var payload: [NSObject: AnyObject] = JsonUtil.toJson(
+			json["payload"] as String)
+
+		payload["message"] = message
 
 		var userJson: [NSObject: AnyObject] =
 			JsonUtil.toJson(json["user"] as String)
 
 		var user: User = UserDAO.createUser(userJson)
 
-		alertJsonObj = alertJsonObj + JsonUtil.toJson(json["payload"] as String)
-
 		AlertDAO._insert(
 			alertId.toInt()!, parentAlertId:parentAlertId.toInt()!,
-			createTime:createTime, payload:alertJsonObj, user:user, commit:true)
+			createTime:createTime, payload:payload, user:user, commit:true)
 	}
 
 	class func insertComment(json: [NSObject: AnyObject]) {

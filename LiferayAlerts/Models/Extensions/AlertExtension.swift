@@ -19,7 +19,7 @@
 extension Alert {
 
 	func getMessage() -> String? {
-		return payload["alert"] as String?
+		return payload["message"] as String?
 	}
 
 	func getPollsQuestion() -> PollsQuestion {
