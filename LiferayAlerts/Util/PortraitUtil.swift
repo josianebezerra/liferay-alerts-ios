@@ -18,13 +18,19 @@
 class PortraitUtil {
 
 	class func getPortraitURL(user: User) -> NSURL {
+		let portraitId = user.portraitId.longLongValue
+
+		return self.getPortraitURL(user.portraitId.longLongValue, uuid: user.uuid)
+	}
+
+	class func getPortraitURL(portraitId: Int64, uuid: String) -> NSURL {
 		var URL: String = String()
 
 		URL = SettingsUtil.getServer()
 		URL = URL + "/image/user_male/_portrait?img_id="
-		URL = URL + user.portraitId.stringValue
+		URL = URL + "\(portraitId)"
 
-		_appendToken(URL, uuid: user.uuid)
+		_appendToken(URL, uuid: uuid)
 
 		return NSURL(string: URL)!
 	}

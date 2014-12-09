@@ -15,7 +15,9 @@
             <connections>
                 <outlet property="keyboradHeightConstraint" destination="zxe-RP-MT5" id="llL-S5-aqr"/>
                 <outlet property="messageTextView" destination="IdA-cE-TbB" id="lTj-32-EBX"/>
+                <outlet property="portraitView" destination="fJN-XV-gXY" id="DGz-36-igC"/>
                 <outlet property="sendLabel" destination="hiz-Ji-ytp" id="LN7-ab-zaD"/>
+                <outlet property="usernameLabel" destination="Ndz-nb-foa" id="5lM-DM-BJL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -87,6 +89,22 @@
                     <color key="textColor" red="0.9882352941176471" green="0.35686274509803922" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="59" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="fJN-XV-gXY" customClass="PortraitView" customModule="LiferayAlerts" customModuleProvider="target">
+                    <rect key="frame" x="7" y="72" width="53" height="54"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="53" id="Zxz-mD-803"/>
+                        <constraint firstAttribute="width" constant="69" id="aYo-VT-hVo"/>
+                        <constraint firstAttribute="height" constant="70" id="fss-ga-09s"/>
+                        <constraint firstAttribute="height" constant="54" id="ube-ps-ohp"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="aYo-VT-hVo"/>
+                            <exclude reference="fss-ga-09s"/>
+                        </mask>
+                    </variation>
+                </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Say something nice..." translatesAutoresizingMaskIntoConstraints="NO" id="IdA-cE-TbB">
                     <rect key="frame" x="63" y="93" width="537" height="462"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -142,8 +160,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="fJN-XV-gXY" firstAttribute="top" secondItem="1Lw-Xg-rIu" secondAttribute="bottom" constant="8" id="AcW-yn-Jlw"/>
                 <constraint firstItem="1Lw-Xg-rIu" firstAttribute="bottom" secondItem="Ndz-nb-foa" secondAttribute="top" constant="-16" id="Bhe-dI-S06"/>
                 <constraint firstItem="1Lw-Xg-rIu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EeC-an-eNl"/>
+                <constraint firstItem="fJN-XV-gXY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="7" id="Eyd-Fh-jRN"/>
                 <constraint firstItem="Ndz-nb-foa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="68" id="LxN-Fu-dlH"/>
                 <constraint firstAttribute="trailing" secondItem="IdA-cE-TbB" secondAttribute="trailing" id="P5b-VX-25D"/>
                 <constraint firstItem="1Lw-Xg-rIu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Tct-CS-sOD"/>

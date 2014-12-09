@@ -30,6 +30,7 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 		messageTextView.selectedRange = NSMakeRange(0, 0)
 
 		self._updateSendLabel("")
+		self._setUser()
 
 		NotificationUtil.register(UIKeyboardWillHideNotification,
 			observer: self, selector: Selector("keyboardWillHide:"))
@@ -119,6 +120,16 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 		}
 	}
 
+	func _setUser() {
+		usernameLabel.text = SettingsUtil.getUsername()
+
+		let portraitId = SettingsUtil.getPortraitId()
+		let uuid = SettingsUtil.getUserUuid()
+		let URL = PortraitUtil.getPortraitURL(portraitId, uuid: uuid)
+
+		portraitView.setPortraitURL(URL)
+	}
+
 	func _updateSendLabel(message: String) {
 		if (messageTextView.tag == 0 || Validator.isNull(message)) {
 			sendLabel.alpha = 0.3
@@ -132,7 +143,9 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 
 	@IBOutlet weak var keyboradHeightConstraint: NSLayoutConstraint!
 	@IBOutlet weak var messageTextView: UITextView!
+	@IBOutlet weak var portraitView: PortraitView!
 	@IBOutlet weak var sendLabel: UILabel!
+	@IBOutlet weak var usernameLabel: UILabel!
 
 	let _placeholder = NSLocalizedString("say-something-nice", comment:"")
 }
