@@ -34,6 +34,7 @@
                     <connections>
                         <outlet property="dataSource" destination="-1" id="7B5-hs-lUF"/>
                         <outlet property="delegate" destination="-1" id="0oF-Rj-kqT"/>
+                        <outletCollection property="gestureRecognizers" destination="wKM-K5-SmX" appends="YES" id="tnA-Eg-czK"/>
                     </connections>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-UW-rfv" userLabel="Bottom Bar">
@@ -126,9 +127,14 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="534" y="352"/>
         </view>
-        <tapGestureRecognizer id="jeG-PF-bzl">
+        <tapGestureRecognizer id="jeG-PF-bzl" userLabel="Back Button Gesture Recognizer">
             <connections>
                 <action selector="backButtonClick:" destination="-1" id="B0C-Ag-XxI"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="wKM-K5-SmX" userLabel="Table View Gesture Recognizer">
+            <connections>
+                <action selector="tableViewClick:" destination="-1" id="lWY-WO-vrX"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

@@ -81,6 +81,10 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		dismissViewControllerAnimated(true, completion:nil)
 	}
 
+	@IBAction func tableViewClick(recognizer: UITapGestureRecognizer) {
+		commentTextField.resignFirstResponder()
+	}
+
 	@IBAction func sendCommentAction() {
 		var comment: String = commentTextField.text
 
