@@ -16,6 +16,7 @@
 		2938A56D19F6D7AA00A72879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2938A55B19F6D7AA00A72879 /* AppDelegate.swift */; };
 		293BB69C19F6A011004AF345 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293BB69B19F6A011004AF345 /* CoreData.framework */; };
 		2944203A1A36131500D36306 /* PortraitUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294420391A36131500D36306 /* PortraitUtil.swift */; };
+		2944203C1A3773E300D36306 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2944203B1A3773E300D36306 /* TextField.swift */; };
 		294457EB1A2674F2007ECCC4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 294457EA1A2674F2007ECCC4 /* Localizable.strings */; };
 		296160331A23615D00343359 /* PollsChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296160311A23615D00343359 /* PollsChoiceView.swift */; };
 		296160341A23615D00343359 /* PollsChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296160321A23615D00343359 /* PollsChoiceView.xib */; };
@@ -89,6 +90,7 @@
 		2938A55B19F6D7AA00A72879 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293BB69B19F6A011004AF345 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		294420391A36131500D36306 /* PortraitUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortraitUtil.swift; sourceTree = "<group>"; };
+		2944203B1A3773E300D36306 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		294457EA1A2674F2007ECCC4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "Supporting Files/Localizable.strings"; sourceTree = "<group>"; };
 		296160311A23615D00343359 /* PollsChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollsChoiceView.swift; path = Polls/PollsChoiceView.swift; sourceTree = "<group>"; };
 		296160321A23615D00343359 /* PollsChoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PollsChoiceView.xib; path = Polls/PollsChoiceView.xib; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				297AD9561A23A980006CF823 /* Polls */,
 				29B7FDCD1A2E5FD500011E50 /* PortraitView */,
 				29C6357D19F6DDEE00160E35 /* LaunchScreen.xib */,
+				2944203B1A3773E300D36306 /* TextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				29F8E49319FE886B000A7CA2 /* AlertExtension.swift in Sources */,
 				75F2F6271A31EF7100D71492 /* JsonUtil.swift in Sources */,
 				75DA6CCD1A1166580078D3EE /* AlertType.swift in Sources */,
+				2944203C1A3773E300D36306 /* TextField.swift in Sources */,
 				75B8DE7B1A0A5B2F00298092 /* FontUtil.swift in Sources */,
 				75B8DE771A097A5900298092 /* UIDimensions.swift in Sources */,
 				75DA6CC91A11326A0078D3EE /* PollsChoiceContainerView.swift in Sources */,
