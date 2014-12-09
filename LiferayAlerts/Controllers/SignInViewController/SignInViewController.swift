@@ -25,6 +25,10 @@ class SignInViewController: UIViewController {
 		super.init(coder:coder)
 	}
 
+	override func viewDidLoad() {
+		loginTextField.becomeFirstResponder()
+	}
+
 	@IBAction func signInAction() {
 		let login = loginTextField.text
 		let password = passwordTextField.text
