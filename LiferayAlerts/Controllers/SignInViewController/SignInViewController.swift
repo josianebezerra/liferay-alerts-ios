@@ -42,8 +42,7 @@ class SignInViewController: UIViewController {
 
 				var hud = MBProgressHUD.showHUDAddedTo(window, animated: true)
 
-				hud.labelText = NSLocalizedString(
-					"\(error!.description)", comment:"")
+				hud.labelText = error!.description
 
 				hud.mode = MBProgressHUDModeText
 				hud.hide(true, afterDelay:1.5)
