@@ -71,6 +71,26 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 		return true
 	}
 
+	override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+		super.touchesBegan(touches, withEvent: event)
+		let touch: UITouch = touches.anyObject()! as UITouch
+		let view = touch.view
+
+		if(view.tag == UIDimensions.SIGN_IN_BUTTON_TAG) {
+			view.alpha = 0.5
+		}
+	}
+
+	override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+		super.touchesEnded(touches, withEvent: event)
+		let touch: UITouch = touches.anyObject()! as UITouch
+		let view = touch.view
+
+		if(view.tag == UIDimensions.SIGN_IN_BUTTON_TAG) {
+			view.alpha = 1.0
+		}
+	}
+
 	lazy var queue: NSOperationQueue = {
 		var queue = NSOperationQueue()
 		queue.maxConcurrentOperationCount = 1

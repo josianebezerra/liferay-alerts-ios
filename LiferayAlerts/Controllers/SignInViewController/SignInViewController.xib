@@ -30,7 +30,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoe-ze-D9G" userLabel="Top Bar">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                     <subviews>
-                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-nL-MYX">
+                        <label opaque="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-nL-MYX">
                             <rect key="frame" x="529" y="32" width="59" height="23"/>
                             <gestureRecognizers/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
@@ -128,7 +128,7 @@
             </constraints>
             <point key="canvasLocation" x="338" y="275"/>
         </view>
-        <tapGestureRecognizer id="3Cf-bL-gTY">
+        <tapGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" id="3Cf-bL-gTY">
             <connections>
                 <action selector="signInAction" destination="-1" id="J1b-wF-vVJ"/>
             </connections>
