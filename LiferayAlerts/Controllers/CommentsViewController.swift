@@ -53,6 +53,8 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 		NotificationUtil.register(
 			"UIKeyboardWillHideNotification", observer: self,
 			selector: "willHideKeyboardNotification:")
+
+		comments = AlertDAO.getChildren(alertId)
 	}
 
 	func reloadEntriesNotification() {
