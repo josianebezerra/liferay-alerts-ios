@@ -52,14 +52,14 @@ class SignInViewController: UIViewController {
 		queue.addOperation(operation)
 	}
 
-	@IBOutlet weak var loginTextField: UITextField!
-	@IBOutlet weak var passwordTextField: UITextField!
-
 	lazy var queue: NSOperationQueue = {
 		var queue = NSOperationQueue()
 		queue.maxConcurrentOperationCount = 1
 
 		return queue
 	}()
+
+	@IBOutlet weak var loginTextField: UITextField!
+	@IBOutlet weak var passwordTextField: UITextField!
 
 }
