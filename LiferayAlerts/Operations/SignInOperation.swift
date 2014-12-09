@@ -18,7 +18,7 @@
 class SignInOperation: NSOperation {
 
 	init(login: String, password: String,
-		completion: ((error: NSError?) -> Void)) {
+		completion: ((user: [NSObject: AnyObject]?, error: NSError?) -> Void)) {
 
 		self.completion = completion
 		self.login = login
@@ -40,8 +40,18 @@ class SignInOperation: NSOperation {
 			return
 		}
 
+		let group = groups![0] as [NSObject: AnyObject]
+		let companyId = group["companyId"] as NSNumber
+
+		let user = UserServiceUtil.getUser(companyId.longLongValue,
+			error: &error)
+
+		if (self._hasError(error)) {
+			return
+		}
+
 		dispatch_async(dispatch_get_main_queue(), {
-			self.completion(error: error)
+			self.completion(user: user, error: error)
 		});
 
 		SettingsUtil.setCredentials(login, password: password)
@@ -53,7 +63,7 @@ class SignInOperation: NSOperation {
 		}
 
 		dispatch_async(dispatch_get_main_queue(), {
-			self.completion(error: error)
+			self.completion(user: nil, error: error)
 		});
 
 		super.cancel()
@@ -61,7 +71,7 @@ class SignInOperation: NSOperation {
 		return true
 	}
 
-	var completion: ((error: NSError?) -> Void)
+	var completion: ((user: [NSObject: AnyObject]?, error: NSError?) -> Void)
 	var login: String
 	var password: String
 

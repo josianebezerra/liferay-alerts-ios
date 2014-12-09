@@ -28,8 +28,20 @@ class SettingsUtil {
 		return self._getPreference("password") as String?
 	}
 
+	class func getPortraitId() -> Int64 {
+		return (self._getPreference("portraitId") as NSNumber).longLongValue
+	}
+
 	class func getServer() -> String {
 		return "http://192.168.108.28:8080"
+	}
+
+	class func getUsername() -> String {
+		return self._getPreference("username") as String
+	}
+
+	class func getUserUuid() -> String {
+		return self._getPreference("uuid") as String
 	}
 
 	class func getSession() -> LRSession {
@@ -58,6 +70,27 @@ class SettingsUtil {
 
 	class func setPassword(password: String) {
 		self._setPreference(password, key: "password")
+	}
+
+	class func setPortraitId(portraitId: NSNumber) {
+		self._setPreference(portraitId, key: "portraitId")
+	}
+
+	class func setUser(user: [NSObject: AnyObject]) {
+		let firstName: String = user["firstName"] as String
+		let lastName: String = user["lastName"] as String
+
+		self.setUsername("\(firstName) \(lastName)")
+		self.setPortraitId(user["portraitId"] as NSNumber)
+		self.setUserUuid(user["uuid"] as String)
+	}
+
+	class func setUsername(username: String) {
+		self._setPreference(username, key: "username")
+	}
+
+	class func setUserUuid(uuid: String) {
+		self._setPreference(uuid, key: "uuid")
 	}
 
 	class func _getPreference(key: String) -> AnyObject? {

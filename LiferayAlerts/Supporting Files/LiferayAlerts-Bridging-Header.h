@@ -30,6 +30,7 @@
 #import "LRPushnotificationsdeviceService_v62.h"
 #import "LRPushnotificationsentryService_v62.h"
 #import "LRServiceFactory.h"
+#import "LRUserService_v62.h"
 #import "MBProgressHUD.h"
 
 //SDWebImage

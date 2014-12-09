@@ -68,6 +68,7 @@
 		75B8DE7B1A0A5B2F00298092 /* FontUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8DE7A1A0A5B2F00298092 /* FontUtil.swift */; };
 		75B8DE7D1A0AAC7500298092 /* TextCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8DE7C1A0AAC7500298092 /* TextCardView.swift */; };
 		75B8DE7F1A0AB6AC00298092 /* TextCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75B8DE7E1A0AB6AC00298092 /* TextCardView.xib */; };
+		75CC2ACE1A37247500AC6AE9 /* UserServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CC2ACD1A37247500AC6AE9 /* UserServiceUtil.swift */; };
 		75DA6CC91A11326A0078D3EE /* PollsChoiceContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DA6CC81A11326A0078D3EE /* PollsChoiceContainerView.swift */; };
 		75DA6CCD1A1166580078D3EE /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DA6CCC1A1166580078D3EE /* AlertType.swift */; };
 		75F2F61A1A3087B900D71492 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F6181A3087B900D71492 /* SignInViewController.swift */; };
@@ -140,6 +141,7 @@
 		75B8DE7A1A0A5B2F00298092 /* FontUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontUtil.swift; sourceTree = "<group>"; };
 		75B8DE7C1A0AAC7500298092 /* TextCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCardView.swift; sourceTree = "<group>"; };
 		75B8DE7E1A0AB6AC00298092 /* TextCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCardView.xib; sourceTree = "<group>"; };
+		75CC2ACD1A37247500AC6AE9 /* UserServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServiceUtil.swift; path = Services/UserServiceUtil.swift; sourceTree = "<group>"; };
 		75DA6CC81A11326A0078D3EE /* PollsChoiceContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollsChoiceContainerView.swift; path = Polls/PollsChoiceContainerView.swift; sourceTree = "<group>"; };
 		75DA6CCC1A1166580078D3EE /* AlertType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
 		75F2F6181A3087B900D71492 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = SignInViewController/SignInViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				2972965A1A25134A00E76429 /* PollsVoteServiceUtil.swift */,
 				29C99E421A28BB12009CEAE2 /* PushNotificationsDeviceServiceUtil.swift */,
 				29C99E441A28BDC0009CEAE2 /* PushNotificationsEntryServiceUtil.swift */,
+				75CC2ACD1A37247500AC6AE9 /* UserServiceUtil.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				2961603F1A237C5700343359 /* PollsAlertViewCell.swift in Sources */,
 				296160421A237D7600343359 /* AlertViewCellFactory.swift in Sources */,
 				75F2F61A1A3087B900D71492 /* SignInViewController.swift in Sources */,
+				75CC2ACE1A37247500AC6AE9 /* UserServiceUtil.swift in Sources */,
 				75B8DE7D1A0AAC7500298092 /* TextCardView.swift in Sources */,
 				296C65A41A0155F200ACF560 /* BaseCardView.swift in Sources */,
 				2999F2BC1A001A1000456701 /* GradientUtil.swift in Sources */,

@@ -41,11 +41,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 		MBProgressHUD.showHUDAddedTo(view, animated: true)
 
 		let operation = SignInOperation(login: login, password: password) {
-			(error) -> Void in
+			(user, error) -> Void in
 
 			MBProgressHUD.hideHUDForView(self.view, animated: true)
 
 			if (error == nil) {
+				SettingsUtil.setUser(user!)
+
 				self.navigationController!.pushViewController(
 					MainViewController(), animated: true)
 			}

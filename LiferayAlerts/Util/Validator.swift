@@ -17,6 +17,25 @@
 */
 class Validator: NSObject {
 
+	class func isEmailAddress(emailAddress: String) -> Bool {
+		let pattern = "[\\w!#$%&'*+/=?^_`{|}~-]+(?:\\.[\\w!#$%&'*" +
+			"+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:-*[a-zA-" +
+			"Z0-9])?\\.*)+"
+
+		let regex: NSRegularExpression = NSRegularExpression(pattern: pattern,
+			options: NSRegularExpressionOptions(0), error: nil)!
+
+		let matches = regex.matchesInString(emailAddress,
+			options: NSMatchingOptions(0), range: NSMakeRange(
+				0, countElements(emailAddress)))
+
+		if(matches.count == 0) {
+			return false
+		}
+
+		return true
+	}
+
 	class func isNull(var string: String?) -> Bool {
 		if (string == nil || string!.isEmpty) {
 			return true
