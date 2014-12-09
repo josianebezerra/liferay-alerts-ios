@@ -20,10 +20,10 @@ import CoreData
  */
 class User: NSManagedObject {
 
-    @NSManaged var fullName: String
-    @NSManaged var id: NSNumber
-    @NSManaged var portraitId: NSNumber
-    @NSManaged var uuid: String
-    @NSManaged var alerts: NSSet
+	@NSManaged var fullName: String
+	@NSManaged var id: NSNumber
+	@NSManaged var portraitId: NSNumber
+	@NSManaged var uuid: String
+	@NSManaged var alerts: NSSet
 
 }
