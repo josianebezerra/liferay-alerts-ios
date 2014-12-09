@@ -76,19 +76,45 @@
                         <rect key="frame" x="41" y="239" width="420" height="117"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="59" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="REu-sZ-bp8" customClass="PortraitView" customModule="LiferayAlerts" customModuleProvider="target">
+                        <rect key="frame" x="13" y="16" width="53" height="54"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69" id="1RL-ay-9WV"/>
+                            <constraint firstAttribute="height" constant="70" id="3s5-SF-Gic"/>
+                            <constraint firstAttribute="width" constant="53" id="AeY-B6-ulL"/>
+                            <constraint firstAttribute="height" constant="54" id="DtC-Eu-m3p"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1RL-ay-9WV"/>
+                                <exclude reference="3s5-SF-Gic"/>
+                            </mask>
+                        </variation>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
                 <constraint firstItem="toE-sv-gtr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CSz-8D-C9e"/>
+                <constraint firstItem="toE-sv-gtr" firstAttribute="top" secondItem="REu-sZ-bp8" secondAttribute="bottom" constant="-67" id="OM8-XG-kmI"/>
                 <constraint firstItem="61T-uq-9Ur" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailing" constant="-8" id="XMa-Bt-lCX"/>
                 <constraint firstItem="61T-uq-9Ur" firstAttribute="top" secondItem="toE-sv-gtr" secondAttribute="bottom" constant="10" id="YnR-mq-4P2"/>
                 <constraint firstItem="61T-uq-9Ur" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="41" id="ees-S4-t54"/>
+                <constraint firstItem="REu-sZ-bp8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="hU1-1H-RZo"/>
                 <constraint firstItem="toE-sv-gtr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="24" id="iDp-fS-AKv"/>
+                <constraint firstItem="REu-sZ-bp8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="nDE-9H-hU1"/>
+                <constraint firstItem="toE-sv-gtr" firstAttribute="leading" secondItem="REu-sZ-bp8" secondAttribute="trailing" constant="-58" id="psN-YR-15d"/>
                 <constraint firstAttribute="bottom" secondItem="61T-uq-9Ur" secondAttribute="bottom" constant="17" id="qde-c0-MOW"/>
                 <constraint firstAttribute="trailing" secondItem="toE-sv-gtr" secondAttribute="trailing" id="z6p-n0-FeX"/>
             </constraints>
             <size key="customSize" width="469" height="373"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="OM8-XG-kmI"/>
+                    <exclude reference="psN-YR-15d"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="backgroundImageView" destination="nKL-ZJ-u2f" id="IF5-a2-l7f"/>
                 <outlet property="imageContainer" destination="nKL-ZJ-u2f" id="RcF-jB-JC9"/>
@@ -96,6 +122,7 @@
                 <outlet property="imageView" destination="tb2-To-xuj" id="mLT-Zd-Rcw"/>
                 <outlet property="nameLabel" destination="n3h-V8-rUa" id="jfq-5E-viB"/>
                 <outlet property="overlayView" destination="cU4-co-Krq" id="9qc-tE-gZj"/>
+                <outlet property="portraitView" destination="REu-sZ-bp8" id="NTO-Zy-D4U"/>
                 <outlet property="textCardView" destination="61T-uq-9Ur" id="47r-F3-FFb"/>
             </connections>
             <point key="canvasLocation" x="246.5" y="441.5"/>
