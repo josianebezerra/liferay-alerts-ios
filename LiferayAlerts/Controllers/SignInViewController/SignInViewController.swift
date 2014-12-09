@@ -27,6 +27,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
 	override func viewDidLoad() {
 		loginTextField.becomeFirstResponder()
+		self._updateSiginInButton()
+	}
+
+	@IBAction func editingChanged() {
+		self._updateSiginInButton()
 	}
 
 	@IBAction func signInAction() {
@@ -91,6 +96,20 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 		}
 	}
 
+	func _updateSiginInButton() {
+		let hasLogin = !Validator.isNull(loginTextField.text);
+		let hasPassword = !Validator.isNull(passwordTextField.text);
+
+		if (hasLogin && hasPassword) {
+			signInLabel.alpha = 1.0
+			signInLabel.userInteractionEnabled = true
+		}
+		else {
+			signInLabel.alpha = 0.3
+			signInLabel.userInteractionEnabled = false
+		}
+	}
+
 	lazy var queue: NSOperationQueue = {
 		var queue = NSOperationQueue()
 		queue.maxConcurrentOperationCount = 1
@@ -100,5 +119,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
 	@IBOutlet weak var loginTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
+	@IBOutlet weak var signInLabel: UILabel!
 
 }

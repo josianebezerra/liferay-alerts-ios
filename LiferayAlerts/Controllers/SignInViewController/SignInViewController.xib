@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="loginTextField" destination="6JF-GX-bKI" id="UIw-0h-SQI"/>
                 <outlet property="passwordTextField" destination="sQm-gn-11N" id="AR0-TR-er2"/>
+                <outlet property="signInLabel" destination="8Yh-nL-MYX" id="QyX-L6-Njz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -70,6 +71,7 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15.630000114440918"/>
                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                     <connections>
+                        <action selector="editingChanged" destination="-1" eventType="editingChanged" id="RuE-5S-Zyx"/>
                         <outlet property="delegate" destination="-1" id="0qR-kW-po6"/>
                     </connections>
                 </textField>
@@ -85,6 +87,7 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15.630000114440918"/>
                     <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                     <connections>
+                        <action selector="editingChanged" destination="-1" eventType="editingChanged" id="yRc-3G-zb5"/>
                         <outlet property="delegate" destination="-1" id="5VM-5T-COI"/>
                     </connections>
                 </textField>
