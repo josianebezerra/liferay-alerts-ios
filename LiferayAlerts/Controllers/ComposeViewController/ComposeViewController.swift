@@ -29,6 +29,8 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 		messageTextView.becomeFirstResponder()
 		messageTextView.selectedRange = NSMakeRange(0, 0)
 
+		self._updateSendLabel("")
+
 		NotificationUtil.register(UIKeyboardWillHideNotification,
 			observer: self, selector: Selector("keyboardWillHide:"))
 
@@ -41,10 +43,6 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 	}
 
 	@IBAction func createAction() {
-		if (messageTextView.tag == 0) {
-			return
-		}
-
 		let message = messageTextView.text
 
 		var payload = [String: String]()
@@ -82,6 +80,12 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 			textView.textColor = UIColors.COMPOSE_TEXT
 		}
 
+		var message = textView.text as NSString
+		message = message.stringByReplacingCharactersInRange(range,
+			withString: text)
+
+		self._updateSendLabel(message)
+
 		return true
 	}
 
@@ -93,8 +97,44 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 		}
 	}
 
+	override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+		super.touchesBegan(touches, withEvent: event)
+		let touch: UITouch = touches.anyObject()! as UITouch
+		let view = touch.view
+
+		if(view.tag == UIDimensions.COMPOSE_SEND_LABEL_TAG ||
+			view.tag == UIDimensions.COMPOSE_BACK_VIEW_TAG) {
+
+			view.alpha = 0.5
+		}
+	}
+
+	override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+		super.touchesEnded(touches, withEvent: event)
+		let touch: UITouch = touches.anyObject()! as UITouch
+		let view = touch.view
+
+		if(view.tag == UIDimensions.COMPOSE_SEND_LABEL_TAG ||
+			view.tag == UIDimensions.COMPOSE_BACK_VIEW_TAG) {
+
+			view.alpha = 1.0
+		}
+	}
+
+	func _updateSendLabel(message: String) {
+		if (messageTextView.tag == 0 || Validator.isNull(message)) {
+			sendLabel.alpha = 0.3
+			sendLabel.userInteractionEnabled = false
+		}
+		else {
+			sendLabel.alpha = 1.0
+			sendLabel.userInteractionEnabled = true
+		}
+	}
+
 	@IBOutlet weak var keyboradHeightConstraint: NSLayoutConstraint!
 	@IBOutlet weak var messageTextView: UITextView!
+	@IBOutlet weak var sendLabel: UILabel!
 
 	let _placeholder = NSLocalizedString("say-something-nice", comment:"")
 }

@@ -33,6 +33,9 @@ struct UIDimensions {
 	static let COMMENTS_BAR_SEND_BUTTON_BORDER: CGFloat = 1.0
 	static let COMMENTS_BAR_SEND_BUTTON_RADIUS: CGFloat = 5.0
 
+	static let COMPOSE_BACK_VIEW_TAG: Int = 998
+	static let COMPOSE_SEND_LABEL_TAG: Int = 999
+
 	static let POLLS_CARD_CHOICE_HEIGHT: CGFloat = 80.0
 
 	static let VERTICAL_LINE_WIDTH: CGFloat = 1.0
