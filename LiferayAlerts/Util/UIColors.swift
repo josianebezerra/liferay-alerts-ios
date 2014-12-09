@@ -25,6 +25,11 @@ struct UIColors {
 	static let WHITE: UIColor = UIColor(rgb:"FFFFFF")
 	static let YELLOW: UIColor = UIColor(rgb: "FBD22A")
 
+	static let ALERT_TYPE_IMAGE_COLOR: UIColor = UIColor(rgb: "33C749")
+	static let ALERT_TYPE_LINK_COLOR: UIColor = UIColor(rgb: "647EFB")
+	static let ALERT_TYPE_POLLS_COLOR: UIColor = UIColor(rgb: "9552EF")
+	static let ALERT_TYPE_TEXT_COLOR: UIColor = UIColor(rgb: "FC6045")
+
 	static let CARD_BOTTOM_BAR_TEXT: UIColor = UIColor(rgb: "66233240")
 	static let CARD_MESSAGE: UIColor = DARK_GRAY
 	static let CARD_SHAPE_BACKGROUND: UIColor = WHITE

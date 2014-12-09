@@ -20,13 +20,17 @@ class CommentsHeaderView: UIView {
 	func setAlert(alert: Alert) {
 		divider.backgroundColor = UIColors.COMMENTS_DIVIDER
 
+		var typeColor: UIColor = alert.getType()!.getColor()
+
 		userNameLabel.text = alert.user.fullName
+		userNameLabel.textColor = typeColor
 
 		messageTextView.text = alert.getMessage()
 		messageTextView.textContainer.lineFragmentPadding = 0
 
 		var URL: NSURL = PortraitUtil.getPortraitURL(alert.user)
 		portraitView.setPortraitURL(URL)
+		portraitView.typeBadge.backgroundColor = typeColor
 	}
 
 

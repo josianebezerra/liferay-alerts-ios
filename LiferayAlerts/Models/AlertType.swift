@@ -22,4 +22,24 @@ enum AlertType: String {
 	case POLLS = "polls"
 	case TEXT = "text"
 
+	func getColor() -> UIColor {
+		var color: UIColor
+
+		switch (self) {
+			case .IMAGE:
+				color = UIColors.ALERT_TYPE_IMAGE_COLOR
+
+			case .LINK:
+				color = UIColors.ALERT_TYPE_LINK_COLOR
+
+			case .POLLS:
+				color = UIColors.ALERT_TYPE_POLLS_COLOR
+
+			default:
+				color = UIColors.ALERT_TYPE_TEXT_COLOR
+		}
+
+		return color
+	}
+
 }

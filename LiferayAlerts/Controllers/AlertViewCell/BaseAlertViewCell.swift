@@ -30,7 +30,7 @@ class BaseAlertViewCell: UICollectionViewCell {
 
 		let horizontalPriority = UIDimensions.ALERT_HORIZONTAL_FITTING_PRIORITY
 
-		let size =  super.systemLayoutSizeFittingSize(targetSize,
+		let size = super.systemLayoutSizeFittingSize(targetSize,
 			withHorizontalFittingPriority: horizontalPriority,
 			verticalFittingPriority: verticalFittingPriority)
 
@@ -40,13 +40,15 @@ class BaseAlertViewCell: UICollectionViewCell {
 	func setAlert(alert: Alert) {
 		self.alert = alert
 
-		_setPortrait(alert.user)
+		_setPortrait()
 	}
 
-	private func _setPortrait(user: User) {
-		let URL: NSURL = PortraitUtil.getPortraitURL(user)
+	private func _setPortrait() {
+		let URL: NSURL = PortraitUtil.getPortraitURL(alert!.user)
+		let typeColor: UIColor = alert!.getType()!.getColor()
 
 		portraitView.setPortraitURL(URL)
+		portraitView.typeBadge.backgroundColor = typeColor
 	}
 
 	var alert: Alert?
