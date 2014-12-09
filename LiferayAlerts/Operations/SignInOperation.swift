@@ -40,6 +40,8 @@ class SignInOperation: NSOperation {
 			return
 		}
 
+		SettingsUtil.setCredentials(login, password: password)
+
 		let group = groups![0] as [NSObject: AnyObject]
 		let companyId = group["companyId"] as NSNumber
 
@@ -53,8 +55,6 @@ class SignInOperation: NSOperation {
 		dispatch_async(dispatch_get_main_queue(), {
 			self.completion(user: user, error: error)
 		});
-
-		SettingsUtil.setCredentials(login, password: password)
 	}
 
 	func _hasError(error: NSError?) -> Bool {
