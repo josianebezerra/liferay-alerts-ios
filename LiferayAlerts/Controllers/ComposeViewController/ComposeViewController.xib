@@ -6,6 +6,8 @@
     <customFonts key="customFonts">
         <mutableArray key="LiferayAlerts-Regular.ttf">
             <string>LiferayAlerts-Regular</string>
+            <string>LiferayAlerts-Regular</string>
+            <string>LiferayAlerts-Regular</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -79,10 +81,10 @@
                         <constraint firstItem="lxr-0T-gqe" firstAttribute="leading" secondItem="1Lw-Xg-rIu" secondAttribute="leading" id="ymt-qE-gJd"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zeno Rocha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndz-nb-foa" userLabel="Username">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndz-nb-foa" userLabel="Username">
                     <rect key="frame" x="68" y="80" width="513" height="15"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.9882352941176471" green="0.35686274509803922" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Say something nice..." translatesAutoresizingMaskIntoConstraints="NO" id="IdA-cE-TbB">
@@ -106,12 +108,34 @@
                                 <constraint firstAttribute="height" constant="1" id="RIU-R0-X8x"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="c" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZ2-gv-h0k">
+                            <rect key="frame" x="4" y="7" width="42" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="42" id="s40-5X-nK3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="LiferayAlerts-Regular" family="Liferay Alerts" pointSize="23.5"/>
+                            <color key="textColor" red="0.95294117647058818" green="0.73725490196078436" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdO-Q5-1Rd">
+                            <rect key="frame" x="54" y="6" width="42" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="42" id="O8b-Ye-BWY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="LiferayAlerts-Regular" family="Liferay Alerts" pointSize="25.75"/>
+                            <color key="textColor" red="0.95294117649999999" green="0.73725490199999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.99607843137254903" green="0.97254901960784312" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="GdO-Q5-1Rd" firstAttribute="top" secondItem="M1L-Xe-hxs" secondAttribute="top" constant="6" id="5C5-lp-lV7"/>
+                        <constraint firstItem="GdO-Q5-1Rd" firstAttribute="leading" secondItem="gZ2-gv-h0k" secondAttribute="trailing" constant="8" id="85P-wx-cja"/>
                         <constraint firstItem="gSe-oG-rlt" firstAttribute="top" secondItem="M1L-Xe-hxs" secondAttribute="top" id="D0W-yM-LuD"/>
                         <constraint firstAttribute="width" secondItem="gSe-oG-rlt" secondAttribute="width" id="LCN-vi-PjY"/>
                         <constraint firstAttribute="height" constant="45" id="WHh-M9-D4P"/>
+                        <constraint firstItem="gZ2-gv-h0k" firstAttribute="top" secondItem="M1L-Xe-hxs" secondAttribute="top" constant="7" id="ZdA-Ju-B8z"/>
+                        <constraint firstItem="gZ2-gv-h0k" firstAttribute="leading" secondItem="M1L-Xe-hxs" secondAttribute="leading" constant="4" id="buw-CG-9BQ"/>
                         <constraint firstAttribute="centerX" secondItem="gSe-oG-rlt" secondAttribute="centerX" id="jfZ-mI-4g5"/>
                     </constraints>
                 </view>
@@ -132,7 +156,7 @@
                 <constraint firstAttribute="trailing" secondItem="1Lw-Xg-rIu" secondAttribute="trailing" id="zxT-9n-FOP"/>
                 <constraint firstAttribute="bottom" secondItem="M1L-Xe-hxs" secondAttribute="bottom" id="zxe-RP-MT5"/>
             </constraints>
-            <point key="canvasLocation" x="478" y="237"/>
+            <point key="canvasLocation" x="478" y="229"/>
         </view>
         <tapGestureRecognizer id="eEx-uH-aTc" userLabel="Back Gesture">
             <connections>
