@@ -51,8 +51,6 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 
 		PushNotificationsEntryServiceUtil.addPushNotificationsEntry(
 			JsonUtil.toString(payload)!)
-
-		println(payload)
 	}
 
 	func keyboardWillHide(notification: NSNotification) {
