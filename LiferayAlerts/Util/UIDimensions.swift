@@ -39,4 +39,7 @@ struct UIDimensions {
 	static let VERTICAL_LINE_X: CGFloat = 37.0
 	static let VERTICAL_LINE_Y: CGFloat = 0.0
 
+	static let SIGN_IN_LOGIN_TEXT_FIELD = 0
+	static let SIGN_IN_PASSWORD_TEXT_FIELD = 1
+
 }

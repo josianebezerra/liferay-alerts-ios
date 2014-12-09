@@ -15,7 +15,7 @@
 /**
 * @author Josiane Bezerra
 */
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UITextFieldDelegate {
 
 	override init() {
 		super.init(nibName:"SignInViewController", bundle:nil)
@@ -54,6 +54,17 @@ class SignInViewController: UIViewController {
 		}
 
 		queue.addOperation(operation)
+	}
+
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		if (textField.tag == UIDimensions.SIGN_IN_LOGIN_TEXT_FIELD) {
+			passwordTextField.becomeFirstResponder()
+		}
+		else if (textField.tag == UIDimensions.SIGN_IN_PASSWORD_TEXT_FIELD) {
+			self.signInAction()
+		}
+
+		return true
 	}
 
 	lazy var queue: NSOperationQueue = {
