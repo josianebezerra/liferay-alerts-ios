@@ -3,6 +3,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="LiferayAlerts-Regular.ttf">
+            <string>LiferayAlerts-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="LiferayAlerts" customModuleProvider="target">
             <connections>
@@ -37,15 +42,6 @@
                 <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UJ-Zd-czW" userLabel="Top Bar View">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5a-NW-tBY">
-                            <rect key="frame" x="514" y="30" width="67" height="30"/>
-                            <state key="normal" title="Compose">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="addContentAction" destination="-1" eventType="touchUpInside" id="5OF-sC-Qvk"/>
-                            </connections>
-                        </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_bar_icon" translatesAutoresizingMaskIntoConstraints="NO" id="JaO-en-kOA">
                             <rect key="frame" x="-6" y="12" width="87" height="87"/>
                             <constraints>
@@ -72,10 +68,8 @@
                         <constraint firstItem="JaO-en-kOA" firstAttribute="top" secondItem="1UJ-Zd-czW" secondAttribute="top" constant="12" id="CQO-RJ-OA3"/>
                         <constraint firstItem="jzf-dt-TQI" firstAttribute="leading" secondItem="1UJ-Zd-czW" secondAttribute="leading" constant="75" id="OKq-hO-pyZ"/>
                         <constraint firstItem="g64-IY-LBr" firstAttribute="leading" secondItem="1UJ-Zd-czW" secondAttribute="leading" constant="76" id="UJd-Cn-aFa"/>
-                        <constraint firstAttribute="trailing" secondItem="b5a-NW-tBY" secondAttribute="trailing" constant="19" id="Ux2-Bf-mnf"/>
                         <constraint firstItem="JaO-en-kOA" firstAttribute="leading" secondItem="1UJ-Zd-czW" secondAttribute="leading" constant="-6" id="s1G-hr-x7Y"/>
                         <constraint firstAttribute="height" constant="89" id="ty6-Ct-zmu"/>
-                        <constraint firstItem="b5a-NW-tBY" firstAttribute="top" secondItem="1UJ-Zd-czW" secondAttribute="top" constant="30" id="u9Y-HQ-1Ia"/>
                         <constraint firstItem="g64-IY-LBr" firstAttribute="top" secondItem="1UJ-Zd-czW" secondAttribute="top" constant="37" id="umR-8j-tEi"/>
                     </constraints>
                 </view>
@@ -86,22 +80,62 @@
                         <constraint firstAttribute="height" constant="1" id="qtz-9o-nF6"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WmB-io-K6r" userLabel="Compose">
+                    <rect key="frame" x="272" y="528" width="56" height="56"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="f" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8g-N0-e56">
+                            <rect key="frame" x="7" y="12" width="42" height="29"/>
+                            <fontDescription key="fontDescription" name="LiferayAlerts-Regular" family="Liferay Alerts" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98431372549019602" green="0.82352941176470584" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="w8g-N0-e56" secondAttribute="bottom" constant="15" id="4Qs-2D-ybh"/>
+                        <constraint firstAttribute="width" constant="56" id="FXj-co-3r7"/>
+                        <constraint firstAttribute="trailing" secondItem="w8g-N0-e56" secondAttribute="trailing" constant="7" id="Yhs-kd-mv7"/>
+                        <constraint firstAttribute="height" constant="56" id="Z2A-0Y-pYm"/>
+                        <constraint firstItem="w8g-N0-e56" firstAttribute="top" secondItem="WmB-io-K6r" secondAttribute="top" constant="12" id="ho9-nM-bSv"/>
+                        <constraint firstItem="w8g-N0-e56" firstAttribute="leading" secondItem="WmB-io-K6r" secondAttribute="leading" constant="7" id="wpS-Xv-fpW"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="28"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="5xM-34-cGH" appends="YES" id="0bM-GC-vlX"/>
+                    </connections>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="KSJ-QJ-5IR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0dk-91-HMT"/>
                 <constraint firstItem="WWf-4T-41I" firstAttribute="bottom" secondItem="1UJ-Zd-czW" secondAttribute="bottom" id="794-4C-v2k"/>
                 <constraint firstItem="1UJ-Zd-czW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Bhb-VJ-cmw"/>
+                <constraint firstAttribute="bottom" secondItem="WmB-io-K6r" secondAttribute="bottom" constant="16" id="K1N-F6-SSb"/>
                 <constraint firstAttribute="bottom" secondItem="KSJ-QJ-5IR" secondAttribute="bottom" id="LaN-77-qxH"/>
+                <constraint firstAttribute="centerX" secondItem="WmB-io-K6r" secondAttribute="centerX" id="PvX-SO-0k2"/>
                 <constraint firstItem="KSJ-QJ-5IR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rxc-uq-Uxm"/>
                 <constraint firstItem="1UJ-Zd-czW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Shu-La-4eK"/>
                 <constraint firstItem="1UJ-Zd-czW" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="dAg-jH-Hbi"/>
                 <constraint firstItem="KSJ-QJ-5IR" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="eeX-4X-elp"/>
                 <constraint firstItem="WWf-4T-41I" firstAttribute="leading" secondItem="1UJ-Zd-czW" secondAttribute="leading" id="k37-le-ZiC"/>
                 <constraint firstItem="WWf-4T-41I" firstAttribute="trailing" secondItem="1UJ-Zd-czW" secondAttribute="trailing" id="kaZ-xe-4rV"/>
+                <constraint firstAttribute="centerX" secondItem="WmB-io-K6r" secondAttribute="centerX" constant="10" id="sPE-fd-JEI"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="sPE-fd-JEI"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="447" y="333"/>
         </view>
+        <tapGestureRecognizer id="5xM-34-cGH">
+            <connections>
+                <action selector="addContentAction" destination="-1" id="bdI-dU-FeI"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="top_bar_icon" width="87" height="87"/>
