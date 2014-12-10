@@ -88,6 +88,10 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 	@IBAction func sendCommentAction() {
 		var comment: String = commentTextField.text
 
+		if (comment.isEmpty) {
+			return
+		}
+
 		PushNotificationsEntryServiceUtil.addComment(alert!, comment: comment)
 
 		commentTextField.resignFirstResponder()
