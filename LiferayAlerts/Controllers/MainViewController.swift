@@ -108,13 +108,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 
 	private func _initTopBar() {
 		_setTopBarGradient()
-
-		divider.backgroundColor = UIColors.TOP_BAR_DIVIDER
-		dividerHeight.constant = (1 / UIScreen.mainScreen().scale)
-
-		topBarLastAlert.textColor = UIColors.TOP_BAR_LAST_ALERT
-		userName.textColor = UIColors.TOP_BAR_USER_NAME
-		userName.shadowColor = UIColors.TOP_BAR_USER_NAME_SHADOW
 	}
 
 	private func _setTopBarGradient() {
@@ -124,16 +117,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 			(UIColors.TOP_BAR_BACKGROUND).CGColor
 		]
 
-		GradientUtil.setGradientBackground(topBar, colors:colors)
+		GradientUtil.setGradientBackground(topBarBackground, colors:colors)
 	}
 
 	var alerts: [Alert]?
 
 	@IBOutlet var collectionView: UICollectionView!
-	@IBOutlet var dividerHeight: NSLayoutConstraint!
-	@IBOutlet var divider: UIView!
 	@IBOutlet var topBar: UIView!
-	@IBOutlet var topBarLastAlert: UILabel!
-	@IBOutlet var userName: UILabel!
+	@IBOutlet var topBarBackground: UIView!
 
 }

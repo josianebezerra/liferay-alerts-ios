@@ -60,11 +60,7 @@ struct UIColors {
 
 	static let TOP_BAR_BACKGROUND: UIColor = YELLOW
 	static let TOP_BAR_BACKGROUND_CENTER: UIColor = UIColor(rgb:"FFD12B")
-	static let TOP_BAR_DIVIDER: UIColor = DARK_YELLOW
-	static let TOP_BAR_LAST_ALERT: UIColor = UIColor(rgb:"B29734")
 	static let TOP_BAR_TEXT: UIColor = WHITE
-	static let TOP_BAR_USER_NAME: UIColor = WHITE
-	static let TOP_BAR_USER_NAME_SHADOW: UIColor = DARK_YELLOW
 	static let VERTICAL_LINE_COLOR: UIColor = DARK_GRAY_ALPHA_40
 
 }
