@@ -56,10 +56,10 @@
             </constraints>
             <size key="customSize" width="569" height="540"/>
             <connections>
-                <outlet property="nameLabel" destination="bZ8-kz-Pcq" id="FZe-Pf-Fex"/>
                 <outlet property="pollsChoiceContainerView" destination="0m5-xu-h3O" id="HFt-cJ-vzz"/>
                 <outlet property="portraitView" destination="IGN-s1-jOH" id="cOM-NU-cgY"/>
                 <outlet property="questionLabel" destination="WHu-r5-Ek7" id="4a0-69-Ksi"/>
+                <outlet property="userNameLabel" destination="bZ8-kz-Pcq" id="KZu-gE-Kag"/>
             </connections>
             <point key="canvasLocation" x="340.5" y="178"/>
         </collectionViewCell>
