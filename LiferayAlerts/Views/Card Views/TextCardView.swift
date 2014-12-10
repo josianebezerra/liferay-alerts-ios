@@ -83,6 +83,7 @@ class TextCardView: BaseCardView {
 
 		_updateLike(alert.like)
 		_setMessage()
+		_setUserName()
 
 		var alertId: Int = alert.alertId.integerValue
 		var destination: String = TextCardView._getDestination(alertId)
@@ -100,8 +101,14 @@ class TextCardView: BaseCardView {
 		}
 
 		messageTextView.text = alert!.getMessage()
+		messageTextView.textContainer.lineFragmentPadding = 0
 		messageTextView.textColor = UIColors.CARD_MESSAGE
 		messageTextView.font = TEXT_FONT
+	}
+
+	private func _setUserName() {
+		userNameLabel.text = alert!.user.fullName + ":"
+		userNameLabel.textColor = alert!.getType()!.getColor()
 	}
 
 	private func _updateLike(like: Bool) {
@@ -127,5 +134,6 @@ class TextCardView: BaseCardView {
 	@IBOutlet var likeButton: UIButton!
 	@IBOutlet var likeLabel: UILabel!
 	@IBOutlet var messageTextView: UITextView!
+	@IBOutlet var userNameLabel: UILabel!
 
 }
