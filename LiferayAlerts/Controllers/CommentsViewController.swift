@@ -174,6 +174,9 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 			UIDimensions.COMMENTS_BAR_INPUT_RADIUS
 
 		commentTextField.textColor = UIColors.COMMENTS_BAR_INPUT_TEXT
+
+		commentTextField.placeholder = NSLocalizedString(
+			"write-something-nice", comment: "")
 	}
 
 	private func _initTableView() {
