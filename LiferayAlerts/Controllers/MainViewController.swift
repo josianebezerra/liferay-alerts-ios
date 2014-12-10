@@ -27,6 +27,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 		super.init(coder:coder)
 	}
 
+	class func reloadData() {
+		NotificationUtil.send("reloadEntries")
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -38,6 +42,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 		NotificationUtil.register(
 			"commentButtonClick", observer:self,
 			selector: "didCommentButtonClickNotification:")
+
+		NotificationUtil.register(
+			"reloadEntries", observer:self,
+			selector: "reloadEntriesNotification")
 	}
 
 	@IBAction func addContentAction() {
@@ -71,6 +79,12 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 		presentViewController(
 			CommentsViewController(alert:alert), animated: true,
 			completion: nil)
+	}
+
+	func reloadEntriesNotification() {
+		alerts = AlertDAO.getAll()
+
+		collectionView.reloadData()
 	}
 
 	private func _initCollectionView() {

@@ -21,6 +21,8 @@ class PushNotificationUtil {
 
 	class func handleNotification(notification: [NSObject: AnyObject]) {
 		AlertDAO.insert(notification)
+
+		MainViewController.reloadData()
 	}
 
 	class func registerForNotifications() {
