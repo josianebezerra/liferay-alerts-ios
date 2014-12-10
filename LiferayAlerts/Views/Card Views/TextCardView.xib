@@ -43,15 +43,19 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="likeButtonAction:" destination="-1" eventType="touchUpInside" id="oqx-yE-U1x"/>
+                                <action selector="likeButtonAction" destination="-1" eventType="touchUpInside" id="aVL-Hw-Vlb"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq6-vI-aTd" userLabel="Like Label">
                             <rect key="frame" x="36" y="15" width="27" height="15"/>
                             <accessibility key="accessibilityConfiguration" label="Love"/>
+                            <gestureRecognizers/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="Cgx-CG-LOR" appends="YES" id="7eo-bJ-j0j"/>
+                            </connections>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKw-3E-vAH" userLabel="Comment Button">
                             <rect key="frame" x="79" y="10" width="21" height="25"/>
@@ -64,12 +68,17 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fet-YZ-fwD" userLabel="Comment Label">
                             <rect key="frame" x="105" y="15" width="55" height="15"/>
+                            <gestureRecognizers/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="UGT-XL-29a" appends="YES" id="CSk-gJ-j8c"/>
+                            </connections>
                         </label>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="Fet-YZ-fwD" firstAttribute="top" secondItem="QbJ-2r-s9M" secondAttribute="top" id="3oZ-UG-bg4"/>
                         <constraint firstAttribute="height" constant="45" id="9hv-19-DkK"/>
                         <constraint firstItem="05T-7B-vRV" firstAttribute="leading" secondItem="QbJ-2r-s9M" secondAttribute="leading" constant="9" id="IBW-wY-vmT"/>
                         <constraint firstAttribute="centerY" secondItem="05T-7B-vRV" secondAttribute="centerY" id="Jed-57-YZb"/>
@@ -77,13 +86,16 @@
                         <constraint firstItem="Fet-YZ-fwD" firstAttribute="leading" secondItem="Lq6-vI-aTd" secondAttribute="trailing" constant="111" id="XuR-he-rRW"/>
                         <constraint firstAttribute="centerY" secondItem="Lq6-vI-aTd" secondAttribute="centerY" id="ZRI-gd-bVL"/>
                         <constraint firstItem="KKw-3E-vAH" firstAttribute="leading" secondItem="Lq6-vI-aTd" secondAttribute="trailing" constant="16" id="fpX-3v-fFQ"/>
+                        <constraint firstAttribute="bottom" secondItem="Fet-YZ-fwD" secondAttribute="bottom" id="hKe-dm-cmh"/>
                         <constraint firstAttribute="centerY" secondItem="KKw-3E-vAH" secondAttribute="centerY" id="muK-9M-X9B"/>
                         <constraint firstAttribute="centerY" secondItem="Fet-YZ-fwD" secondAttribute="centerY" id="nLK-KZ-av5"/>
                         <constraint firstItem="Lq6-vI-aTd" firstAttribute="leading" secondItem="05T-7B-vRV" secondAttribute="trailing" constant="5" id="sR1-Gc-QeG"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
+                            <exclude reference="3oZ-UG-bg4"/>
                             <exclude reference="XuR-he-rRW"/>
+                            <exclude reference="hKe-dm-cmh"/>
                         </mask>
                     </variation>
                 </view>
@@ -108,6 +120,16 @@
                 </mask>
             </variation>
         </view>
+        <tapGestureRecognizer cancelsTouchesInView="NO" id="UGT-XL-29a" userLabel="Comment Label Tap Gesture Recognizer">
+            <connections>
+                <action selector="commentButtonAction" destination="-1" id="x5c-YG-1Dv"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer cancelsTouchesInView="NO" id="Cgx-CG-LOR" userLabel="Like Label Tap Gesture Recognizer">
+            <connections>
+                <action selector="likeButtonAction" destination="-1" id="V6v-Xw-bKe"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="icon_comment" width="21" height="25"/>

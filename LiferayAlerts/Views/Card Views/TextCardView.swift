@@ -38,6 +38,9 @@ class TextCardView: BaseCardView {
 		containerView.setTranslatesAutoresizingMaskIntoConstraints(false)
 		containerView.setFrameConstraints(equalsToView: self)
 
+		commentLabel.userInteractionEnabled = true
+		likeLabel.userInteractionEnabled = true
+
 		self.layoutIfNeeded()
 	}
 
@@ -45,7 +48,7 @@ class TextCardView: BaseCardView {
 		NotificationUtil.send("commentButtonClick", data: ["alert": alert!])
 	}
 
-	@IBAction func likeButtonAction(sender: UIButton) {
+	@IBAction func likeButtonAction() {
 		var alertId: Int = self.alert!.alertId.integerValue
 		var like: Bool = !self.alert!.like
 
