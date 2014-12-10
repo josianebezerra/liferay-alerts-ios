@@ -111,7 +111,6 @@
                     <color key="textColor" red="0.13725490196078433" green="0.19607843137254902" blue="0.25098039215686274" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="jGA-S9-pgm"/>
                     </connections>
