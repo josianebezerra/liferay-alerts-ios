@@ -35,10 +35,9 @@ class PushNotificationsEntryServiceUtil {
 	}
 
 	class func addPushNotificationsEntry(payload: String) {
-		var session: LRSession = SettingsUtil.getSession()
+		var callback: LRCallback = AddPushNotificationCallback()
 
-		var service: LRPushnotificationsentryService_v62 =
-			LRPushnotificationsentryService_v62(session:session)
+		var service: LRPushnotificationsentryService_v62 = getService(callback)
 
 		var error: NSError?
 
