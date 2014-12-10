@@ -18,6 +18,7 @@
 struct UIDimensions {
 
 	static let ALERT_HORIZONTAL_FITTING_PRIORITY: Float = 1000.0
+	static let ALERT_LIST_BOTTOM_PADDING: CGFloat = 88
 
 	static let CARD_ARROW_HEIGHT: CGFloat = 11.0
 	static let CARD_ARROW_LEFT_START_Y: CGFloat = 15.0

@@ -107,6 +107,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource,
 		let top = topBar.frame.height
 		collectionView.contentInset.top = top
 
+		collectionView.contentInset.bottom =
+			UIDimensions.ALERT_LIST_BOTTOM_PADDING
+
 		var layout: UICollectionViewFlowLayout =
 			collectionView.collectionViewLayout as UICollectionViewFlowLayout
 
