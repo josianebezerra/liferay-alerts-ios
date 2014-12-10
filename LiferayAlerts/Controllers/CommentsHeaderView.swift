@@ -15,11 +15,14 @@
 /**
  * @author Silvio Santos
  */
-class CommentsHeaderView: UIView {
+class CommentsHeaderView: UITableViewCell {
+
+	override func awakeFromNib() {
+		messageTextView.textColor = UIColors.COMMENT_TEXT
+		divider.backgroundColor = UIColors.COMMENTS_DIVIDER
+	}
 
 	func setAlert(alert: Alert) {
-		divider.backgroundColor = UIColors.COMMENTS_DIVIDER
-
 		var typeColor: UIColor = alert.getType()!.getColor()
 
 		userNameLabel.text = alert.user.fullName
@@ -38,4 +41,5 @@ class CommentsHeaderView: UIView {
 	@IBOutlet var messageTextView: UITextView!
 	@IBOutlet var portraitView: PortraitView!
 	@IBOutlet var userNameLabel: UILabel!
+
 }

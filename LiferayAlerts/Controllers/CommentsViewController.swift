@@ -96,20 +96,33 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 	func tableView(tableView: UITableView,
 		cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-		var cell: CommentViewCell = tableView.dequeueReusableCellWithIdentifier(
-			"CommentCellId") as CommentViewCell
+		if (indexPath.row == 0) {
+			var cell: CommentsHeaderView =
+				tableView.dequeueReusableCellWithIdentifier(
+				"CommentHeaderViewId") as CommentsHeaderView
 
-		var comment: Alert = comments![indexPath.row]
+			cell.setAlert(alert!)
 
-		cell.setAlert(comment)
+			return cell
 
-		return cell
+		}
+		else {
+			var cell: CommentViewCell =
+				tableView.dequeueReusableCellWithIdentifier(
+				"CommentCellId") as CommentViewCell
+
+			var comment: Alert = comments![indexPath.row - 1]
+
+			cell.setAlert(comment)
+
+			return cell
+		}
 	}
 
 	func tableView(
 		tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-		return comments!.count
+		return comments!.count + 1
 	}
 
 	private func _animateView(up: Bool, params: [NSObject: AnyObject]) {
@@ -134,18 +147,6 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 				self.view.frame = CGRectOffset(self.view.frame, 0, distance)
 			},
 			completion: nil)
-	}
-
-	private func _getCommentsHeaderView() -> CommentsHeaderView {
-		var nib: UINib = UINib(
-			nibName: "CommentsHeaderView", bundle: NSBundle.mainBundle())
-
-		var view: CommentsHeaderView = nib.instantiateWithOwner(
-			nil, options: nil)[0] as CommentsHeaderView
-
-		view.setAlert(alert!)
-
-		return view
 	}
 
 	private func _initBottomBar() {
@@ -176,12 +177,17 @@ class CommentsViewController: UIViewController, UITableViewDataSource,
 	}
 
 	private func _initTableView() {
-		var nib: UINib = UINib(nibName: "CommentViewCell", bundle:nil)
+		var commentNib: UINib = UINib(nibName: "CommentViewCell", bundle:nil)
+		var headerNib: UINib = UINib(nibName: "CommentsHeaderView", bundle: nil)
 
-		tableView.registerNib(nib, forCellReuseIdentifier: "CommentCellId")
+		tableView.registerNib(
+			commentNib, forCellReuseIdentifier: "CommentCellId")
+
+		tableView.registerNib(
+			headerNib, forCellReuseIdentifier: "CommentHeaderViewId")
+
 		tableView.estimatedRowHeight = 44.0
 		tableView.contentInset.top = topBar.frame.size.height
-		tableView.tableHeaderView = _getCommentsHeaderView()
 		tableView.separatorStyle = UITableViewCellSeparatorStyle.None
 	}
 

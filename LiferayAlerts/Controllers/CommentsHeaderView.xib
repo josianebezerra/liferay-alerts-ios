@@ -2,67 +2,69 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View" customClass="CommentsHeaderView" customModule="LiferayAlerts" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="188"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="dTu-zJ-nOH" userLabel="Portrait VIew" customClass="PortraitView" customModule="LiferayAlerts" customModuleProvider="target">
-                    <rect key="frame" x="13" y="5" width="53" height="54"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="54" id="kVK-8F-dCJ"/>
-                        <constraint firstAttribute="width" constant="53" id="pq9-QL-U3x"/>
-                    </constraints>
-                </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBk-9t-VQd" userLabel="User Name">
-                    <rect key="frame" x="73" y="11" width="522" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKE-1e-mHR">
-                    <rect key="frame" x="73" y="36" width="522" height="144"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                </textView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3w-It-9Vb" userLabel="Divider">
-                    <rect key="frame" x="0.0" y="187" width="600" height="1"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="npD-dO-xwG"/>
-                    </constraints>
-                </view>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="dTu-zJ-nOH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="Djm-TX-dgU"/>
-                <constraint firstAttribute="bottom" secondItem="S3w-It-9Vb" secondAttribute="bottom" id="PFg-4h-BNj"/>
-                <constraint firstAttribute="trailing" secondItem="S3w-It-9Vb" secondAttribute="trailing" id="WTT-Np-d4b"/>
-                <constraint firstItem="PBk-9t-VQd" firstAttribute="leading" secondItem="RKE-1e-mHR" secondAttribute="leading" id="WxQ-At-Etb"/>
-                <constraint firstItem="S3w-It-9Vb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XYg-hh-s4Q"/>
-                <constraint firstAttribute="trailing" secondItem="PBk-9t-VQd" secondAttribute="trailing" constant="5" id="d0a-78-VNx"/>
-                <constraint firstItem="PBk-9t-VQd" firstAttribute="leading" secondItem="dTu-zJ-nOH" secondAttribute="trailing" constant="7" id="djc-cE-AXh"/>
-                <constraint firstItem="RKE-1e-mHR" firstAttribute="top" secondItem="PBk-9t-VQd" secondAttribute="bottom" constant="4" id="eMA-7q-rCQ"/>
-                <constraint firstAttribute="trailing" secondItem="RKE-1e-mHR" secondAttribute="trailing" constant="5" id="kMC-q1-Cbq"/>
-                <constraint firstItem="dTu-zJ-nOH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="lmF-na-I6L"/>
-                <constraint firstItem="PBk-9t-VQd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="11" id="oS4-6P-iGW"/>
-                <constraint firstItem="RKE-1e-mHR" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-8" id="v8w-aC-iYs"/>
-            </constraints>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="234" id="YvP-zf-3TU" customClass="CommentsHeaderView" customModule="LiferayAlerts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="551" height="234"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YvP-zf-3TU" id="5qH-mn-JIr">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3w-It-9Vb" userLabel="Divider">
+                        <rect key="frame" x="0.0" y="224" width="551" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="npD-dO-xwG"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="dTu-zJ-nOH" userLabel="Portrait VIew" customClass="PortraitView" customModule="LiferayAlerts" customModuleProvider="target">
+                        <rect key="frame" x="13" y="13" width="53" height="54"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="54" id="kVK-8F-dCJ"/>
+                            <constraint firstAttribute="width" constant="53" id="pq9-QL-U3x"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBk-9t-VQd" userLabel="User Name">
+                        <rect key="frame" x="76" y="20" width="470" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKE-1e-mHR">
+                        <rect key="frame" x="76" y="40" width="468" height="180"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PBk-9t-VQd" firstAttribute="leading" secondItem="dTu-zJ-nOH" secondAttribute="trailing" constant="10" id="0Yq-63-36S"/>
+                    <constraint firstAttribute="trailing" secondItem="S3w-It-9Vb" secondAttribute="trailing" id="0c4-IE-zgX"/>
+                    <constraint firstItem="S3w-It-9Vb" firstAttribute="leading" secondItem="5qH-mn-JIr" secondAttribute="leading" id="5LI-QE-gvA"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="RKE-1e-mHR" secondAttribute="bottom" constant="5" id="7w1-uh-eu2"/>
+                    <constraint firstItem="dTu-zJ-nOH" firstAttribute="top" secondItem="5qH-mn-JIr" secondAttribute="topMargin" constant="5" id="FtP-v6-q7h"/>
+                    <constraint firstAttribute="trailing" secondItem="RKE-1e-mHR" secondAttribute="trailing" constant="7" id="Olp-1F-IQ3"/>
+                    <constraint firstItem="PBk-9t-VQd" firstAttribute="leading" secondItem="RKE-1e-mHR" secondAttribute="leading" id="VfD-aU-pNp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="S3w-It-9Vb" secondAttribute="bottom" id="ZL2-KF-Fkq"/>
+                    <constraint firstItem="RKE-1e-mHR" firstAttribute="top" secondItem="PBk-9t-VQd" secondAttribute="bottom" constant="3" id="eda-Kh-m3l"/>
+                    <constraint firstAttribute="trailing" secondItem="PBk-9t-VQd" secondAttribute="trailing" constant="5" id="hgJ-Vu-B6S"/>
+                    <constraint firstItem="PBk-9t-VQd" firstAttribute="top" secondItem="5qH-mn-JIr" secondAttribute="top" constant="20" id="qIg-Pk-fNR"/>
+                    <constraint firstItem="dTu-zJ-nOH" firstAttribute="leading" secondItem="5qH-mn-JIr" secondAttribute="leadingMargin" constant="5" id="wTa-fw-hjH"/>
+                </constraints>
+            </tableViewCellContentView>
             <connections>
-                <outlet property="divider" destination="S3w-It-9Vb" id="2QQ-3E-5UY"/>
-                <outlet property="messageTextView" destination="RKE-1e-mHR" id="RZi-Cm-0Z9"/>
-                <outlet property="portraitView" destination="dTu-zJ-nOH" id="KR5-oR-bX7"/>
-                <outlet property="userNameLabel" destination="PBk-9t-VQd" id="veo-NH-zS4"/>
+                <outlet property="divider" destination="S3w-It-9Vb" id="4fO-gl-oLl"/>
+                <outlet property="messageTextView" destination="RKE-1e-mHR" id="jYv-X3-2z4"/>
+                <outlet property="portraitView" destination="dTu-zJ-nOH" id="Qd9-Qr-7cg"/>
+                <outlet property="userNameLabel" destination="PBk-9t-VQd" id="7se-NB-M12"/>
             </connections>
-            <point key="canvasLocation" x="226" y="137"/>
-        </view>
+            <point key="canvasLocation" x="280.5" y="363"/>
+        </tableViewCell>
     </objects>
 </document>
