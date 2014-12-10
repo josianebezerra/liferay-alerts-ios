@@ -59,7 +59,6 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 		let frame = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue()
 
 		keyboradHeightConstraint.constant = 0
-		view.layoutIfNeeded()
 	}
 
 	func keyboardWillShow(notification: NSNotification) {
@@ -67,16 +66,19 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 		let frame = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue()
 
 		keyboradHeightConstraint.constant = frame.size.height
-		view.layoutIfNeeded()
 	}
 
 	func textView(textView: UITextView, shouldChangeTextInRange range: NSRange,
 		replacementText text: String) -> Bool {
 
+		var range = range
+
 		if(textView.tag == 0) {
 			textView.tag = 1
 			textView.text = ""
 			textView.textColor = UIColors.COMPOSE_TEXT
+
+			range.location = 0
 		}
 
 		var message = textView.text as NSString
