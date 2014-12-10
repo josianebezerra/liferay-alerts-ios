@@ -24,12 +24,18 @@ class PollsAlertViewCell: BaseAlertViewCell {
 
 		userNameLabel.text = alert.user.fullName
 		userNameLabel.textColor = alert.getType()!.getColor()
-		
+
 		questionLabel.text = alert.getMessage()
+
+		bottomBar.leftArrow = false
+		bottomBar.userNameLabel.hidden = true
+		bottomBar.messageTextView.hidden = true
+		bottomBar.setAlert(alert)
 
 		layoutIfNeeded()
 	}
 
+	@IBOutlet var bottomBar: TextCardView!
 	@IBOutlet var userNameLabel: UILabel!
 	@IBOutlet var pollsChoiceContainerView: PollsChoiceContainerView!
 	@IBOutlet var questionLabel: UILabel!

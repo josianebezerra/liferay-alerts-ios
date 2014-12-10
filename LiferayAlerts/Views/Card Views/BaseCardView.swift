@@ -110,8 +110,8 @@ class BaseCardView: UIView {
 	private func _drawRectangle(path: UIBezierPath, rect: CGRect) {
 		var x: CGFloat = rectOrigin!.x
 		var y: CGFloat = rectOrigin!.y
-		var width = rect.width - x
-		var height = rect.height - y
+		var width = rect.width - UIDimensions.CARD_PADDING_HORIZONTAL
+		var height = rect.height - UIDimensions.CARD_PADDING_VERTICAL
 		var PI: CGFloat = CGFloat(M_PI)
 
 		var left: CGFloat = (UIDimensions.CARD_RADIUS + x)

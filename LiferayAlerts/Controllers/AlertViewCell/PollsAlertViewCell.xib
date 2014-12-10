@@ -7,12 +7,16 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VDG-Pg-xWF" customClass="PollsAlertViewCell" customModule="LiferayAlerts" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="569" height="540"/>
+            <rect key="frame" x="0.0" y="0.0" width="569" height="256"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="569" height="540"/>
+                <rect key="frame" x="0.0" y="0.0" width="569" height="256"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8j-B4-Cgd" userLabel="Top Background">
+                        <rect key="frame" x="0.0" y="0.0" width="569" height="73"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="59" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="IGN-s1-jOH" userLabel="Portrait View" customClass="PortraitView" customModule="LiferayAlerts" customModuleProvider="target">
                         <rect key="frame" x="13" y="5" width="53" height="54"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -22,7 +26,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0m5-xu-h3O" customClass="PollsChoiceContainerView" customModule="LiferayAlerts" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="73" width="569" height="467"/>
+                        <rect key="frame" x="0.0" y="73" width="569" height="111"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZ8-kz-Pcq" userLabel="Name">
@@ -37,31 +41,46 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBZ-uB-rVe" customClass="TextCardView" customModule="LiferayAlerts" customModuleProvider="target">
+                        <rect key="frame" x="41" y="189" width="520" height="50"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="qyD-ne-dcw"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="c8j-B4-Cgd" firstAttribute="bottom" secondItem="0m5-xu-h3O" secondAttribute="top" id="2Ib-ys-SSk"/>
                 <constraint firstItem="IGN-s1-jOH" firstAttribute="top" secondItem="VDG-Pg-xWF" secondAttribute="top" constant="5" id="3wJ-zA-4wu"/>
-                <constraint firstAttribute="bottom" secondItem="0m5-xu-h3O" secondAttribute="bottom" id="BcH-3s-abo"/>
+                <constraint firstAttribute="trailing" secondItem="fBZ-uB-rVe" secondAttribute="trailing" constant="8" id="5DH-7d-DcG"/>
+                <constraint firstItem="fBZ-uB-rVe" firstAttribute="leading" secondItem="VDG-Pg-xWF" secondAttribute="leading" constant="41" id="9LE-MN-Tr7"/>
+                <constraint firstAttribute="trailing" secondItem="c8j-B4-Cgd" secondAttribute="trailing" id="CyA-NQ-SeD"/>
+                <constraint firstAttribute="bottom" secondItem="fBZ-uB-rVe" secondAttribute="bottom" constant="17" id="FLB-Ah-ml6"/>
                 <constraint firstItem="bZ8-kz-Pcq" firstAttribute="leading" secondItem="VDG-Pg-xWF" secondAttribute="leading" constant="80" id="OIN-jx-A8D"/>
+                <constraint firstItem="fBZ-uB-rVe" firstAttribute="top" secondItem="0m5-xu-h3O" secondAttribute="bottom" constant="5" id="Ru3-l2-0wE"/>
                 <constraint firstItem="bZ8-kz-Pcq" firstAttribute="top" secondItem="VDG-Pg-xWF" secondAttribute="top" constant="20" id="SNA-Ip-Xrr"/>
                 <constraint firstAttribute="trailing" secondItem="WHu-r5-Ek7" secondAttribute="trailing" constant="10" id="Y5P-Fb-KS4"/>
                 <constraint firstItem="0m5-xu-h3O" firstAttribute="leading" secondItem="VDG-Pg-xWF" secondAttribute="leading" id="Yv4-kB-NZD"/>
                 <constraint firstItem="0m5-xu-h3O" firstAttribute="top" secondItem="WHu-r5-Ek7" secondAttribute="bottom" constant="10" id="btd-Af-2x1"/>
+                <constraint firstItem="c8j-B4-Cgd" firstAttribute="top" secondItem="VDG-Pg-xWF" secondAttribute="top" id="gqY-j5-7tI"/>
                 <constraint firstItem="WHu-r5-Ek7" firstAttribute="leading" secondItem="VDG-Pg-xWF" secondAttribute="leading" constant="80" id="lBY-MG-aqN"/>
                 <constraint firstItem="IGN-s1-jOH" firstAttribute="leading" secondItem="VDG-Pg-xWF" secondAttribute="leading" constant="13" id="miQ-wj-P0e"/>
+                <constraint firstItem="c8j-B4-Cgd" firstAttribute="leading" secondItem="VDG-Pg-xWF" secondAttribute="leading" id="rV8-gs-edA"/>
                 <constraint firstItem="WHu-r5-Ek7" firstAttribute="top" secondItem="bZ8-kz-Pcq" secondAttribute="bottom" constant="10" id="wJO-WO-OEz"/>
                 <constraint firstAttribute="trailing" secondItem="0m5-xu-h3O" secondAttribute="trailing" id="zhY-db-CNR"/>
             </constraints>
-            <size key="customSize" width="569" height="540"/>
+            <size key="customSize" width="569" height="256"/>
             <connections>
+                <outlet property="bottomBar" destination="fBZ-uB-rVe" id="bWA-55-pUO"/>
                 <outlet property="pollsChoiceContainerView" destination="0m5-xu-h3O" id="HFt-cJ-vzz"/>
                 <outlet property="portraitView" destination="IGN-s1-jOH" id="cOM-NU-cgY"/>
                 <outlet property="questionLabel" destination="WHu-r5-Ek7" id="4a0-69-Ksi"/>
                 <outlet property="userNameLabel" destination="bZ8-kz-Pcq" id="KZu-gE-Kag"/>
             </connections>
-            <point key="canvasLocation" x="340.5" y="178"/>
+            <point key="canvasLocation" x="340.5" y="36"/>
         </collectionViewCell>
     </objects>
 </document>
